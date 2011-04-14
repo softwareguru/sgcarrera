@@ -1,0 +1,620 @@
+@font-face {
+	font-family: "HVD Comic Serif Pro";
+	src: url("../fonts/hvd_comic_serif_pro.eot");
+	src: local("HVD Comic Serif Pro"), local("HVD-Comic-Serif-Pro"),
+		url("../fonts/type/hvd_comic_serif_pro.woff") format("woff"),
+		url("../fonts/HVD_Comic_Serif_Pro.otf") format("opentype"),
+		url("../fonts/hvd_comic_serif_pro") format("svg");
+	}
+
+/* dejanc@gmail.com */
+
+body {
+background:#f2f7e6;
+color:#6a6f2d;
+}
+
+a {
+color:#cc6633;
+text-decoration:none;
+text-shadow:1px 1px #fff;
+}
+
+a:hover {
+color:#111;
+}
+
+th.headerSortDown span { 
+    background: url(../images/desc-trans.png) right no-repeat; 
+	display:block;
+} 
+
+th.headerSortUp span { 
+    background: url(../images/asc-trans.png) right no-repeat; 
+	display:block; 
+}
+
+#header {
+padding:18px 35px 10px 35px;
+background:#5e8834;
+border-bottom:5px solid #547a2f;
+border-top:5px solid #547a2f;
+color:#d1ff90;
+}
+
+#header a{
+text-shadow:1px 1px #446226;
+color:#d1ff90;
+}
+
+#header ul{
+list-style:none;
+float:right;
+font-weight:bold;
+font-size:13px;
+text-shadow:1px 1px #446226;
+margin:0px;
+}
+
+#header ul li{
+display:inline;
+}
+
+#header ul li a{
+padding:0 5px;
+}
+
+#header ul li.selected a{
+color:#fff;
+}
+
+#header ul li a:hover{
+color:#fff;
+}
+
+#header h3{
+color:#fff;
+font-family: "HVD Comic Serif Pro" !important;
+font-weight:normal;
+margin:0px;
+text-shadow:1px 1px #2e4319;
+font-size:26px;
+}
+
+#header h3 a {
+display:inline-block;
+font-size:14px;
+font-weight:bold;
+background:#456326;
+padding:6px 10px;
+border:2px solid #547a2f;
+-moz-border-radius:3px;
+-webkit-border-radius:3px;
+border-radius:3px;
+margin:0 0 0 10px;
+font-family:"Helvetica Neue", Arial, Helvetica, sans-serif;
+}
+
+#header h3 a:hover{
+background:#3b5520;
+}
+
+#main {
+	border-top:5px solid #fff;
+	clear:both;
+}
+
+#info {
+padding:6px 15px 12px 15px;
+background:#fff;
+-moz-border-radius-bottomright:5px;
+-moz-border-radius-bottomleft:5px;
+-webkit-border-bottom-left-radius:5px;
+-webkit-border-bottom-right-radius:5px;
+margin:0 15px 20px 15px;
+font-size:11px;
+clear:both;
+}
+
+#info strong a{
+color:#623f2e;
+font-size:14px;
+margin:0 0 0 5px;
+}
+
+#info strong a:hover{
+color:#111;
+}
+
+#info ul{
+float:right;
+list-style:none;
+margin:4px 0 0 0;
+padding:0px;
+}
+
+#info ul li{
+display:inline;
+}
+
+#info ul li a{
+padding:3px 12px 7px 12px;
+font-weight:bold;
+border-right:1px dashed #dee6cb;
+}
+
+#info ul li.lastlink a{
+border-right:0px dashed #dee6cb;
+}
+
+#nav {
+background:#fff;
+border:5px solid #e6eada;
+-moz-border-radius:18px;
+-webkit-border-radius:18px;
+border-radius:18px;
+padding:10px;
+margin:0 0 20px 0;
+}
+
+#nav ul{
+padding:0px;
+margin:0px;
+list-style:none;
+height:145px;
+overflow:hidden;
+width:940px;
+}
+
+#nav ul li{
+display:inline;
+}
+
+#nav ul li img{
+width:148px;
+height:103px;
+display:block;
+}
+
+#nav ul li a{
+background:#75aa41;
+display:block;
+float:left;
+text-align:center;
+width:153px;
+color:#d1ff90;
+text-transform:uppercase;
+text-shadow:1px 1px #446325;
+font-size:12px;
+font-weight:bold;
+letter-spacing:1px;
+margin:0 2px 0 0;
+}
+
+#nav ul li a:hover{
+background:#5e8834;
+text-shadow:1px 1px #354e1d;
+}
+
+#nav ul li a span{
+display:block;
+padding:10px 0 10px 0;
+background:url(../images/navspan-trans.png) bottom repeat-x;
+}
+
+#nav ul li a:hover span{
+color:#fff;
+}
+
+#nav li.lastnav a{
+margin:0px;
+-moz-border-radius-bottomright:10px;
+-moz-border-radius-topright:10px;
+-webkit-border-top-right-radius:10px;
+-webkit-border-bottom-right-radius:10px;
+}
+
+#nav li.lastnav a span{
+margin:0px;
+-moz-border-radius-bottomright:10px;
+-webkit-border-bottom-right-radius:10px;
+}
+
+#nav li.firstnav a{
+-moz-border-radius-bottomleft:10px;
+-moz-border-radius-topleft:10px;
+-webkit-border-top-left-radius:10px;
+-webkit-border-bottom-left-radius:10px;
+}
+
+#nav li.firstnav a span{
+-moz-border-radius-bottomleft:10px;
+-webkit-border-bottom-left-radius:10px;
+}
+
+#footer {
+background:#f5f9eb;
+border-top:1px solid #e1e9ce;
+padding:25px 0 50px 0;
+color:#6a6f2d;
+font-size:11px;
+clear:both;
+margin:30px 0 0 0;
+}
+
+#footer div{
+width:930px;
+}
+
+#footer div img{
+float:right;
+margin:-5px 0 0 0;
+}
+
+#left {
+width:140px;
+float:left;
+margin:0 0 0 15px;
+}
+
+#mid {
+width:480px;
+float:left;
+background:#ecf0e0;
+border:1px solid #dbe1cd;
+margin:0 0 0 14px;
+padding:30px;
+-moz-border-radius:7px;
+-webkit-border-radius:7px;
+border-radius:7px;
+}
+
+#right {
+width:210px;
+float:right;
+margin:0 17px 0 0;
+}
+
+.sidebarbox {
+clear:left;
+margin:0 0 15px 0;
+}
+
+.sidebarcontent {
+background:#fafcf5;
+padding:10px 15px;
+-moz-border-radius-bottomleft:5px;
+-moz-border-radius-bottomright:5px;
+-webkit-border-bottom-left-radius:5px;
+-webkit-border-bottom-right-radius:5px;
+}
+
+.sidebarcontent ul {
+list-style:none;
+margin:0px; 
+padding:0px;
+}
+
+.sidebarcontent ul li a{
+display:block;
+font-weight:bold;
+padding:3px 0;
+}
+
+.sidebarheader a{
+display:block;
+-moz-border-radius-topleft:5px;
+-moz-border-radius-topright:5px;
+-webkit-border-top-left-radius:5px;
+-webkit-border-top-right-radius:5px;
+color:#fff;
+font-family: "HVD Comic Serif Pro" !important;
+font-weight:normal;
+margin:0px;
+text-shadow:0px 0px #fff;
+font-size:14px;
+color:#625249;
+padding:12px 0 7px 15px;
+border-bottom:2px solid #edefe9;
+background:url(../images/plus.png) 115px 15px no-repeat #fff;
+outline:none;
+}
+
+.activesidebar a{
+background:url(../images/minus.png) 115px 15px no-repeat #fff;
+}
+
+h1 {
+font-family: "HVD Comic Serif Pro" !important;
+font-weight:normal;
+font-size:28px;
+color:#623f2e;
+border-bottom:1px dashed #d2d6c8;
+padding:0 0 5px 0;
+margin:0px 0 15px 0;
+}
+
+table {
+border:1px solid #c5cbb4;
+border-bottom:none;
+margin:0 0 30px;
+}
+
+thead {
+color:#69834e;
+font-family: "HVD Comic Serif Pro" !important;
+font-size:14px;
+font-weight:normal;
+letter-spacing:1px;
+text-shadow:0px;
+}
+
+thead th {
+background:#fff !important;
+}
+
+td, thead th {
+padding:10px 20px;
+border-bottom:1px solid #c5cbb4;
+background:#fafcf5;
+}
+
+thead th {
+cursor:pointer;
+font-weight:normal;
+}
+
+td img {
+padding:0 5px 0 0;
+}
+
+.graph {
+background:#fff;
+margin:10px 0 40px;
+text-align:center;
+}
+
+input, textarea {
+border:1px solid #d2d9c0;
+padding:7px;
+-moz-border-radius:3px;
+-webkit-border-top:3px;
+border-radius:3px;
+font:12px Arial, Helvetica, sans-serif;
+width:190px;
+margin:0px;
+}
+
+input:focus, textarea:focus {
+border:1px solid #666;
+}
+
+label {
+display:block;
+font-family: "HVD Comic Serif Pro" !important;
+font-weight:normal;
+color:#6a6f2d;
+margin:20px 0 3px 0;
+font-size:14px;
+}
+
+textarea {
+padding:5px 0 25px 5px;
+width:95%;
+height:100px;
+}	
+
+input.submit {
+background:#cc6633;
+color:#fff;
+border:3px #fff solid;
+padding:0px;
+clear:both;
+-moz-border-radius:3px;
+-webkit-border-radius:3px;
+border-radius:3px;
+cursor:pointer;
+outline:none;
+width:85px;
+height:32px;
+margin:10px 0 0 0;
+font-family: "HVD Comic Serif Pro" !important;
+font-weight:normal;
+text-transform:uppercase;
+}
+
+input.submit:hover {
+background:#d5703e;
+}
+
+#right h3 {
+color:#625249;
+font-size:18px;
+font-family: "HVD Comic Serif Pro" !important;
+margin:0px 0 20px 0;
+border-bottom:1px dashed  #d3e4bd;
+padding:0 0 5px 0;
+}
+
+.twit {
+margin:15px 0 15px 0;
+border-bottom:1px dotted  #d3e4bd;
+padding:0 0 15px 0;
+}
+
+.twit p{
+color:#6a6f2d;
+font-size:11px;
+margin:0px 0 10px 0;
+line-height:14px;
+text-shadow:1px 1px #fff;
+}
+
+.twit p img{
+float:left;
+margin:-5px 5px 0 0;
+border:2px solid #fff;
+vertical-align:baseline;
+}
+
+.notice, .error, .success {
+-moz-border-radius:3px;
+-webkit-border-radius:3px;
+border-radius:3px;
+font-size:12px;
+padding:7px 9px;
+border:0px;
+}
+
+.notice a, .error a, .success a{
+color:#993300;
+text-decoration:none;
+font-weight:bold;
+padding:0 3px;
+}
+
+.notice {
+color:#827a30;
+padding-left:30px;
+background:url(../images/notice-trans.png) 9px 9px no-repeat #ffffcc;
+}
+
+.error {
+color:#993300;
+padding-left:30px;
+background:url(../images/error-trans.png) 9px 10px no-repeat #ffe6db;
+}
+
+.success {
+color:#398c33;
+padding-left:30px;
+background:url(../images/success-trans.png) 9px 9px no-repeat #e8fecd;
+}
+
+td {
+background-image:url(../images/td-trans.png);
+background-position:top;
+background-repeat:repeat-x;
+}
+
+ul.tabs {
+	margin: 15px 0 0 0;
+	padding: 0;
+	float: left;
+	list-style: none;
+	height: 32px;
+	border-bottom: 1px solid #D2D9C0;
+	border-left: 1px solid #D2D9C0;
+	width: 100%;
+}
+ul.tabs li {
+	float: left;
+	margin: 0;
+	padding: 0;
+	height: 31px;
+	line-height: 31px;
+	border: 1px solid #D2D9C0;
+	border-left: none;
+	margin-bottom: -1px;
+	background: url(../images/layout/boxhead.png);
+	overflow: hidden;
+	position: relative;
+	font-size:12px;
+}
+ul.tabs li a {
+	text-decoration: none;
+	display: block;
+	padding: 0 20px;
+	border: 1px solid #fff;
+	outline: none;
+	text-transform:uppercase;
+	font-weight:bold;
+	font-size:10px;
+}
+ul.tabs li a:hover {
+	background: #FAFCF5;
+}	
+html ul.tabs li.active, html ul.tabs li.active a:hover  {
+	background: #FAFCF5;
+	border-bottom: 1px solid #FAFCF5;
+}
+.tab_container {
+	border: 1px solid #D2D9C0;
+	border-top: none;
+	clear: both;
+	float: left; 
+	width: 100%;
+	background: #FAFCF5;
+	-moz-border-radius-bottomright: 5px;
+	-khtml-border-radius-bottomright: 5px;
+	-webkit-border-bottom-right-radius: 5px;
+	-moz-border-radius-bottomleft: 5px;
+	-khtml-border-radius-bottomleft: 5px;
+	-webkit-border-bottom-left-radius: 5px;
+	-moz-box-shadow:1px 1px #fff;
+	-webkit-box-shadow:1px 1px #fff;
+	box-shadow:1px 1px #fff;
+	margin-bottom:20px;
+}
+.tab_content {
+	padding: 20px;
+	
+}
+
+blockquote {
+color:#625249;
+background:#F2F7E6;
+margin:10px;
+padding:20px;
+-moz-border-radius:10px;
+-webkit-border-radius:10px;
+border-radius:10px;
+}
+
+h1, h2, h3 {
+font-family:"HVD Comic Serif Pro", Arial, sans-serif;
+color:#623F2E;
+}
+
+.lileft {
+float:left;
+width:48%;
+margin-bottom:20px;
+}
+
+.liright {
+float:right;
+width:48%;
+margin-bottom:20px;
+}
+
+.liright label, .lileft label {
+margin-top:10px;
+}
+
+p.link a {
+padding:5px 10px;
+background:url(../images/link-trans.png) bottom repeat-x #75AA41;
+color:#fff;
+text-shadow:1px 1px rgba(0,0,0,0.3);
+font-weight:bold;
+text-transform:uppercase;
+-moz-border-radius:5px;
+-webkit-border-radius:5px;
+border-radius:5px;
+}
+
+p.link a:hover {
+background-position:0 10px;
+}
+
+.login {
+background:#fff;
+-moz-border-radius:15px;
+-webkit-border-radius:15px;
+border-radius:15px;
+}
+
+tr.even td {
+background:url(../images/td-trans.png) top repeat-x #ECF0E0;
+}

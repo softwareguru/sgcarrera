@@ -1,0 +1,210 @@
+/* dejanc@gmail.com */
+
+body {
+background:#f6f6f6;
+color:#4A3C2B;
+}
+
+a {
+color:#0073B4;
+text-shadow:1px 1px #fff;
+}
+
+a:hover {
+color:#111;
+}
+
+
+
+#header {
+background:#333;
+border-bottom:5px solid #111;
+border-top:5px solid #111;
+color:#ccc;
+}
+
+#header a{
+text-shadow:1px 1px rgba(0,0,0,0.2);
+color:#ccc;
+}
+
+#header ul{
+text-shadow:1px 1px rgba(0,0,0,0.2);
+}
+
+
+
+#header h3{
+text-shadow:1px 1px rgba(0,0,0,0.2);
+}
+
+#header h3 a {
+background:#666;
+border:2px solid #111;
+}
+
+#header h3 a:hover{
+background:#111;
+}
+
+
+#info strong a{
+color:#222;
+}
+
+#info strong a:hover{
+color:#111;
+}
+
+
+#info ul li a{
+border-right:1px dashed #dee6cb;
+}
+
+#info ul li.lastlink a{
+border-right:0px dashed #dee6cb;
+}
+
+#nav {
+background:#fff;
+border:5px solid #e9e9e9;
+}
+
+#nav ul li a{
+background:#97A9B4;
+color:#D3ECFB;
+text-shadow:1px 1px #rgba(0,0,0,0.2);
+}
+
+#nav ul li a:hover{
+background:#5D686F;
+text-shadow:1px 1px #354e1d;
+}
+
+.sidebarheader a {
+border-bottom:2px solid #e9e9e9;
+}
+
+#footer {
+background:#fff;
+border-top:1px solid #eaeaea;
+color:#4A3C2B;
+}
+
+#mid {
+background:#fff;
+border:1px solid #eaeaea;
+}
+
+.sidebarcontent {
+background:#eaeaea;
+}
+.sidebarheader a{
+color:#222;
+}
+
+h1 {
+color:#222;
+border-bottom:1px dashed #eaeaea;
+}
+
+table {
+border:1px solid #eaeaea;
+}
+
+thead {
+color:#555;
+}
+
+td, thead th {
+border-bottom:1px solid #eaeaea;
+background:#f6f6f6;
+}
+
+
+input, textarea {
+border:1px solid #eaeaea;
+}
+
+
+label {
+color:#4A3C2B;
+}
+
+input.submit {
+background:#999;
+-moz-box-shadow:0 0 2px rgba(0,0,0,0.3);
+box-shadow:0 0 2px rgba(0,0,0,0.3);
+-webkit-box-shadow:0 0 2px rgba(0,0,0,0.3);
+}
+
+input.submit:hover {
+background:#aaa;
+}
+
+#right h3 {
+color:#111;
+border-bottom:1px dashed  #eaeaea;
+}
+
+.twit {
+border-bottom:1px dotted  #eaeaea;
+}
+
+.twit p{
+color:#4A3C2B;
+}
+
+ul.tabs {
+	border-bottom: none;
+	border-left: none;
+}
+ul.tabs li {
+	border: 1px solid #eaeaea;
+}
+
+ul.tabs li a:hover {
+	background: #fff;
+}	
+html ul.tabs li.active, html ul.tabs li.active a:hover  {
+	background: #fff;
+	border-bottom: 1px solid #fff;
+}
+.tab_container {
+	border: 1px solid #eaeaea;
+	background: #fff;
+}
+
+blockquote {
+color:#625249;
+background:#f6f6f6;
+}
+
+h1, h2, h3 {
+color:#222;
+}
+
+
+#nav ul li a {
+text-shadow:1px 1px rgba(0,0,0,0.2);
+}
+
+ul.tabs li a {
+background:#f6f6f6;
+}
+
+ul.tabs li.active a {
+background:#fff;
+} 
+
+
+
+p.link a {
+padding:5px 10px;
+background:url(../images/link-trans.png) bottom repeat-x #97A9B4;
+}
+
+
+tr.even td {
+background:url(../images/td-trans.png) top repeat-x #eaeaea;
+}

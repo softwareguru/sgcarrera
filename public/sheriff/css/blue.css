@@ -1,0 +1,199 @@
+/* dejanc@gmail.com */
+
+body {
+background:#D8EFF7;
+color:#054B6F;
+}
+
+a {
+color:#7C9F17;
+text-shadow:1px 1px #fff;
+}
+
+a:hover {
+color:#111;
+}
+
+
+
+#header {
+background:#1F6C88;
+border-bottom:5px solid #1C617A;
+border-top:5px solid #1C617A;
+color:#91C9CB;
+}
+
+#header a{
+text-shadow:1px 1px rgba(0,0,0,0.2);
+color:#91C9CB;
+}
+
+#header ul{
+text-shadow:1px 1px rgba(0,0,0,0.2);
+}
+
+
+
+#header h3{
+text-shadow:1px 1px rgba(0,0,0,0.2);
+}
+
+#header h3 a {
+background:#1F7390;
+border:2px solid #1C617A;
+}
+
+#header h3 a:hover{
+background:#1C617A;
+}
+
+
+#info strong a{
+color:#9B0B0F;
+}
+
+#info strong a:hover{
+color:#111;
+}
+
+
+#info ul li a{
+border-right:1px dashed #dee6cb;
+}
+
+#info ul li.lastlink a{
+border-right:0px dashed #dee6cb;
+}
+
+#nav {
+background:#fff;
+border:5px solid #CDE3EA;
+}
+
+#nav ul li a{
+background:#1E7BAB;
+color:#9CEDFF;
+text-shadow:1px 1px #rgba(0,0,0,0.2);
+}
+
+#nav ul li a:hover{
+background:#1F6C88;
+text-shadow:1px 1px #354e1d;
+}
+
+.sidebarheader a {
+border-bottom:2px solid #CDE3EA;
+}
+
+#footer {
+background:#ECF7FB;
+border-top:1px solid #BBDAEB;
+color:#054B6F;
+}
+
+#mid {
+background:#ECF7FB;
+border:1px solid #BBDAEB;
+}
+
+.sidebarcontent {
+background:#EFF9FC;
+}
+.sidebarheader a{
+color:#900;
+}
+
+h1 {
+color:#9B0B0F;
+border-bottom:1px dashed #B1C9D6;
+}
+
+table {
+border:1px solid #B1C9D6;
+}
+
+thead {
+color:#69834e;
+}
+
+td, thead th {
+border-bottom:1px solid #B1C9D6;
+background:#EFF9FC;
+}
+
+
+input, textarea {
+border:1px solid #B1C9D6;
+}
+
+
+label {
+color:#054B6F;
+}
+
+input.submit {
+background:#7C9F17;
+}
+
+input.submit:hover {
+background:#9ebf39;
+}
+
+#right h3 {
+color:#700;
+border-bottom:1px dashed  #B1C9D6;
+}
+
+.twit {
+border-bottom:1px dotted  #B1C9D6;
+}
+
+.twit p{
+color:#054B6F;
+}
+
+ul.tabs {
+	border-bottom: none;
+	border-left: none;
+}
+ul.tabs li {
+	border: 1px solid #B1C9D6;
+}
+
+ul.tabs li a:hover {
+	background: #EFF9FC;
+}	
+html ul.tabs li.active, html ul.tabs li.active a:hover  {
+	background: #fff;
+	border-bottom: 1px solid #fff;
+}
+.tab_container {
+	border: 1px solid #B1C9D6;
+	background: #fff;
+}
+
+blockquote {
+color:#625249;
+background:#D8EFF7;
+}
+
+h1, h2, h3 {
+color:#9B0B0F;
+}
+
+
+#nav ul li a {
+text-shadow:1px 1px rgba(0,0,0,0.2);
+}
+
+
+
+p.link a {
+padding:5px 10px;
+background:url(../images/link-trans.png) bottom repeat-x #1E7BAB;
+}
+
+
+tr.even td {
+background:url(../images/td-trans.png) top repeat-x #E2F3F9;
+}
