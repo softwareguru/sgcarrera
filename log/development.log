@@ -1,0 +1,1898 @@
+
+
+Started GET "/default/index.html" for 127.0.0.1 at Wed Apr 13 20:03:41 -0500 2011
+  Processing by DefaultController#index as HTML
+Rendered default/index.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 22ms (Views: 20.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/fonts/type/hvd_comic_serif_pro.woff" for 127.0.0.1 at Wed Apr 13 20:03:43 -0500 2011
+
+ActionController::RoutingError (No route matches "/fonts/type/hvd_comic_serif_pro.woff"):
+  
+
+Rendered /usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.6ms)
+
+
+Started GET "/fonts/HVD_Comic_Serif_Pro.otf" for 127.0.0.1 at Wed Apr 13 20:03:43 -0500 2011
+
+ActionController::RoutingError (No route matches "/fonts/HVD_Comic_Serif_Pro.otf"):
+  
+
+Rendered /usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.4ms)
+
+
+Started GET "/fonts/hvd_comic_serif_pro" for 127.0.0.1 at Wed Apr 13 20:03:43 -0500 2011
+
+ActionController::RoutingError (No route matches "/fonts/hvd_comic_serif_pro"):
+  
+
+Rendered /usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (3.0ms)
+
+
+Started GET "/default/index" for 127.0.0.1 at Wed Apr 13 20:03:45 -0500 2011
+  Processing by DefaultController#index as HTML
+Rendered default/index.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 22ms (Views: 20.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/fonts/type/hvd_comic_serif_pro.woff" for 127.0.0.1 at Wed Apr 13 20:03:45 -0500 2011
+
+ActionController::RoutingError (No route matches "/fonts/type/hvd_comic_serif_pro.woff"):
+  
+
+Rendered /usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (3.4ms)
+
+
+Started GET "/fonts/HVD_Comic_Serif_Pro.otf" for 127.0.0.1 at Wed Apr 13 20:03:46 -0500 2011
+
+ActionController::RoutingError (No route matches "/fonts/HVD_Comic_Serif_Pro.otf"):
+  
+
+Rendered /usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.7ms)
+
+
+Started GET "/fonts/hvd_comic_serif_pro" for 127.0.0.1 at Wed Apr 13 20:03:46 -0500 2011
+
+ActionController::RoutingError (No route matches "/fonts/hvd_comic_serif_pro"):
+  
+
+Rendered /usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.5ms)
+
+
+Started GET "/default/index" for 127.0.0.1 at Wed Apr 13 20:04:10 -0500 2011
+  Processing by DefaultController#index as HTML
+Rendered default/index.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 21ms (Views: 19.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/fonts/type/hvd_comic_serif_pro.woff" for 127.0.0.1 at Wed Apr 13 20:04:10 -0500 2011
+
+ActionController::RoutingError (No route matches "/fonts/type/hvd_comic_serif_pro.woff"):
+  
+
+Rendered /usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.7ms)
+
+
+Started GET "/fonts/HVD_Comic_Serif_Pro.otf" for 127.0.0.1 at Wed Apr 13 20:04:10 -0500 2011
+
+ActionController::RoutingError (No route matches "/fonts/HVD_Comic_Serif_Pro.otf"):
+  
+
+Rendered /usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.7ms)
+
+
+Started GET "/fonts/hvd_comic_serif_pro" for 127.0.0.1 at Wed Apr 13 20:04:10 -0500 2011
+
+ActionController::RoutingError (No route matches "/fonts/hvd_comic_serif_pro"):
+  
+
+Rendered /usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.6ms)
+
+
+Started GET "/default/index" for 127.0.0.1 at Wed Apr 13 20:04:32 -0500 2011
+  Processing by DefaultController#index as HTML
+Rendered default/index.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 21ms (Views: 19.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/fonts/type/hvd_comic_serif_pro.woff" for 127.0.0.1 at Wed Apr 13 20:04:34 -0500 2011
+
+ActionController::RoutingError (No route matches "/fonts/type/hvd_comic_serif_pro.woff"):
+  
+
+Rendered /usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.9ms)
+
+
+Started GET "/fonts/HVD_Comic_Serif_Pro.otf" for 127.0.0.1 at Wed Apr 13 20:04:34 -0500 2011
+
+ActionController::RoutingError (No route matches "/fonts/HVD_Comic_Serif_Pro.otf"):
+  
+
+Rendered /usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.5ms)
+
+
+Started GET "/fonts/hvd_comic_serif_pro" for 127.0.0.1 at Wed Apr 13 20:04:34 -0500 2011
+
+ActionController::RoutingError (No route matches "/fonts/hvd_comic_serif_pro"):
+  
+
+Rendered /usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.7ms)
+
+
+Started GET "/default/index" for 127.0.0.1 at Wed Apr 13 20:04:51 -0500 2011
+  Processing by DefaultController#index as HTML
+Rendered default/index.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 27ms (Views: 24.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/fonts/type/hvd_comic_serif_pro.woff" for 127.0.0.1 at Wed Apr 13 20:04:52 -0500 2011
+
+ActionController::RoutingError (No route matches "/fonts/type/hvd_comic_serif_pro.woff"):
+  
+
+Rendered /usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.7ms)
+
+
+Started GET "/fonts/HVD_Comic_Serif_Pro.otf" for 127.0.0.1 at Wed Apr 13 20:04:52 -0500 2011
+
+ActionController::RoutingError (No route matches "/fonts/HVD_Comic_Serif_Pro.otf"):
+  
+
+Rendered /usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.4ms)
+
+
+Started GET "/fonts/hvd_comic_serif_pro" for 127.0.0.1 at Wed Apr 13 20:04:52 -0500 2011
+
+ActionController::RoutingError (No route matches "/fonts/hvd_comic_serif_pro"):
+  
+
+Rendered /usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.4ms)
+
+
+Started GET "/default/index" for 127.0.0.1 at Wed Apr 13 20:06:47 -0500 2011
+  Processing by DefaultController#index as HTML
+Rendered default/index.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 21ms (Views: 19.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/fonts/type/hvd_comic_serif_pro.woff" for 127.0.0.1 at Wed Apr 13 20:06:47 -0500 2011
+
+ActionController::RoutingError (No route matches "/fonts/type/hvd_comic_serif_pro.woff"):
+  
+
+Rendered /usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.7ms)
+
+
+Started GET "/fonts/HVD_Comic_Serif_Pro.otf" for 127.0.0.1 at Wed Apr 13 20:06:47 -0500 2011
+
+ActionController::RoutingError (No route matches "/fonts/HVD_Comic_Serif_Pro.otf"):
+  
+
+Rendered /usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.5ms)
+
+
+Started GET "/fonts/hvd_comic_serif_pro" for 127.0.0.1 at Wed Apr 13 20:06:47 -0500 2011
+
+ActionController::RoutingError (No route matches "/fonts/hvd_comic_serif_pro"):
+  
+
+Rendered /usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.4ms)
+
+
+Started GET "/default/index" for 127.0.0.1 at Wed Apr 13 20:08:28 -0500 2011
+  Processing by DefaultController#index as HTML
+Rendered default/index.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 21ms (Views: 19.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/default/index" for 127.0.0.1 at Wed Apr 13 20:12:14 -0500 2011
+  Processing by DefaultController#index as HTML
+ERROR: compiling _app_views_layouts_application_html_erb___640258748_69998308288300_0 RAISED compile error
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:7: syntax error, unexpected ':', expecting ')'
+..._link_tag 'frame/screen.css' :media => 'screen,projection' )...
+                              ^
+Function body:           def _app_views_layouts_application_html_erb___640258748_69998308288300_0(local_assigns)
+            _old_virtual_path, @_virtual_path = @_virtual_path, "layouts/application";_old_output_buffer = @output_buffer;;@output_buffer = ActionView::OutputBuffer.new;@output_buffer.safe_concat('<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <title>Sgcarrera</title>
+  ');@output_buffer.append= ( stylesheet_link_tag 'grey.css' );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  ');@output_buffer.append= ( stylesheet_link_tag 'frame/screen.css' :media => 'screen,projection' );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  ');@output_buffer.append= ( javascript_include_tag :defaults );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  ');@output_buffer.append= ( csrf_meta_tag );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('</head>
+<body>
+
+');@output_buffer.append= ( yield );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('
+</body>
+</html>
+');@output_buffer.to_s
+          ensure
+            @_virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+Backtrace: /home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:20:in `compile'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_view/template.rb:134:in `render'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/activesupport-3.0.5/lib/active_support/notifications.rb:54:in `instrument'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_view/template.rb:127:in `render'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_view/render/layouts.rb:80:in `_render_layout'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_view/render/rendering.rb:62:in `_render_template'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/activesupport-3.0.5/lib/active_support/notifications.rb:52:in `instrument'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/activesupport-3.0.5/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/activesupport-3.0.5/lib/active_support/notifications.rb:52:in `instrument'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_view/render/rendering.rb:56:in `_render_template'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_view/render/rendering.rb:26:in `render'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/abstract_controller/rendering.rb:115:in `_render_template'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/abstract_controller/rendering.rb:109:in `render_to_body'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_controller/metal/renderers.rb:47:in `render_to_body'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_controller/metal/compatibility.rb:55:in `render_to_body'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/abstract_controller/rendering.rb:102:in `render_to_string'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/abstract_controller/rendering.rb:93:in `render'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_controller/metal/rendering.rb:17:in `render'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_controller/metal/instrumentation.rb:40:in `render'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/activesupport-3.0.5/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/usr/local/src/ruby_1_8/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/activesupport-3.0.5/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_controller/metal/instrumentation.rb:40:in `render'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_controller/metal/instrumentation.rb:78:in `cleanup_view_runtime'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/activerecord-3.0.5/lib/active_record/railties/controller_runtime.rb:15:in `cleanup_view_runtime'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/abstract_controller/base.rb:150:in `process_action'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_controller/metal/rendering.rb:11:in `process_action'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/abstract_controller/callbacks.rb:18:in `process_action'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/activesupport-3.0.5/lib/active_support/callbacks.rb:435:in `_run__941840225__process_action__199225275__callbacks'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/activesupport-3.0.5/lib/active_support/callbacks.rb:409:in `send'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/activesupport-3.0.5/lib/active_support/callbacks.rb:409:in `_run_process_action_callbacks'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/activesupport-3.0.5/lib/active_support/callbacks.rb:93:in `send'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/activesupport-3.0.5/lib/active_support/callbacks.rb:93:in `run_callbacks'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/activesupport-3.0.5/lib/active_support/notifications.rb:52:in `instrument'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/activesupport-3.0.5/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/activesupport-3.0.5/lib/active_support/notifications.rb:52:in `instrument'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_controller/metal/rescue.rb:17:in `process_action'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/abstract_controller/base.rb:119:in `process'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/abstract_controller/rendering.rb:41:in `process'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_controller/metal.rb:138:in `dispatch'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_controller/metal.rb:178:in `action'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/routing/route_set.rb:62:in `call'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/routing/route_set.rb:62:in `dispatch'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/routing/route_set.rb:27:in `call'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/rack-mount-0.6.13/lib/rack/mount/route_set.rb:148:in `call'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:93:in `recognize'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:68:in `optimized_each'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:92:in `recognize'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/rack-mount-0.6.13/lib/rack/mount/route_set.rb:139:in `call'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/routing/route_set.rb:492:in `call'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/head.rb:14:in `call'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/rack-1.2.1/lib/rack/methodoverride.rb:24:in `call'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/flash.rb:182:in `call'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/session/abstract_store.rb:149:in `call'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/cookies.rb:302:in `call'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/activerecord-3.0.5/lib/active_record/query_cache.rb:32:in `call'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/activerecord-3.0.5/lib/active_record/connection_adapters/abstract/query_cache.rb:28:in `cache'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/activerecord-3.0.5/lib/active_record/query_cache.rb:12:in `cache'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/activerecord-3.0.5/lib/active_record/query_cache.rb:31:in `call'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/activerecord-3.0.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:354:in `call'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/callbacks.rb:46:in `call'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/activesupport-3.0.5/lib/active_support/callbacks.rb:415:in `_run_call_callbacks'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/callbacks.rb:44:in `call'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/rack-1.2.1/lib/rack/sendfile.rb:107:in `call'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/show_exceptions.rb:47:in `call'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/railties-3.0.5/lib/rails/rack/logger.rb:13:in `call'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/rack-1.2.1/lib/rack/runtime.rb:17:in `call'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/activesupport-3.0.5/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/rack-1.2.1/lib/rack/lock.rb:11:in `call'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/rack-1.2.1/lib/rack/lock.rb:11:in `synchronize'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/rack-1.2.1/lib/rack/lock.rb:11:in `call'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/static.rb:30:in `call'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/railties-3.0.5/lib/rails/application.rb:168:in `call'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/railties-3.0.5/lib/rails/application.rb:77:in `send'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/railties-3.0.5/lib/rails/application.rb:77:in `method_missing'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/railties-3.0.5/lib/rails/rack/log_tailer.rb:14:in `call'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/rack-1.2.1/lib/rack/content_length.rb:13:in `call'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/rack-1.2.1/lib/rack/handler/webrick.rb:52:in `service'
+/usr/local/src/ruby_1_8/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+/usr/local/src/ruby_1_8/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+/usr/local/src/ruby_1_8/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+/usr/local/src/ruby_1_8/lib/ruby/1.8/webrick/server.rb:162:in `start'
+/usr/local/src/ruby_1_8/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+/usr/local/src/ruby_1_8/lib/ruby/1.8/webrick/server.rb:95:in `start'
+/usr/local/src/ruby_1_8/lib/ruby/1.8/webrick/server.rb:92:in `each'
+/usr/local/src/ruby_1_8/lib/ruby/1.8/webrick/server.rb:92:in `start'
+/usr/local/src/ruby_1_8/lib/ruby/1.8/webrick/server.rb:23:in `start'
+/usr/local/src/ruby_1_8/lib/ruby/1.8/webrick/server.rb:82:in `start'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/rack-1.2.1/lib/rack/handler/webrick.rb:13:in `run'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/rack-1.2.1/lib/rack/server.rb:213:in `start'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/railties-3.0.5/lib/rails/commands/server.rb:65:in `start'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/railties-3.0.5/lib/rails/commands.rb:30
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/railties-3.0.5/lib/rails/commands.rb:27:in `tap'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/railties-3.0.5/lib/rails/commands.rb:27
+script/rails:6:in `require'
+script/rails:6
+Rendered default/index.html.erb within layouts/application (44.1ms)
+Completed   in 58ms
+
+ActionView::Template::Error (compile error
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:7: syntax error, unexpected ':', expecting ')'
+..._link_tag 'frame/screen.css' :media => 'screen,projection' )...
+                              ^):
+    4:   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    5:   <title>Sgcarrera</title>
+    6:   <%= stylesheet_link_tag 'grey.css' %>
+    7:   <%= stylesheet_link_tag 'frame/screen.css' :media => 'screen,projection' %>
+    8:   <%= javascript_include_tag :defaults %>
+    9:   <%= csrf_meta_tag %>
+    10: </head>
+  app/views/layouts/application.html.erb:20:in `compile'
+
+Rendered /usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.7ms)
+Rendered /usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (13.7ms)
+Rendered /usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (36.2ms)
+
+
+Started GET "/default/index" for 127.0.0.1 at Wed Apr 13 20:12:38 -0500 2011
+  Processing by DefaultController#index as HTML
+Rendered default/index.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 22ms (Views: 20.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/default/index" for 127.0.0.1 at Wed Apr 13 20:13:39 -0500 2011
+  Processing by DefaultController#index as HTML
+Rendered default/index.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 21ms (Views: 19.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/default/index" for 127.0.0.1 at Wed Apr 13 20:14:02 -0500 2011
+  Processing by DefaultController#index as HTML
+Rendered default/index.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 217ms (Views: 21.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/stylesheets/frame/prit.css" for 127.0.0.1 at Wed Apr 13 20:14:02 -0500 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/frame/prit.css"):
+  
+
+Rendered /usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.6ms)
+
+
+Started GET "/stylesheets/frame/prit.css" for 127.0.0.1 at Wed Apr 13 20:14:08 -0500 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/frame/prit.css"):
+  
+
+Rendered /usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.5ms)
+
+
+Started GET "/default/index" for 127.0.0.1 at Wed Apr 13 20:18:22 -0500 2011
+  Processing by DefaultController#index as HTML
+Rendered default/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 20ms (Views: 18.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/default/index" for 127.0.0.1 at Wed Apr 13 20:18:25 -0500 2011
+  Processing by DefaultController#index as HTML
+Rendered default/index.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 19ms (Views: 18.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/fonts/type/hvd_comic_serif_pro.woff" for 127.0.0.1 at Wed Apr 13 20:18:26 -0500 2011
+
+ActionController::RoutingError (No route matches "/fonts/type/hvd_comic_serif_pro.woff"):
+  
+
+Rendered /usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.3ms)
+
+
+Started GET "/fonts/HVD_Comic_Serif_Pro.otf" for 127.0.0.1 at Wed Apr 13 20:18:26 -0500 2011
+
+ActionController::RoutingError (No route matches "/fonts/HVD_Comic_Serif_Pro.otf"):
+  
+
+Rendered /usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.4ms)
+
+
+Started GET "/fonts/hvd_comic_serif_pro" for 127.0.0.1 at Wed Apr 13 20:18:26 -0500 2011
+
+ActionController::RoutingError (No route matches "/fonts/hvd_comic_serif_pro"):
+  
+
+Rendered /usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.5ms)
+
+
+Started GET "/default/index" for 127.0.0.1 at Wed Apr 13 20:18:27 -0500 2011
+  Processing by DefaultController#index as HTML
+Rendered default/index.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 21ms (Views: 18.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/fonts/type/hvd_comic_serif_pro.woff" for 127.0.0.1 at Wed Apr 13 20:18:28 -0500 2011
+
+ActionController::RoutingError (No route matches "/fonts/type/hvd_comic_serif_pro.woff"):
+  
+
+Rendered /usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.5ms)
+
+
+Started GET "/fonts/HVD_Comic_Serif_Pro.otf" for 127.0.0.1 at Wed Apr 13 20:18:28 -0500 2011
+
+ActionController::RoutingError (No route matches "/fonts/HVD_Comic_Serif_Pro.otf"):
+  
+
+Rendered /usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.4ms)
+
+
+Started GET "/fonts/hvd_comic_serif_pro" for 127.0.0.1 at Wed Apr 13 20:18:28 -0500 2011
+
+ActionController::RoutingError (No route matches "/fonts/hvd_comic_serif_pro"):
+  
+
+Rendered /usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.4ms)
+
+
+Started GET "/default/index" for 127.0.0.1 at Wed Apr 13 20:22:44 -0500 2011
+  Processing by DefaultController#index as HTML
+Rendered default/index.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 22ms (Views: 20.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/default/images/box.png" for 127.0.0.1 at Wed Apr 13 20:22:44 -0500 2011
+
+ActionController::RoutingError (No route matches "/default/images/box.png"):
+  
+
+Rendered /usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.4ms)
+
+
+Started GET "/fonts/type/hvd_comic_serif_pro.woff" for 127.0.0.1 at Wed Apr 13 20:22:44 -0500 2011
+
+ActionController::RoutingError (No route matches "/fonts/type/hvd_comic_serif_pro.woff"):
+  
+
+Rendered /usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.8ms)
+
+
+Started GET "/default/images/comment.png" for 127.0.0.1 at Wed Apr 13 20:22:45 -0500 2011
+
+ActionController::RoutingError (No route matches "/default/images/comment.png"):
+  
+
+Rendered /usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.4ms)
+
+
+Started GET "/default/images/calender.png" for 127.0.0.1 at Wed Apr 13 20:22:45 -0500 2011
+
+ActionController::RoutingError (No route matches "/default/images/calender.png"):
+  
+
+Rendered /usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.3ms)
+
+
+Started GET "/default/images/photo.png" for 127.0.0.1 at Wed Apr 13 20:22:45 -0500 2011
+
+ActionController::RoutingError (No route matches "/default/images/photo.png"):
+  
+
+Rendered /usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (4.8ms)
+
+
+Started GET "/default/images/lock.png" for 127.0.0.1 at Wed Apr 13 20:22:45 -0500 2011
+
+ActionController::RoutingError (No route matches "/default/images/lock.png"):
+  
+
+Rendered /usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (4.7ms)
+
+
+Started GET "/default/images/settings.png" for 127.0.0.1 at Wed Apr 13 20:22:45 -0500 2011
+
+ActionController::RoutingError (No route matches "/default/images/settings.png"):
+  
+
+Rendered /usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.5ms)
+
+
+Started GET "/fonts/HVD_Comic_Serif_Pro.otf" for 127.0.0.1 at Wed Apr 13 20:22:45 -0500 2011
+
+ActionController::RoutingError (No route matches "/fonts/HVD_Comic_Serif_Pro.otf"):
+  
+
+Rendered /usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.6ms)
+
+
+Started GET "/default/images/edit.png" for 127.0.0.1 at Wed Apr 13 20:22:45 -0500 2011
+
+ActionController::RoutingError (No route matches "/default/images/edit.png"):
+  
+
+Rendered /usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (3.2ms)
+
+
+Started GET "/default/images/delete.png" for 127.0.0.1 at Wed Apr 13 20:22:45 -0500 2011
+
+ActionController::RoutingError (No route matches "/default/images/delete.png"):
+  
+
+Rendered /usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (4.5ms)
+
+
+Started GET "/default/images/graph.png" for 127.0.0.1 at Wed Apr 13 20:22:46 -0500 2011
+
+ActionController::RoutingError (No route matches "/default/images/graph.png"):
+  
+
+Rendered /usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (3.2ms)
+
+
+Started GET "/images/layout/boxhead.png" for 127.0.0.1 at Wed Apr 13 20:22:46 -0500 2011
+
+ActionController::RoutingError (No route matches "/images/layout/boxhead.png"):
+  
+
+Rendered /usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (8.1ms)
+
+
+Started GET "/fonts/hvd_comic_serif_pro" for 127.0.0.1 at Wed Apr 13 20:22:46 -0500 2011
+
+ActionController::RoutingError (No route matches "/fonts/hvd_comic_serif_pro"):
+  
+
+Rendered /usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.5ms)
+
+
+Started GET "/default/images/twit.png" for 127.0.0.1 at Wed Apr 13 20:22:46 -0500 2011
+
+ActionController::RoutingError (No route matches "/default/images/twit.png"):
+  
+
+Rendered /usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (5.7ms)
+
+
+Started GET "/default/images/guitemplates.png" for 127.0.0.1 at Wed Apr 13 20:22:46 -0500 2011
+
+ActionController::RoutingError (No route matches "/default/images/guitemplates.png"):
+  
+
+Rendered /usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (3.5ms)
+
+
+Started GET "/default/images/edit.png" for 127.0.0.1 at Wed Apr 13 20:22:46 -0500 2011
+
+ActionController::RoutingError (No route matches "/default/images/edit.png"):
+  
+
+Rendered /usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.4ms)
+
+
+Started GET "/default/images/delete.png" for 127.0.0.1 at Wed Apr 13 20:22:46 -0500 2011
+
+ActionController::RoutingError (No route matches "/default/images/delete.png"):
+  
+
+Rendered /usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.5ms)
+
+
+Started GET "/default/images/twit.png" for 127.0.0.1 at Wed Apr 13 20:22:46 -0500 2011
+
+ActionController::RoutingError (No route matches "/default/images/twit.png"):
+  
+
+Rendered /usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (5.2ms)
+
+
+Started GET "/default/index" for 127.0.0.1 at Wed Apr 13 20:23:51 -0500 2011
+  Processing by DefaultController#index as HTML
+Rendered default/index.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 20ms (Views: 19.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/default/images/box.png" for 127.0.0.1 at Wed Apr 13 20:23:52 -0500 2011
+
+ActionController::RoutingError (No route matches "/default/images/box.png"):
+  
+
+Rendered /usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.5ms)
+
+
+Started GET "/fonts/type/hvd_comic_serif_pro.woff" for 127.0.0.1 at Wed Apr 13 20:23:52 -0500 2011
+
+ActionController::RoutingError (No route matches "/fonts/type/hvd_comic_serif_pro.woff"):
+  
+
+Rendered /usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.6ms)
+
+
+Started GET "/default/images/photo.png" for 127.0.0.1 at Wed Apr 13 20:23:52 -0500 2011
+
+ActionController::RoutingError (No route matches "/default/images/photo.png"):
+  
+
+Rendered /usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (4.3ms)
+
+
+Started GET "/default/images/calender.png" for 127.0.0.1 at Wed Apr 13 20:23:52 -0500 2011
+
+ActionController::RoutingError (No route matches "/default/images/calender.png"):
+  
+
+Rendered /usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (3.0ms)
+
+
+Started GET "/default/images/comment.png" for 127.0.0.1 at Wed Apr 13 20:23:52 -0500 2011
+
+ActionController::RoutingError (No route matches "/default/images/comment.png"):
+  
+
+Rendered /usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (4.2ms)
+
+
+Started GET "/default/images/lock.png" for 127.0.0.1 at Wed Apr 13 20:23:52 -0500 2011
+
+ActionController::RoutingError (No route matches "/default/images/lock.png"):
+  
+
+Rendered /usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (3.2ms)
+
+
+Started GET "/default/images/settings.png" for 127.0.0.1 at Wed Apr 13 20:23:52 -0500 2011
+
+ActionController::RoutingError (No route matches "/default/images/settings.png"):
+  
+
+Rendered /usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (3.3ms)
+
+
+Started GET "/fonts/HVD_Comic_Serif_Pro.otf" for 127.0.0.1 at Wed Apr 13 20:23:52 -0500 2011
+
+ActionController::RoutingError (No route matches "/fonts/HVD_Comic_Serif_Pro.otf"):
+  
+
+Rendered /usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.6ms)
+
+
+Started GET "/default/images/twit.png" for 127.0.0.1 at Wed Apr 13 20:23:53 -0500 2011
+
+ActionController::RoutingError (No route matches "/default/images/twit.png"):
+  
+
+Rendered /usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.9ms)
+
+
+Started GET "/default/images/guitemplates.png" for 127.0.0.1 at Wed Apr 13 20:23:53 -0500 2011
+
+ActionController::RoutingError (No route matches "/default/images/guitemplates.png"):
+  
+
+Rendered /usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.9ms)
+
+
+Started GET "/fonts/hvd_comic_serif_pro" for 127.0.0.1 at Wed Apr 13 20:23:53 -0500 2011
+
+ActionController::RoutingError (No route matches "/fonts/hvd_comic_serif_pro"):
+  
+
+Rendered /usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.4ms)
+
+
+Started GET "/default/images/twit.png" for 127.0.0.1 at Wed Apr 13 20:23:53 -0500 2011
+
+ActionController::RoutingError (No route matches "/default/images/twit.png"):
+  
+
+Rendered /usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.3ms)
+
+
+Started GET "/default/index" for 127.0.0.1 at Wed Apr 13 20:25:10 -0500 2011
+  Processing by DefaultController#index as HTML
+Rendered default/index.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 20ms (Views: 19.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/default/images/box.png" for 127.0.0.1 at Wed Apr 13 20:25:11 -0500 2011
+
+ActionController::RoutingError (No route matches "/default/images/box.png"):
+  
+
+Rendered /usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.9ms)
+
+
+Started GET "/fonts/type/hvd_comic_serif_pro.woff" for 127.0.0.1 at Wed Apr 13 20:25:11 -0500 2011
+
+ActionController::RoutingError (No route matches "/fonts/type/hvd_comic_serif_pro.woff"):
+  
+
+Rendered /usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.6ms)
+
+
+Started GET "/default/images/photo.png" for 127.0.0.1 at Wed Apr 13 20:25:11 -0500 2011
+
+ActionController::RoutingError (No route matches "/default/images/photo.png"):
+  
+
+Rendered /usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.6ms)
+
+
+Started GET "/default/images/calender.png" for 127.0.0.1 at Wed Apr 13 20:25:11 -0500 2011
+
+ActionController::RoutingError (No route matches "/default/images/calender.png"):
+  
+
+Rendered /usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (3.5ms)
+
+
+Started GET "/default/images/comment.png" for 127.0.0.1 at Wed Apr 13 20:25:11 -0500 2011
+
+ActionController::RoutingError (No route matches "/default/images/comment.png"):
+  
+
+Rendered /usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (3.9ms)
+
+
+Started GET "/default/images/lock.png" for 127.0.0.1 at Wed Apr 13 20:25:11 -0500 2011
+
+ActionController::RoutingError (No route matches "/default/images/lock.png"):
+  
+
+Rendered /usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (9.3ms)
+
+
+Started GET "/default/images/settings.png" for 127.0.0.1 at Wed Apr 13 20:25:11 -0500 2011
+
+ActionController::RoutingError (No route matches "/default/images/settings.png"):
+  
+
+Rendered /usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.5ms)
+
+
+Started GET "/fonts/HVD_Comic_Serif_Pro.otf" for 127.0.0.1 at Wed Apr 13 20:25:11 -0500 2011
+
+ActionController::RoutingError (No route matches "/fonts/HVD_Comic_Serif_Pro.otf"):
+  
+
+Rendered /usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (3.1ms)
+
+
+Started GET "/default/images/twit.png" for 127.0.0.1 at Wed Apr 13 20:25:11 -0500 2011
+
+ActionController::RoutingError (No route matches "/default/images/twit.png"):
+  
+
+Rendered /usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (6.1ms)
+
+
+Started GET "/default/images/guitemplates.png" for 127.0.0.1 at Wed Apr 13 20:25:12 -0500 2011
+
+ActionController::RoutingError (No route matches "/default/images/guitemplates.png"):
+  
+
+Rendered /usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.6ms)
+
+
+Started GET "/fonts/hvd_comic_serif_pro" for 127.0.0.1 at Wed Apr 13 20:25:12 -0500 2011
+
+ActionController::RoutingError (No route matches "/fonts/hvd_comic_serif_pro"):
+  
+
+Rendered /usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (3.1ms)
+
+
+Started GET "/default/images/twit.png" for 127.0.0.1 at Wed Apr 13 20:25:12 -0500 2011
+
+ActionController::RoutingError (No route matches "/default/images/twit.png"):
+  
+
+Rendered /usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (4.5ms)
+
+
+Started GET "/public/" for 127.0.0.1 at Wed Apr 13 20:25:51 -0500 2011
+
+ActionController::RoutingError (No route matches "/public"):
+  
+
+Rendered /usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.4ms)
+
+
+Started GET "/default/index" for 127.0.0.1 at Wed Apr 13 20:26:46 -0500 2011
+  Processing by DefaultController#index as HTML
+Rendered default/index.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 24ms (Views: 21.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/default/images/box.png" for 127.0.0.1 at Wed Apr 13 20:26:47 -0500 2011
+
+ActionController::RoutingError (No route matches "/default/images/box.png"):
+  
+
+Rendered /usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.7ms)
+
+
+Started GET "/fonts/type/hvd_comic_serif_pro.woff" for 127.0.0.1 at Wed Apr 13 20:26:47 -0500 2011
+
+ActionController::RoutingError (No route matches "/fonts/type/hvd_comic_serif_pro.woff"):
+  
+
+Rendered /usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (4.2ms)
+
+
+Started GET "/default/images/photo.png" for 127.0.0.1 at Wed Apr 13 20:26:47 -0500 2011
+
+ActionController::RoutingError (No route matches "/default/images/photo.png"):
+  
+
+Rendered /usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (4.2ms)
+
+
+Started GET "/default/images/calender.png" for 127.0.0.1 at Wed Apr 13 20:26:47 -0500 2011
+
+ActionController::RoutingError (No route matches "/default/images/calender.png"):
+  
+
+Rendered /usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (4.5ms)
+
+
+Started GET "/default/images/comment.png" for 127.0.0.1 at Wed Apr 13 20:26:47 -0500 2011
+
+ActionController::RoutingError (No route matches "/default/images/comment.png"):
+  
+
+Rendered /usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.9ms)
+
+
+Started GET "/default/images/lock.png" for 127.0.0.1 at Wed Apr 13 20:26:47 -0500 2011
+
+ActionController::RoutingError (No route matches "/default/images/lock.png"):
+  
+
+Rendered /usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (3.1ms)
+
+
+Started GET "/default/images/settings.png" for 127.0.0.1 at Wed Apr 13 20:26:47 -0500 2011
+
+ActionController::RoutingError (No route matches "/default/images/settings.png"):
+  
+
+Rendered /usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.5ms)
+
+
+Started GET "/fonts/HVD_Comic_Serif_Pro.otf" for 127.0.0.1 at Wed Apr 13 20:26:48 -0500 2011
+
+ActionController::RoutingError (No route matches "/fonts/HVD_Comic_Serif_Pro.otf"):
+  
+
+Rendered /usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.7ms)
+
+
+Started GET "/default/images/guitemplates.png" for 127.0.0.1 at Wed Apr 13 20:26:48 -0500 2011
+
+ActionController::RoutingError (No route matches "/default/images/guitemplates.png"):
+  
+
+Rendered /usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.4ms)
+
+
+Started GET "/fonts/hvd_comic_serif_pro" for 127.0.0.1 at Wed Apr 13 20:26:48 -0500 2011
+
+ActionController::RoutingError (No route matches "/fonts/hvd_comic_serif_pro"):
+  
+
+Rendered /usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (3.0ms)
+
+
+Started GET "/default/index" for 127.0.0.1 at Wed Apr 13 20:27:27 -0500 2011
+  Processing by DefaultController#index as HTML
+Rendered default/index.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 28ms (Views: 26.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/default/index" for 127.0.0.1 at Wed Apr 13 20:28:31 -0500 2011
+  Processing by DefaultController#index as HTML
+ERROR: compiling _app_views_layouts_application_html_erb___640258748_69998297187340_0 RAISED compile error
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:50: syntax error, unexpected '<'
+...end= ( image_tag 'photo.png'><span>button name</span></a></l...
+                              ^
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:50: syntax error, unexpected tIDENTIFIER, expecting kDO or '{' or '('
+... 'photo.png'><span>button name</span></a></li>
+                              ^
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:50: unknown regexp option - a
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:50: syntax error, unexpected '<'
+...><span>button name</span></a></li>
+                              ^
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:51: unknown regexp options - caldr
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:51: syntax error, unexpected tINTEGER, expecting ')'
+...calender.png" alt="" border="0" /><span>button name</span></...
+                              ^
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:53: syntax error, unexpected '<', expecting ')'
+                <li><a href="#"><img src="image...
+                 ^
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:53: syntax error, unexpected '<'
+...             <li><a href="#"><img src="images/lock.png" alt=...
+                              ^
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:53: syntax error, unexpected tIDENTIFIER, expecting ')'
+...<img src="images/lock.png" alt="" border="0" /><span>button ...
+                              ^
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:53: syntax error, unexpected tIDENTIFIER, expecting ')'
+...images/lock.png" alt="" border="0" /><span>button name</span...
+                              ^
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:53: syntax error, unexpected '>'
+...lock.png" alt="" border="0" /><span>button name</span></a></...
+                              ^
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:53: syntax error, unexpected tIDENTIFIER, expecting kDO or '{' or '('
+...border="0" /><span>button name</span></a></li>
+                              ^
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:53: unknown regexp option - a
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:53: syntax error, unexpected '<'
+...><span>button name</span></a></li>
+                              ^
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:54: unknown regexp options - ttg
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:54: syntax error, unexpected tINTEGER, expecting ')'
+...settings.png" alt="" border="0" /><span>button name</span></...
+                              ^
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:58: syntax error, unexpected tIDENTIFIER, expecting ')'
+        <div id="left">
+                     ^
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:59: syntax error, unexpected tIDENTIFIER, expecting ')'
+        	<div class="sidebarbox">
+        	                      ^
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:60: syntax error, unexpected tIDENTIFIER, expecting ')'
+            	<div class="sidebarheader">
+            	                         ^
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:62: syntax error, unexpected '<', expecting ')'
+                </div><!-- sidebarheader --> 
+                 ^
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:65: unknown regexp option - a
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:65: syntax error, unexpected '<'
+                    	<li><a href="#">Dashboard</a></li>
+                    	                              ^
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:66: unknown regexp option - a
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:66: syntax error, unexpected '<'
+                        <li><a href="#">Content</a></li>
+                                                    ^
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:67: unknown regexp option - a
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:67: syntax error, unexpected '<'
+                        <li><a href="#">Reports</a></li>
+                                                    ^
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:68: unknown regexp option - a
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:68: syntax error, unexpected '<'
+                        <li><a href="#">Users</a></li>
+                                                  ^
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:69: unknown regexp option - a
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:69: syntax error, unexpected '<'
+                        <li><a href="#">Media Library</a></li>
+                                                          ^
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:70: unknown regexp option - a
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:70: syntax error, unexpected '<'
+                        <li><a href="#">Events</a></li>
+                                                   ^
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:71: unknown regexp option - a
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:71: syntax error, unexpected '<'
+                        <li><a href="#">Newsletter</a></li>
+                                                       ^
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:72: unknown regexp option - a
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:72: syntax error, unexpected '<'
+                        <li><a href="#">Settings</a></li>
+                                                     ^
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:73: unknown regexp option - l
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:74: syntax error, unexpected '<'
+                </div>
+                 ^
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:75: unknown regexp options - dv
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:75: syntax error, unexpected '<'
+            </div><!-- sidebarbox -->
+                   ^
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:75: syntax error, unexpected tUMINUS, expecting kDO or '{' or '('
+            </div><!-- sidebarbox -->
+                                   ^
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:78: syntax error, unexpected '<'
+            	<div class="sidebarheader">
+            	 ^
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:79: syntax error, unexpected '<'
+                	<a href="#">Actions</a>
+                	 ^
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:80: unknown regexp options - dv
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:80: syntax error, unexpected '<'
+                </div><!-- sidebarheader --> 
+                       ^
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:80: syntax error, unexpected tUMINUS, expecting kDO or '{' or '('
+                </div><!-- sidebarheader --> 
+                                          ^
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:82: syntax error, unexpected '<'
+                	<ul>
+                	 ^
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:83: unknown regexp option - l
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:84: syntax error, unexpected '<'
+                        <li><a href="#">Content</a></li>
+                         ^
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:84: unknown regexp option - l
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:85: syntax error, unexpected '<'
+                        <li><a href="#">Reports</a></li>
+                         ^
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:85: unknown regexp option - l
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:86: syntax error, unexpected '<'
+                        <li><a href="#">Users</a></li>
+                         ^
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:86: unknown regexp option - l
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:87: syntax error, unexpected '<'
+                        <li><a href="#">Media Library</a></li>
+                         ^
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:87: syntax error, unexpected tCONSTANT, expecting kDO or '{' or '('
+                        <li><a href="#">Media Library</a></li>
+                                                     ^
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:87: unknown regexp option - l
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:88: syntax error, unexpected '<'
+                        <li><a href="#">Events</a></li>
+                         ^
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:88: unknown regexp option - l
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:89: syntax error, unexpected '<'
+                        <li><a href="#">Newsletter</a></li>
+                         ^
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:89: unknown regexp option - l
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:90: syntax error, unexpected '<'
+                        <li><a href="#">Settings</a></li>
+                         ^
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:90: unknown regexp option - l
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:91: syntax error, unexpected '<'
+                    </ul>
+                     ^
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:92: unknown regexp options - dv
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:93: syntax error, unexpected '<'
+            </div><!-- sidebarbox -->
+             ^
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:97: unknown regexp option - a
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:98: syntax error, unexpected '<'
+                </div><!-- sidebarheader --> 
+                 ^
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:101: unknown regexp option - a
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:101: syntax error, unexpected '<'
+                    	<li><a href="#">Dashboard</a></li>
+                    	                              ^
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:102: unknown regexp option - a
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:102: syntax error, unexpected '<'
+                        <li><a href="#">Content</a></li>
+                                                    ^
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:103: unknown regexp option - a
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:103: syntax error, unexpected '<'
+                        <li><a href="#">Reports</a></li>
+                                                    ^
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:104: unknown regexp option - a
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:104: syntax error, unexpected '<'
+                        <li><a href="#">Users</a></li>
+                                                  ^
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:105: unknown regexp option - a
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:105: syntax error, unexpected '<'
+                        <li><a href="#">Media Library</a></li>
+                                                          ^
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:106: unknown regexp option - a
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:106: syntax error, unexpected '<'
+                        <li><a href="#">Events</a></li>
+                                                   ^
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:107: unknown regexp option - a
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:107: syntax error, unexpected '<'
+                        <li><a href="#">Newsletter</a></li>
+                                                       ^
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:108: unknown regexp option - a
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:108: syntax error, unexpected '<'
+                        <li><a href="#">Settings</a></li>
+                                                     ^
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:109: unknown regexp option - l
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:110: syntax error, unexpected '<'
+                </div>
+                 ^
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:111: unknown regexp options - dv
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:111: syntax error, unexpected '<'
+            </div><!-- sidebarbox -->
+                   ^
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:111: syntax error, unexpected tUMINUS, expecting kDO or '{' or '('
+            </div><!-- sidebarbox -->
+                                   ^
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:116: unknown regexp options - dv
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:116: unmatched ): /div><!-- left -->
+        
+        <div id="mid">
+		<%= yield );@output_buffer.safe_concat('	
+');@output_buffer.safe_concat('        </
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:116: syntax error, unexpected '<'
+');@output_buffer.safe_concat('        </div><!-- mid -->
+                                              ^
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:116: syntax error, unexpected tUMINUS, expecting kDO or '{' or '('
+');@output_buffer.safe_concat('        </div><!-- mid -->
+                                                       ^
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:120: syntax error, unexpected '<'
+        	<h3>Notices</h3>
+        	 ^
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:122: unknown regexp options - dv
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:123: syntax error, unexpected '<'
+            <div class="error">Here\'s an error message.</div>
+             ^
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:123: syntax error, unexpected $undefined, expecting ')'
+            <div class="error">Here\'s an error message.</div>
+                                    ^
+Function body:           def _app_views_layouts_application_html_erb___640258748_69998297187340_0(local_assigns)
+            _old_virtual_path, @_virtual_path = @_virtual_path, "layouts/application";_old_output_buffer = @output_buffer;;@output_buffer = ActionView::OutputBuffer.new;@output_buffer.safe_concat('<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <title>Sgcarrera</title>
+  ');@output_buffer.append= ( stylesheet_link_tag 'frame/screen.css', :media => 'screen,projection' );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  ');@output_buffer.append= ( stylesheet_link_tag 'frame/print.css', :media => 'print' );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  ');@output_buffer.append= ( stylesheet_link_tag 'theme.css', :media => 'screen,projection' );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('
+  ');@output_buffer.append= ( stylesheet_link_tag 'grey.css' );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('
+  <!--[if IE]>');@output_buffer.append= ( stylesheet_link_tag 'frame/ie.css', :media => 'screen,projection' );@output_buffer.safe_concat('<![endif]-->
+
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+
+
+  ');@output_buffer.append= ( csrf_meta_tag );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('</head>
+
+<body>
+
+<div id="header">
+	<ul>
+        	<li class="selected"><a href="#">Dashboard</a> &sdot;</li>
+            <li><a href="#">Content</a> &sdot;</li>
+            <li><a href="#">Reports</a> &sdot;</li>
+            <li><a href="#">Users</a> &sdot;</li>
+            <li><a href="#">Media Library</a> &sdot;</li>
+            <li><a href="#">Events</a> &sdot;</li>
+            <li><a href="#">Newsletter</a> &sdot;</li>
+            <li><a href="#">Settings</a></li>
+    </ul>
+    
+	<h3>Site Name <a href="#">View Site</a></h3>
+</div><!-- header -->
+<div id="main">
+	<div class="container_12">
+    	<div id="info">
+        	<ul>
+            	<li><a href="#">inbox</a></li>
+                <li><a href="#">profile</a></li>
+                <li class="lastlink"><a href="#">logout</a></li>
+            </ul>
+        	Welcome back <strong><em><a href="#">Username</a></em></strong>
+        </div><!-- info -->
+        
+        <div id="nav">
+        	<ul>
+            	<li class="firstnav"><a href="#"><img src="images/box.png" alt="" border="0" /><span>button name</span></a></li>
+                <li><a href="#">');@output_buffer.append= ( image_tag 'photo.png'><span>button name</span></a></li>
+                <li><a href="#"><img src="images/calender.png" alt="" border="0" /><span>button name</span></a></li>
+                <li><a href="#"><img src="images/comment.png" alt="" border="0" /><span>button name</span></a></li>
+                <li><a href="#"><img src="images/lock.png" alt="" border="0" /><span>button name</span></a></li>
+                <li class="lastnav"><a href="#"><img src="images/settings.png" alt="" border="0" /><span>button name</span></a></li>                
+            </ul>
+        </div><!-- nav -->
+        
+        <div id="left">
+        	<div class="sidebarbox">
+            	<div class="sidebarheader">
+                	<a href="#">Navigation</a>
+                </div><!-- sidebarheader --> 
+                <div class="sidebarcontent">
+                	<ul>
+                    	<li><a href="#">Dashboard</a></li>
+                        <li><a href="#">Content</a></li>
+                        <li><a href="#">Reports</a></li>
+                        <li><a href="#">Users</a></li>
+                        <li><a href="#">Media Library</a></li>
+                        <li><a href="#">Events</a></li>
+                        <li><a href="#">Newsletter</a></li>
+                        <li><a href="#">Settings</a></li>
+                    </ul>
+                </div>
+            </div><!-- sidebarbox -->
+            
+            <div class="sidebarbox">
+            	<div class="sidebarheader">
+                	<a href="#">Actions</a>
+                </div><!-- sidebarheader --> 
+                <div class="sidebarcontent">
+                	<ul>
+                    	<li><a href="#">Dashboard</a></li>
+                        <li><a href="#">Content</a></li>
+                        <li><a href="#">Reports</a></li>
+                        <li><a href="#">Users</a></li>
+                        <li><a href="#">Media Library</a></li>
+                        <li><a href="#">Events</a></li>
+                        <li><a href="#">Newsletter</a></li>
+                        <li><a href="#">Settings</a></li>
+                    </ul>
+                </div>
+            </div><!-- sidebarbox -->
+            
+            <div class="sidebarbox">
+            	<div class="sidebarheader">
+                	<a href="#">Submenu</a>
+                </div><!-- sidebarheader --> 
+                <div class="sidebarcontent">
+                	<ul>
+                    	<li><a href="#">Dashboard</a></li>
+                        <li><a href="#">Content</a></li>
+                        <li><a href="#">Reports</a></li>
+                        <li><a href="#">Users</a></li>
+                        <li><a href="#">Media Library</a></li>
+                        <li><a href="#">Events</a></li>
+                        <li><a href="#">Newsletter</a></li>
+                        <li><a href="#">Settings</a></li>
+                    </ul>
+                </div>
+            </div><!-- sidebarbox -->
+        </div><!-- left -->
+        
+        <div id="mid">
+		<%= yield );@output_buffer.safe_concat('	
+');@output_buffer.safe_concat('        </div><!-- mid -->
+        
+        <div id="right">
+        
+        	<h3>Notices</h3>
+        
+        	<div class="notice">Here\'s small alert.</div>
+            <div class="error">Here\'s an error message.</div>
+            <div class="success">Settings saved.</div>
+        
+        	<h3 style="margin-top:40px;">Twitter Feed</h3>
+            
+            <div class="twit">
+            
+            	<p>The latest Twitts from people you know</p>
+                <p>The latest Twitts from people people you knowpeople you know  people you know,people you know <a href="#">gmail@dejan</apeople you know people you know></a></p>
+            
+            	<p>');@output_buffer.append= ( image_tag 'twit.png' );@output_buffer.safe_concat('<a href="#"><strong>25 minutes ago</strong></a></p>
+            
+            </div><!-- twit -->
+            
+            <div class="twit">
+            
+            	<p>The latest Twitts from people you know</p>
+                <p>The latest Twitts from people you know,people you know <a href="#">gmail@dejan</apeople you know people you know></a></p>
+            
+            	<p>');@output_buffer.append= ( image_tag 'twit.png' );@output_buffer.safe_concat('<a href="#"><strong>25 minutes ago</strong></a></p>
+            
+            </div><!-- twit -->
+            
+               <div class="twit">
+            
+            	<p>The latest Twitts from people you know</p>
+                <p>The latest Twitts from people you know,people you know <a href="#">gmail@dejan</apeople you know people you know></a></p>
+            
+            	<p>');@output_buffer.append= ( image_tag 'twit.png' );@output_buffer.safe_concat('<a href="#"><strong>25 minutes ago</strong></a></p>
+            
+            </div><!-- twit -->
+            
+               <div class="twit">
+            
+            	<p>The latest Twitts from people you know</p>
+                <p>The latest Twitts from people you know,people you know <a href="#">gmail@dejan</apeople you know people you know></a></p>
+            
+            	<p>');@output_buffer.append= ( image_tag 'twit.png' );@output_buffer.safe_concat('<a href="#"><strong>25 minutes ago</strong></a></p>
+            
+            </div><!-- twit -->
+            
+            
+            
+        </div><!-- right -->
+        
+    <div style="clear:both;" ></div>
+    </div><!-- 12 -->
+</div><!-- main -->
+
+<div id="footer">
+	<div class="container_12">
+	    <a href="http://www.guitemplates.com"><img src="images/guitemplates.png" alt="GUI Templates" border="0" /></a>
+		Some copyright details down here.
+    </div><!-- 12 -->
+</div><!-- footer -->
+</body>
+
+</html>
+');@output_buffer.to_s
+          ensure
+            @_virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+Backtrace: /home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:184:in `compile'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_view/template.rb:134:in `render'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/activesupport-3.0.5/lib/active_support/notifications.rb:54:in `instrument'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_view/template.rb:127:in `render'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_view/render/layouts.rb:80:in `_render_layout'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_view/render/rendering.rb:62:in `_render_template'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/activesupport-3.0.5/lib/active_support/notifications.rb:52:in `instrument'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/activesupport-3.0.5/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/activesupport-3.0.5/lib/active_support/notifications.rb:52:in `instrument'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_view/render/rendering.rb:56:in `_render_template'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_view/render/rendering.rb:26:in `render'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/abstract_controller/rendering.rb:115:in `_render_template'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/abstract_controller/rendering.rb:109:in `render_to_body'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_controller/metal/renderers.rb:47:in `render_to_body'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_controller/metal/compatibility.rb:55:in `render_to_body'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/abstract_controller/rendering.rb:102:in `render_to_string'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/abstract_controller/rendering.rb:93:in `render'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_controller/metal/rendering.rb:17:in `render'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_controller/metal/instrumentation.rb:40:in `render'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/activesupport-3.0.5/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/usr/local/src/ruby_1_8/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/activesupport-3.0.5/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_controller/metal/instrumentation.rb:40:in `render'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_controller/metal/instrumentation.rb:78:in `cleanup_view_runtime'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/activerecord-3.0.5/lib/active_record/railties/controller_runtime.rb:15:in `cleanup_view_runtime'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/abstract_controller/base.rb:150:in `process_action'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_controller/metal/rendering.rb:11:in `process_action'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/abstract_controller/callbacks.rb:18:in `process_action'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/activesupport-3.0.5/lib/active_support/callbacks.rb:435:in `_run__941840225__process_action__199225275__callbacks'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/activesupport-3.0.5/lib/active_support/callbacks.rb:409:in `send'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/activesupport-3.0.5/lib/active_support/callbacks.rb:409:in `_run_process_action_callbacks'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/activesupport-3.0.5/lib/active_support/callbacks.rb:93:in `send'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/activesupport-3.0.5/lib/active_support/callbacks.rb:93:in `run_callbacks'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/activesupport-3.0.5/lib/active_support/notifications.rb:52:in `instrument'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/activesupport-3.0.5/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/activesupport-3.0.5/lib/active_support/notifications.rb:52:in `instrument'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_controller/metal/rescue.rb:17:in `process_action'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/abstract_controller/base.rb:119:in `process'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/abstract_controller/rendering.rb:41:in `process'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_controller/metal.rb:138:in `dispatch'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_controller/metal.rb:178:in `action'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/routing/route_set.rb:62:in `call'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/routing/route_set.rb:62:in `dispatch'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/routing/route_set.rb:27:in `call'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/rack-mount-0.6.13/lib/rack/mount/route_set.rb:148:in `call'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:93:in `recognize'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:68:in `optimized_each'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:92:in `recognize'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/rack-mount-0.6.13/lib/rack/mount/route_set.rb:139:in `call'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/routing/route_set.rb:492:in `call'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/head.rb:14:in `call'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/rack-1.2.1/lib/rack/methodoverride.rb:24:in `call'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/flash.rb:182:in `call'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/session/abstract_store.rb:149:in `call'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/cookies.rb:302:in `call'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/activerecord-3.0.5/lib/active_record/query_cache.rb:32:in `call'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/activerecord-3.0.5/lib/active_record/connection_adapters/abstract/query_cache.rb:28:in `cache'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/activerecord-3.0.5/lib/active_record/query_cache.rb:12:in `cache'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/activerecord-3.0.5/lib/active_record/query_cache.rb:31:in `call'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/activerecord-3.0.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:354:in `call'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/callbacks.rb:46:in `call'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/activesupport-3.0.5/lib/active_support/callbacks.rb:415:in `_run_call_callbacks'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/callbacks.rb:44:in `call'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/rack-1.2.1/lib/rack/sendfile.rb:107:in `call'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/show_exceptions.rb:47:in `call'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/railties-3.0.5/lib/rails/rack/logger.rb:13:in `call'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/rack-1.2.1/lib/rack/runtime.rb:17:in `call'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/activesupport-3.0.5/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/rack-1.2.1/lib/rack/lock.rb:11:in `call'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/rack-1.2.1/lib/rack/lock.rb:11:in `synchronize'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/rack-1.2.1/lib/rack/lock.rb:11:in `call'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/static.rb:30:in `call'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/railties-3.0.5/lib/rails/application.rb:168:in `call'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/railties-3.0.5/lib/rails/application.rb:77:in `send'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/railties-3.0.5/lib/rails/application.rb:77:in `method_missing'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/railties-3.0.5/lib/rails/rack/log_tailer.rb:14:in `call'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/rack-1.2.1/lib/rack/content_length.rb:13:in `call'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/rack-1.2.1/lib/rack/handler/webrick.rb:52:in `service'
+/usr/local/src/ruby_1_8/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+/usr/local/src/ruby_1_8/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+/usr/local/src/ruby_1_8/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+/usr/local/src/ruby_1_8/lib/ruby/1.8/webrick/server.rb:162:in `start'
+/usr/local/src/ruby_1_8/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+/usr/local/src/ruby_1_8/lib/ruby/1.8/webrick/server.rb:95:in `start'
+/usr/local/src/ruby_1_8/lib/ruby/1.8/webrick/server.rb:92:in `each'
+/usr/local/src/ruby_1_8/lib/ruby/1.8/webrick/server.rb:92:in `start'
+/usr/local/src/ruby_1_8/lib/ruby/1.8/webrick/server.rb:23:in `start'
+/usr/local/src/ruby_1_8/lib/ruby/1.8/webrick/server.rb:82:in `start'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/rack-1.2.1/lib/rack/handler/webrick.rb:13:in `run'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/rack-1.2.1/lib/rack/server.rb:213:in `start'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/railties-3.0.5/lib/rails/commands/server.rb:65:in `start'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/railties-3.0.5/lib/rails/commands.rb:30
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/railties-3.0.5/lib/rails/commands.rb:27:in `tap'
+/usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/railties-3.0.5/lib/rails/commands.rb:27
+script/rails:6:in `require'
+script/rails:6
+Rendered default/index.html.erb within layouts/application (198.2ms)
+Completed   in 212ms
+
+ActionView::Template::Error (compile error
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:50: syntax error, unexpected '<'
+...end= ( image_tag 'photo.png'><span>button name</span></a></l...
+                              ^
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:50: syntax error, unexpected tIDENTIFIER, expecting kDO or '{' or '('
+... 'photo.png'><span>button name</span></a></li>
+                              ^
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:50: unknown regexp option - a
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:50: syntax error, unexpected '<'
+...><span>button name</span></a></li>
+                              ^
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:51: unknown regexp options - caldr
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:51: syntax error, unexpected tINTEGER, expecting ')'
+...calender.png" alt="" border="0" /><span>button name</span></...
+                              ^
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:53: syntax error, unexpected '<', expecting ')'
+                <li><a href="#"><img src="image...
+                 ^
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:53: syntax error, unexpected '<'
+...             <li><a href="#"><img src="images/lock.png" alt=...
+                              ^
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:53: syntax error, unexpected tIDENTIFIER, expecting ')'
+...<img src="images/lock.png" alt="" border="0" /><span>button ...
+                              ^
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:53: syntax error, unexpected tIDENTIFIER, expecting ')'
+...images/lock.png" alt="" border="0" /><span>button name</span...
+                              ^
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:53: syntax error, unexpected '>'
+...lock.png" alt="" border="0" /><span>button name</span></a></...
+                              ^
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:53: syntax error, unexpected tIDENTIFIER, expecting kDO or '{' or '('
+...border="0" /><span>button name</span></a></li>
+                              ^
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:53: unknown regexp option - a
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:53: syntax error, unexpected '<'
+...><span>button name</span></a></li>
+                              ^
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:54: unknown regexp options - ttg
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:54: syntax error, unexpected tINTEGER, expecting ')'
+...settings.png" alt="" border="0" /><span>button name</span></...
+                              ^
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:58: syntax error, unexpected tIDENTIFIER, expecting ')'
+        <div id="left">
+                     ^
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:59: syntax error, unexpected tIDENTIFIER, expecting ')'
+        	<div class="sidebarbox">
+        	                      ^
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:60: syntax error, unexpected tIDENTIFIER, expecting ')'
+            	<div class="sidebarheader">
+            	                         ^
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:62: syntax error, unexpected '<', expecting ')'
+                </div><!-- sidebarheader --> 
+                 ^
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:65: unknown regexp option - a
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:65: syntax error, unexpected '<'
+                    	<li><a href="#">Dashboard</a></li>
+                    	                              ^
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:66: unknown regexp option - a
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:66: syntax error, unexpected '<'
+                        <li><a href="#">Content</a></li>
+                                                    ^
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:67: unknown regexp option - a
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:67: syntax error, unexpected '<'
+                        <li><a href="#">Reports</a></li>
+                                                    ^
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:68: unknown regexp option - a
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:68: syntax error, unexpected '<'
+                        <li><a href="#">Users</a></li>
+                                                  ^
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:69: unknown regexp option - a
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:69: syntax error, unexpected '<'
+                        <li><a href="#">Media Library</a></li>
+                                                          ^
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:70: unknown regexp option - a
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:70: syntax error, unexpected '<'
+                        <li><a href="#">Events</a></li>
+                                                   ^
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:71: unknown regexp option - a
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:71: syntax error, unexpected '<'
+                        <li><a href="#">Newsletter</a></li>
+                                                       ^
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:72: unknown regexp option - a
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:72: syntax error, unexpected '<'
+                        <li><a href="#">Settings</a></li>
+                                                     ^
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:73: unknown regexp option - l
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:74: syntax error, unexpected '<'
+                </div>
+                 ^
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:75: unknown regexp options - dv
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:75: syntax error, unexpected '<'
+            </div><!-- sidebarbox -->
+                   ^
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:75: syntax error, unexpected tUMINUS, expecting kDO or '{' or '('
+            </div><!-- sidebarbox -->
+                                   ^
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:78: syntax error, unexpected '<'
+            	<div class="sidebarheader">
+            	 ^
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:79: syntax error, unexpected '<'
+                	<a href="#">Actions</a>
+                	 ^
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:80: unknown regexp options - dv
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:80: syntax error, unexpected '<'
+                </div><!-- sidebarheader --> 
+                       ^
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:80: syntax error, unexpected tUMINUS, expecting kDO or '{' or '('
+                </div><!-- sidebarheader --> 
+                                          ^
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:82: syntax error, unexpected '<'
+                	<ul>
+                	 ^
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:83: unknown regexp option - l
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:84: syntax error, unexpected '<'
+                        <li><a href="#">Content</a></li>
+                         ^
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:84: unknown regexp option - l
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:85: syntax error, unexpected '<'
+                        <li><a href="#">Reports</a></li>
+                         ^
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:85: unknown regexp option - l
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:86: syntax error, unexpected '<'
+                        <li><a href="#">Users</a></li>
+                         ^
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:86: unknown regexp option - l
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:87: syntax error, unexpected '<'
+                        <li><a href="#">Media Library</a></li>
+                         ^
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:87: syntax error, unexpected tCONSTANT, expecting kDO or '{' or '('
+                        <li><a href="#">Media Library</a></li>
+                                                     ^
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:87: unknown regexp option - l
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:88: syntax error, unexpected '<'
+                        <li><a href="#">Events</a></li>
+                         ^
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:88: unknown regexp option - l
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:89: syntax error, unexpected '<'
+                        <li><a href="#">Newsletter</a></li>
+                         ^
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:89: unknown regexp option - l
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:90: syntax error, unexpected '<'
+                        <li><a href="#">Settings</a></li>
+                         ^
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:90: unknown regexp option - l
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:91: syntax error, unexpected '<'
+                    </ul>
+                     ^
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:92: unknown regexp options - dv
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:93: syntax error, unexpected '<'
+            </div><!-- sidebarbox -->
+             ^
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:97: unknown regexp option - a
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:98: syntax error, unexpected '<'
+                </div><!-- sidebarheader --> 
+                 ^
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:101: unknown regexp option - a
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:101: syntax error, unexpected '<'
+                    	<li><a href="#">Dashboard</a></li>
+                    	                              ^
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:102: unknown regexp option - a
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:102: syntax error, unexpected '<'
+                        <li><a href="#">Content</a></li>
+                                                    ^
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:103: unknown regexp option - a
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:103: syntax error, unexpected '<'
+                        <li><a href="#">Reports</a></li>
+                                                    ^
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:104: unknown regexp option - a
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:104: syntax error, unexpected '<'
+                        <li><a href="#">Users</a></li>
+                                                  ^
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:105: unknown regexp option - a
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:105: syntax error, unexpected '<'
+                        <li><a href="#">Media Library</a></li>
+                                                          ^
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:106: unknown regexp option - a
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:106: syntax error, unexpected '<'
+                        <li><a href="#">Events</a></li>
+                                                   ^
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:107: unknown regexp option - a
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:107: syntax error, unexpected '<'
+                        <li><a href="#">Newsletter</a></li>
+                                                       ^
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:108: unknown regexp option - a
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:108: syntax error, unexpected '<'
+                        <li><a href="#">Settings</a></li>
+                                                     ^
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:109: unknown regexp option - l
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:110: syntax error, unexpected '<'
+                </div>
+                 ^
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:111: unknown regexp options - dv
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:111: syntax error, unexpected '<'
+            </div><!-- sidebarbox -->
+                   ^
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:111: syntax error, unexpected tUMINUS, expecting kDO or '{' or '('
+            </div><!-- sidebarbox -->
+                                   ^
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:116: unknown regexp options - dv
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:116: unmatched ): /div><!-- left -->
+        
+        <div id="mid">
+		<%= yield );@output_buffer.safe_concat('	
+');@output_buffer.safe_concat('        </
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:116: syntax error, unexpected '<'
+');@output_buffer.safe_concat('        </div><!-- mid -->
+                                              ^
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:116: syntax error, unexpected tUMINUS, expecting kDO or '{' or '('
+');@output_buffer.safe_concat('        </div><!-- mid -->
+                                                       ^
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:120: syntax error, unexpected '<'
+        	<h3>Notices</h3>
+        	 ^
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:122: unknown regexp options - dv
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:123: syntax error, unexpected '<'
+            <div class="error">Here\'s an error message.</div>
+             ^
+/home/zion2x/SGCarrera/sgcarrera/app/views/layouts/application.html.erb:123: syntax error, unexpected $undefined, expecting ')'
+            <div class="error">Here\'s an error message.</div>
+                                    ^):
+    47:         <div id="nav">
+    48:         	<ul>
+    49:             	<li class="firstnav"><a href="#"><img src="images/box.png" alt="" border="0" /><span>button name</span></a></li>
+    50:                 <li><a href="#"><%= image_tag 'photo.png'><span>button name</span></a></li>
+    51:                 <li><a href="#"><img src="images/calender.png" alt="" border="0" /><span>button name</span></a></li>
+    52:                 <li><a href="#"><img src="images/comment.png" alt="" border="0" /><span>button name</span></a></li>
+    53:                 <li><a href="#"><img src="images/lock.png" alt="" border="0" /><span>button name</span></a></li>
+  app/views/layouts/application.html.erb:184:in `compile'
+
+Rendered /usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.8ms)
+Rendered /usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (13.6ms)
+Rendered /usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (35.6ms)
+
+
+Started GET "/default/index" for 127.0.0.1 at Wed Apr 13 20:28:50 -0500 2011
+  Processing by DefaultController#index as HTML
+Rendered default/index.html.erb within layouts/application (8.8ms)
+Completed 200 OK in 23ms (Views: 21.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/default/images/box.png" for 127.0.0.1 at Wed Apr 13 20:28:50 -0500 2011
+
+ActionController::RoutingError (No route matches "/default/images/box.png"):
+  
+
+Rendered /usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.5ms)
+
+
+Started GET "/fonts/type/hvd_comic_serif_pro.woff" for 127.0.0.1 at Wed Apr 13 20:28:50 -0500 2011
+
+ActionController::RoutingError (No route matches "/fonts/type/hvd_comic_serif_pro.woff"):
+  
+
+Rendered /usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.4ms)
+
+
+Started GET "/default/images/calender.png" for 127.0.0.1 at Wed Apr 13 20:28:50 -0500 2011
+
+ActionController::RoutingError (No route matches "/default/images/calender.png"):
+  
+
+Rendered /usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.5ms)
+
+
+Started GET "/default/images/comment.png" for 127.0.0.1 at Wed Apr 13 20:28:50 -0500 2011
+
+ActionController::RoutingError (No route matches "/default/images/comment.png"):
+  
+
+Rendered /usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.6ms)
+
+
+Started GET "/default/images/lock.png" for 127.0.0.1 at Wed Apr 13 20:28:50 -0500 2011
+
+ActionController::RoutingError (No route matches "/default/images/lock.png"):
+  
+
+Rendered /usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.9ms)
+
+
+Started GET "/default/images/settings.png" for 127.0.0.1 at Wed Apr 13 20:28:50 -0500 2011
+
+ActionController::RoutingError (No route matches "/default/images/settings.png"):
+  
+
+Rendered /usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (6.5ms)
+
+
+Started GET "/fonts/HVD_Comic_Serif_Pro.otf" for 127.0.0.1 at Wed Apr 13 20:28:51 -0500 2011
+
+ActionController::RoutingError (No route matches "/fonts/HVD_Comic_Serif_Pro.otf"):
+  
+
+Rendered /usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (4.2ms)
+
+
+Started GET "/default/images/guitemplates.png" for 127.0.0.1 at Wed Apr 13 20:28:51 -0500 2011
+
+ActionController::RoutingError (No route matches "/default/images/guitemplates.png"):
+  
+
+Rendered /usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.8ms)
+
+
+Started GET "/fonts/hvd_comic_serif_pro" for 127.0.0.1 at Wed Apr 13 20:28:51 -0500 2011
+
+ActionController::RoutingError (No route matches "/fonts/hvd_comic_serif_pro"):
+  
+
+Rendered /usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.6ms)
+
+
+Started GET "/default/index" for 127.0.0.1 at Wed Apr 13 20:29:58 -0500 2011
+  Processing by DefaultController#index as HTML
+Rendered default/index.html.erb within layouts/application (9.5ms)
+Completed 200 OK in 24ms (Views: 22.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/fonts/type/hvd_comic_serif_pro.woff" for 127.0.0.1 at Wed Apr 13 20:29:59 -0500 2011
+
+ActionController::RoutingError (No route matches "/fonts/type/hvd_comic_serif_pro.woff"):
+  
+
+Rendered /usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.5ms)
+
+
+Started GET "/default/images/calender.png" for 127.0.0.1 at Wed Apr 13 20:29:59 -0500 2011
+
+ActionController::RoutingError (No route matches "/default/images/calender.png"):
+  
+
+Rendered /usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.4ms)
+
+
+Started GET "/default/images/comment.png" for 127.0.0.1 at Wed Apr 13 20:29:59 -0500 2011
+
+ActionController::RoutingError (No route matches "/default/images/comment.png"):
+  
+
+Rendered /usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.5ms)
+
+
+Started GET "/default/images/lock.png" for 127.0.0.1 at Wed Apr 13 20:29:59 -0500 2011
+
+ActionController::RoutingError (No route matches "/default/images/lock.png"):
+  
+
+Rendered /usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.5ms)
+
+
+Started GET "/default/images/settings.png" for 127.0.0.1 at Wed Apr 13 20:29:59 -0500 2011
+
+ActionController::RoutingError (No route matches "/default/images/settings.png"):
+  
+
+Rendered /usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.4ms)
+
+
+Started GET "/fonts/HVD_Comic_Serif_Pro.otf" for 127.0.0.1 at Wed Apr 13 20:29:59 -0500 2011
+
+ActionController::RoutingError (No route matches "/fonts/HVD_Comic_Serif_Pro.otf"):
+  
+
+Rendered /usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (3.4ms)
+
+
+Started GET "/default/images/guitemplates.png" for 127.0.0.1 at Wed Apr 13 20:29:59 -0500 2011
+
+ActionController::RoutingError (No route matches "/default/images/guitemplates.png"):
+  
+
+Rendered /usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.4ms)
+
+
+Started GET "/fonts/hvd_comic_serif_pro" for 127.0.0.1 at Wed Apr 13 20:29:59 -0500 2011
+
+ActionController::RoutingError (No route matches "/fonts/hvd_comic_serif_pro"):
+  
+
+Rendered /usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.4ms)
+
+
+Started GET "/default/index" for 127.0.0.1 at Wed Apr 13 20:31:53 -0500 2011
+  Processing by DefaultController#index as HTML
+Rendered default/index.html.erb within layouts/application (11.9ms)
+Completed 200 OK in 31ms (Views: 28.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/fonts/type/hvd_comic_serif_pro.woff" for 127.0.0.1 at Wed Apr 13 20:31:54 -0500 2011
+
+ActionController::RoutingError (No route matches "/fonts/type/hvd_comic_serif_pro.woff"):
+  
+
+Rendered /usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (4.3ms)
+
+
+Started GET "/fonts/HVD_Comic_Serif_Pro.otf" for 127.0.0.1 at Wed Apr 13 20:31:54 -0500 2011
+
+ActionController::RoutingError (No route matches "/fonts/HVD_Comic_Serif_Pro.otf"):
+  
+
+Rendered /usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.5ms)
+
+
+Started GET "/default/images/guitemplates.png" for 127.0.0.1 at Wed Apr 13 20:31:54 -0500 2011
+
+ActionController::RoutingError (No route matches "/default/images/guitemplates.png"):
+  
+
+Rendered /usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.5ms)
+
+
+Started GET "/fonts/hvd_comic_serif_pro" for 127.0.0.1 at Wed Apr 13 20:31:54 -0500 2011
+
+ActionController::RoutingError (No route matches "/fonts/hvd_comic_serif_pro"):
+  
+
+Rendered /usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.3ms)
+
+
+Started GET "/default/index" for 127.0.0.1 at Wed Apr 13 20:32:57 -0500 2011
+  Processing by DefaultController#index as HTML
+Rendered default/index.html.erb within layouts/application (11.3ms)
+Completed 200 OK in 26ms (Views: 23.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/fonts/type/hvd_comic_serif_pro.woff" for 127.0.0.1 at Wed Apr 13 20:32:57 -0500 2011
+
+ActionController::RoutingError (No route matches "/fonts/type/hvd_comic_serif_pro.woff"):
+  
+
+Rendered /usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (10.3ms)
+
+
+Started GET "/fonts/HVD_Comic_Serif_Pro.otf" for 127.0.0.1 at Wed Apr 13 20:32:58 -0500 2011
+
+ActionController::RoutingError (No route matches "/fonts/HVD_Comic_Serif_Pro.otf"):
+  
+
+Rendered /usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (3.1ms)
+
+
+Started GET "/fonts/hvd_comic_serif_pro" for 127.0.0.1 at Wed Apr 13 20:32:58 -0500 2011
+
+ActionController::RoutingError (No route matches "/fonts/hvd_comic_serif_pro"):
+  
+
+Rendered /usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.4ms)
+
+
+Started GET "/default/index" for 127.0.0.1 at Wed Apr 13 20:33:08 -0500 2011
+  Processing by DefaultController#index as HTML
+Rendered default/index.html.erb within layouts/application (11.2ms)
+Completed 200 OK in 26ms (Views: 24.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/fonts/type/hvd_comic_serif_pro.woff" for 127.0.0.1 at Wed Apr 13 20:33:08 -0500 2011
+
+ActionController::RoutingError (No route matches "/fonts/type/hvd_comic_serif_pro.woff"):
+  
+
+Rendered /usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (5.1ms)
+
+
+Started GET "/fonts/HVD_Comic_Serif_Pro.otf" for 127.0.0.1 at Wed Apr 13 20:33:08 -0500 2011
+
+ActionController::RoutingError (No route matches "/fonts/HVD_Comic_Serif_Pro.otf"):
+  
+
+Rendered /usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.4ms)
+
+
+Started GET "/fonts/hvd_comic_serif_pro" for 127.0.0.1 at Wed Apr 13 20:33:08 -0500 2011
+
+ActionController::RoutingError (No route matches "/fonts/hvd_comic_serif_pro"):
+  
+
+Rendered /usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.4ms)
+
+
+Started GET "/noexito" for 127.0.0.1 at Wed Apr 13 20:33:11 -0500 2011
+
+ActionController::RoutingError (No route matches "/noexito"):
+  
+
+Rendered /usr/local/src/ruby_1_8/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.7ms)
