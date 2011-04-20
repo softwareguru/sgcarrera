@@ -1,0 +1,3 @@
+#Ignoring lock files
+Gemfile.lock
+
