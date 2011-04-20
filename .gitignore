@@ -4,3 +4,7 @@ Gemfile.lock
 #Ignoring vim files (yes I use vim, so what?)
 *.swp
 
+#I don't wan sass cache
+.sass-cache
+
+
