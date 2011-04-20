@@ -1,3 +1,6 @@
 #Ignoring lock files
 Gemfile.lock
 
+#Ignoring vim files (yes I use vim, so what?)
+*.swp
+
