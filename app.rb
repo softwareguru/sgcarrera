@@ -15,8 +15,7 @@ DataMapper.setup(:default, ENV['DATABASE_URL'] || "sqlite3://#{Dir.pwd}/sgcarrer
 class User
     include DataMapper::Resource
 
-    property :id,           Serial
-    property :username,     String
+    property :username,     String, :key => true
     validates_uniqueness_of :username, :message => "There's already a user with this username"
    
     property :password,     String, :required => true, :message => "Invalid password"
@@ -28,7 +27,7 @@ end
 
 class Userdata
     include DataMapper::Resource
-
+    
     property :id,            Serial
     property :name,          String, :required => true
     property :surnames,      String, :required => true
@@ -64,8 +63,24 @@ post '/new' do
     end
 end
 
-get '/profile' do
+get '/profile/:uname' do 
+    @user = User.get(params[:uname])
+    @userdata = Userdata.get(params[:uname])
     haml :profile
+end
+
+get '/edit/:uname' do 
+    @user = User.get(params[:uname])
+    haml :edit
+end
+
+post '/edit/:uname' do 
+    @userdata = Userdata.new(params[:userdata])
+        if @userdata.save
+            redirect "/profile/#{@userdata.user_username}"
+        else
+            redirect "/profile/#{@userdata.user_username}", :notice => 'Something went wrong'
+        end
 end
 
 get '/stylesheets/*' do
