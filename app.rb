@@ -23,25 +23,26 @@ post '/new' do
     end
 end
 
-get '/profile/:uname' do 
-    @user = User.get(params[:uname])
-    @userdata = Userdata.get(params[:uname])
-    haml :profile
-end
-
-get '/edit/:uname' do 
-    @user = User.get(params[:uname])
+get '/:slug/edit' do 
+    @user = User.get(params[:slug])
     haml :edit
 end
 
-post '/edit/:uname' do 
-    @userdata = Userdata.new(params[:userdata])
-        if @userdata.save
-            redirect "/profile/#{@userdata.user_username}"
-        else
-            redirect "/profile/#{@userdata.user_username}", :notice => 'Something went wrong'
-        end
+post '/:slug/edit' do 
+    @userdata = Userdata.new(params[:slug])
+    if @userdata.save
+        redirect "/profile/#{@userdata.user_username}"
+    else
+        redirect "/profile/#{@userdata.user_username}", :notice => 'Something went wrong'
+    end
 end
+
+get '/:slug' do 
+    @user = User.get(params[:slug])
+    @userdata = Userdata.get(params[:slug])
+    haml :profile
+end
+
 
 get '/stylesheets/*' do
     content_type 'text/css'

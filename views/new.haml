@@ -1,18 +1,21 @@
 %html
   %head
     %title Nuevo
+    %link{:rel => 'stylesheet', :href => '/stylesheets/new.css', :type => 'text/css', :media => 'all'}
+
   %body
     %form{ :method => 'post', :action => 'new' }
       %fieldset
-        %h2 Create account
-        #login.field
-          %label{:for => 'email'}Email Address
-          .composite
-            %input{ :name => 'user[email]', :type => 'email' }
+        %h2 Crear cuenta
+        %p.username
+          %input{ :name => 'user[username]', :type => 'text', :id => 'username' }
           %label{:for => 'username'}Username
-          .composite
-            %input{ :name => 'user[username]', :type => 'text' }
+        %p.email
+          %input{ :name => 'user[email]', :type => 'email', :id => 'email' }
+          %label{:for => 'email'}Correo
+        %p.password
+          %input{ :name => 'user[password]', :type => 'password', :id => 'password' }
           %label{:for => 'password'}Password
-          .composite
-            %input{ :name => 'user[password]', :type => 'password' }
-        %input{ :type => 'submit', :value => 'Send' }
+        %p.submit
+          %input{ :type => 'submit', :value => 'Crear cuenta' }
+
