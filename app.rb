@@ -30,6 +30,21 @@ post '/new' do
     end
 end
 
+post '/token' do
+    @helper = Rpx::RpxHelper.new('0573d1252dde12c6f576c550e0d3ad5f63f08a22',
+                                 'https://rpxnow.com',
+                                 'sgcarrera')
+    @token = params[:token]
+
+    @info = @helper.auth_info(@token)
+    haml :info
+end
+
+get '/stylesheets/*' do
+    content_type 'text/css'
+    sass '../styles/'.concat(params[:splat].join.chomp('.css')).to_sym
+end
+
 get '/:slug/edit' do 
     @user = User.get(params[:slug])
     haml :edit
@@ -49,20 +64,3 @@ get '/:slug' do
     #@userdata = Userdata.get(params[:slug])
     haml :profile
 end
-
-
-get '/stylesheets/*' do
-    content_type 'text/css'
-    sass '../styles/'.concat(params[:splat].join.chomp('.css')).to_sym
-end
-
-post '/token' do
-    @helper = Rpx::RpxHelper.new('0573d1252dde12c6f576c550e0d3ad5f63f08a22',
-                                 'https://rpxnow.com',
-                                 'sgcarrera')
-    @token = params[:token]
-
-    @info = @helper.auth_info(@token)
-    haml :info
-end
-
