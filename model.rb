@@ -14,7 +14,7 @@ class User
     property :email,         String, :format => :email_address,  :unique => true
     property :password,      String
 
-    property :identifier,    String
+    property :identifier,    String, :length => 512
     property :rpx,           Boolean, :default => false
 
     property :created_at,    DateTime
