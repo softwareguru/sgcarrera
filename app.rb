@@ -57,7 +57,7 @@ post '/token' do
     @info = @helper.auth_info(@token)
 
     if @info["identifier"]
-        if @user = User.get(params[:slug])
+        if @user = User.first(:identifier => @info[:identifier])
             redirect "/#{@user.username}"
         else
             session[:identifier] = @info["identifier"]
@@ -78,7 +78,7 @@ get '/stylesheets/*' do
 end
 
 get '/:slug/edit' do 
-    @user = User.get(params[:slug])
+    @user = User.first(:username => params[:slug])
     haml :edit
 end
 
@@ -92,7 +92,7 @@ post '/:slug/edit' do
 end
 
 get '/:slug' do 
-    if @user = User.get(params[:slug])
+    if @user = User.first(:username => params[:slug])
         #@userdata = Userdata.get(params[:slug])
         haml :profile
     else
