@@ -1,0 +1,18 @@
+%html
+  %head
+    %title Nuevo
+  %body
+    %form{ :method => 'post', :action => 'new' }
+      %fieldset
+        %h2 Create account
+        #login.field
+          %label{:for => 'email'}Email Address
+          .composite
+            %input{ :name => 'user[email]', :type => 'email' }
+          %label{:for => 'username'}Username
+          .composite
+            %input{ :name => 'user[username]', :type => 'text' }
+          %label{:for => 'password'}Password
+          .composite
+            %input{ :name => 'user[password]', :type => 'password' }
+        %input{ :type => 'submit', :value => 'Send' }

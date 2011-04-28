@@ -1,0 +1,44 @@
+%html
+  %head
+    %title
+  %body
+    %h1 Editando: #{@user.username}
+  
+    %form{ :method => 'post', :action => 'edit' }
+      %fieldset
+        #information.field
+          %label{:for => 'user_username'}Username
+          .composite
+            %input{ :name => 'userdata[user_username]', :value => @user.username, :type => 'text' }
+          %label{:for => 'name'}Name
+          .composite
+            %input{ :name => 'userdata[name]', :type => 'text' }
+          %label{:for => 'surnames'}Surnames
+          .composite
+            %input{ :name => 'userdata[surnames]', :type => 'text' }
+          %label{:for => 'country'}Country
+          .composite
+            %input{ :name => 'userdata[country]', :type => 'text' }
+          %label{:for => 'state'}State
+          .composite
+            %input{ :name => 'userdata[state]', :type => 'text' }
+          %label{:for => 'city'}City
+          .composite
+            %input{ :name => 'userdata[city]', :type => 'text' }
+          %label{:for => 'street'}Street
+          .composite
+            %input{ :name => 'userdata[street]', :type => 'text' }
+          %label{:for => 'postalcode'}Postal Code
+          .composite
+            %input{ :name => 'userdata[postalcode]', :type => 'text' }
+          %label{:for => 'homepage'}Home Page
+          .composite
+            %input{ :name => 'userdata[homepage]', :type => 'text' }
+          %label{:for => 'telephone'}Telephone
+          .composite
+            %input{ :name => 'userdata[telephone]', :type => 'text' }
+          %label{:for => 'cellphone'}Cellphone
+          .composite
+            %input{ :name => 'userdata[cellphone]', :type => 'text' }
+          
+        %input{ :type => 'submit', :value => 'Send' }
