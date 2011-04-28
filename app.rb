@@ -7,6 +7,8 @@ require 'sinatra/reloader' if development?
 require 'haml'
 require 'sass'
 
+require 'digest/md5'
+
 require 'model'
 require 'rpx'
 
@@ -98,6 +100,7 @@ end
 get '/:slug' do 
     if @user = User.first(:username => params[:slug])
         #@userdata = Userdata.get(params[:slug])
+        @digest = Digest::MD5.hexdigest(@user.email.downcase)
         haml :profile
     else
         halt 404

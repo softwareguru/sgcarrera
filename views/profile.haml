@@ -1,6 +1,13 @@
+- content_for :head do
+  %link{:rel => 'stylesheet', :href => '/stylesheets/profile.css', :type => 'text/css', :media => 'all'}
+
+
+%img{ :src => "http://www.gravatar.com/avatar/#{@digest}?s=200", :alt => "Avatar", :class => "avatar"  }/
 %h1= @user.username
-%h1= @user.email
+%h2= @user.email
 
-%h2 Edit Personal Information
+%h3 Editar informacion personal
 
-%a{ :title => 'Aqui', :href => "/edit/#{@user.username}" }coso
+%a{ :title => 'Aqui', :href => "/edit/#{@user.username}" } Editar
+
+
