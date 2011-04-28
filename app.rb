@@ -56,3 +56,13 @@ get '/stylesheets/*' do
     sass '../styles/'.concat(params[:splat].join.chomp('.css')).to_sym
 end
 
+post 'token' do
+    @helper = Rpx::RpxHelper.new('0573d1252dde12c6f576c550e0d3ad5f63f08a22',
+                                 'rpxnow.com',
+                                 'sgcarrera')
+    @token = params[:token]
+
+    @info = @helper.auth_info(@token)
+    haml :info
+end
+

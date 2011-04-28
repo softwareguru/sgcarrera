@@ -9,11 +9,14 @@ DataMapper.setup(:default, ENV['DATABASE_URL'] || "sqlite3://#{Dir.pwd}/sgcarrer
 class User
     include DataMapper::Resource
 
-    property :username,     String, :key => true
+    property :username,      String, :key => true
     validates_uniqueness_of :username, :message => "There's already a user with this username"
-
-    property :password,     String, :required => true, :message => "Invalid password"
     property :email,         String, :format => :email_address,  :unique => true
+    property :password,      String, :required => true, :message => "Invalid password"
+
+    property :identifier,    String
+    property :rpx,           Boolean, :default => false
+
     property :created_at,    DateTime
 end
 
