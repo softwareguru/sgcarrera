@@ -30,13 +30,30 @@ post '/new' do
     end
 end
 
+get '/select' do
+    @username = session[:username]
+    haml :select
+end
+
 post '/token' do
     @helper = Rpx::RpxHelper.new('0573d1252dde12c6f576c550e0d3ad5f63f08a22',
                                  'https://rpxnow.com',
                                  'sgcarrera')
     @token = params[:token]
-
     @info = @helper.auth_info(@token)
+
+    if @info["identifier"]
+        if @user = User.get(params[:slug])
+            redirect "/#{@user.user_username}"
+        else
+            session[:identifier] = @info["identifier"]
+            session[:username]   = @info["preferredUsername"]
+            redirect "/select"
+        end
+    else
+        halt 403
+    end
+
     haml :info
 end
 
@@ -61,7 +78,7 @@ end
 
 get '/:slug' do 
     if @user = User.get(params[:slug])
-    #@userdata = Userdata.get(params[:slug])
+        #@userdata = Userdata.get(params[:slug])
         haml :profile
     else
         halt 404
