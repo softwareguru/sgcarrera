@@ -10,10 +10,9 @@ class User
     include DataMapper::Resource
 
     property :id,            Serial, :writer => :protected, :key => true
-    property :username,      String, :required => true, :message => "Invalid username"
-    validates_uniqueness_of :username, :message => "There's already a user with this username"
+    property :username,      String, :required => true, :message => "Invalid username", :unique => true
     property :email,         String, :format => :email_address,  :unique => true
-    property :password,      String, :required => true, :message => "Invalid password"
+    property :password,      String
 
     property :identifier,    String
     property :rpx,           Boolean, :default => false
