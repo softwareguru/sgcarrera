@@ -7,4 +7,6 @@ Gemfile.lock
 #I don't wan sass cache
 .sass-cache
 
+#The database can stay away
+*.sqlite3
 
