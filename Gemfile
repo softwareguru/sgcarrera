@@ -2,6 +2,8 @@ source :rubygems
 
 gem "rack-flash"
 gem "sinatra"
+gem "sinatra-content-for"
+gem "sinatra-redirect-with-flash"
 gem "sinatra-reloader"
 gem "haml"
 gem "sass"

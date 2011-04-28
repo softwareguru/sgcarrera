@@ -1,11 +1,6 @@
-%html
-  %head
-    %title
-  %body
-    
-    %h1= @user.username
-    %h1= @user.email
+%h1= @user.username
+%h1= @user.email
 
-    %h2 Edit Personal Information
-    
-    %a{ :title => 'Aqui', :href => "/edit/#{@user.username}" }coso
+%h2 Edit Personal Information
+
+%a{ :title => 'Aqui', :href => "/edit/#{@user.username}" }coso

@@ -1,10 +1,17 @@
 require 'rubygems'
+require 'rack-flash'
 require 'sinatra'
+require 'sinatra/content_for'
+require 'sinatra/redirect_with_flash'
 require 'sinatra/reloader' if development?
 require 'haml'
 require 'sass'
+
 require 'model'
 require 'rpx'
+
+use Rack::Flash
+enable :sessions
 
 get '/' do
     haml :index
@@ -17,9 +24,9 @@ end
 post '/new' do
     @user = User.new(params[:user])
     if @user.save
-        redirect "/"
+        redirect '/', :notice => 'Usuario creado!'
     else
-        redirect "/new", :notice => 'Something went wrong'
+        redirect '/new', :warning => 'Ocurrio un error'
     end
 end
 
@@ -29,17 +36,17 @@ get '/:slug/edit' do
 end
 
 post '/:slug/edit' do 
-    @userdata = Userdata.new(params[:slug])
-    if @userdata.save
-        redirect "/profile/#{@userdata.user_username}"
-    else
-        redirect "/profile/#{@userdata.user_username}", :notice => 'Something went wrong'
-    end
+    #@user = User.get(params[:slug])
+    #if @userdata.save
+        #redirect "/#{@userdata.user_username}"
+    #else
+        #redirect "/#{@userdata.user_username}", :notice => 'Something went wrong'
+    #end
 end
 
 get '/:slug' do 
     @user = User.get(params[:slug])
-    @userdata = Userdata.get(params[:slug])
+    #@userdata = Userdata.get(params[:slug])
     haml :profile
 end
 

@@ -1,9 +1,7 @@
-%html
-  %head
-    %title
-    %link{:rel => 'stylesheet', :href => '/stylesheets/edit.css', :type => 'text/css', :media => 'all'}
-  %body
-    %h1 Editando: #{@user.username}
-  
-    %form{ :method => 'post', :action => 'edit' }
-      %fieldset
+- content_for :head do
+  %link{:rel => 'stylesheet', :href => '/stylesheets/edit.css', :type => 'text/css', :media => 'all'}
+
+%h1 Editando: #{@user.username}
+
+%form{ :method => 'post', :action => 'edit' }
+  %fieldset

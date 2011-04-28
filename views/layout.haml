@@ -3,7 +3,12 @@
   %head
     %title
       = @title || 'SG Carrera'
+    %link{:rel => 'stylesheet', :href => '/stylesheets/main.css', :type => 'text/css', :media => 'all'}
     %link{:rel => 'stylesheet', :href => 'http://fonts.googleapis.com/css?family=Nobile', :type => 'text/css', :media => 'all'}
+    = yield_content :head
   %body
+    - [:notice, :warning].each do |type|
+      - if message = flash[type]
+        .flash{:class => type}= message
     = yield
 

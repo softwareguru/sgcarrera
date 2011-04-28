@@ -1,22 +1,19 @@
-%html
-  %head
-    %title Carrera SG 
-    :javascript
-      var rpxJsHost = (("https:" == document.location.protocol) ? "https://" : "http://static.");
-      document.write(unescape("%3Cscript src='" + rpxJsHost +
-        "rpxnow.com/js/lib/rpx.js' type='text/javascript'%3E%3C/script%3E"));
-    :javascript
-      RPXNOW.overlay = true;
-      RPXNOW.language_preference = 'es';
+- content_for :head do
+  :javascript
+    var rpxJsHost = (("https:" == document.location.protocol) ? "https://" : "http://static.");
+    document.write(unescape("%3Cscript src='" + rpxJsHost +
+      "rpxnow.com/js/lib/rpx.js' type='text/javascript'%3E%3C/script%3E"));
+  :javascript
+    RPXNOW.overlay = true;
+    RPXNOW.language_preference = 'es';
 
-  %body
-    %h1 Bienvenido a Carrera SG
-    %p
-      %a.rpxnow{ :href => "https://sgcarrera.rpxnow.com/openid/v2/signin?token_url=http%3A%2F%2Fsgcarrera.heroku.com%2Ftoken", :onclick => "return false;" } Entrar con redes sociales
-    %p
-      %a{ :href => "/new" } Abrir cuenta
-    %p
-      %a{ :href => "/login" } Entrar a cuenta
+%h1 Bienvenido a Carrera SG
+%p
+  %a.rpxnow{ :href => "https://sgcarrera.rpxnow.com/openid/v2/signin?token_url=http%3A%2F%2Fsgcarrera.heroku.com%2Ftoken", :onclick => "return false;" } Entrar con redes sociales
+%p
+  %a{ :href => "/new" } Abrir cuenta
+%p
+  %a{ :href => "/login" } Entrar a cuenta
 
-    
+
 
