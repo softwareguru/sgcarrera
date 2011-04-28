@@ -46,11 +46,10 @@ post '/select' do
         session[:email]      = nil
         redirect "/#{@user.username}", :notice => 'Usuario creado!'
     else
-        str = ''
-        @user.errors.each do |error|
-            str = str + error + "\n"
+        @user.errors.each do |e|
+            puts e
         end
-        redirect '/select', :warning => str
+        redirect '/select', :warning => 'Ocurrio un error'
     end
 end
 
