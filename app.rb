@@ -60,7 +60,10 @@ post '/:slug/edit' do
 end
 
 get '/:slug' do 
-    @user = User.get(params[:slug])
+    if @user = User.get(params[:slug])
     #@userdata = Userdata.get(params[:slug])
-    haml :profile
+        haml :profile
+    else
+        halt 404
+    end
 end
