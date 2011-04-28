@@ -24,7 +24,7 @@ end
 post '/new' do
     @user = User.new(params[:user])
     if @user.save
-        redirect '/', :notice => 'Usuario creado!'
+        redirect "/#{@user.username}", :notice => 'Usuario creado!'
     else
         redirect '/new', :warning => 'Ocurrio un error'
     end
@@ -32,7 +32,21 @@ end
 
 get '/select' do
     @username = session[:username]
+    @identifier= session[:identifier]
+    @email = session[:email]
     haml :select
+end
+
+post '/select' do
+    @user = User.new(params[:user])
+    if @user.save
+        session[:username]   = nil
+        session[:identifier] = nil
+        session[:email]      = nil
+        redirect "/#{@user.username}", :notice => 'Usuario creado!'
+    else
+        redirect '/new', :warning => 'Ocurrio un error'
+    end
 end
 
 post '/token' do
@@ -44,10 +58,11 @@ post '/token' do
 
     if @info["identifier"]
         if @user = User.get(params[:slug])
-            redirect "/#{@user.user_username}"
+            redirect "/#{@user.username}"
         else
             session[:identifier] = @info["identifier"]
             session[:username]   = @info["preferredUsername"]
+            session[:email]      = @info["email"]
             redirect "/select"
         end
     else

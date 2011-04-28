@@ -4,12 +4,12 @@
 %h1 Selecciona username
 
 %form{ :method => 'post', :action => 'select' }
+  %input{ :type => "hidden", :name => 'user[identifier]', :value => @identifier }
+  %input{ :type => "hidden", :name => 'user[email]', :value => @email }
   %fieldset
     %p.username
       %input{ :name => 'user[username]', :type => 'text', :id => 'username', :value => @username }
       %label{:for => 'username'}Username
     %p.submit
       %input{ :type => 'submit', :value => 'Crear cuenta' }
-
-
 
