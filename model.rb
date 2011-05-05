@@ -18,9 +18,93 @@ class User
     property :rpx,           Boolean, :default => false
 
     property :created_at,    DateTime
+
+    has 1, :details
+    has n, :experiences
+    has n, :educations
+    has n, :skillings
+    has n, :skills, :through => :skillings
+    has n, :publications
+end
+
+class Details
+    include DataMapper::Resource
+
+    property :id,       Serial, :writer => :protected, :key => true
+    property :summary,  Text,   :required => false
+
+    property :title,   String, :required => false
+
+    #This is the hCard format
+    property :street,   String, :required => false
+    property :locality, String, :required => false
+    property :region,   String, :required => false
+    property :postal,   String, :required => false
+
+
+    property :email,    String, :required => false
+    property :url,      String, :required => false
+    property :tel,      String, :required => false
+
+
+    belongs_to :user
+end
+
+
+class Experience
+    include DataMapper::Resource
+
+    property :id,         Serial, :writer => :protected, :key => true
+    property :summary,    Text   
+    property :location,   Text,   :required => false
+
+    property :start_date, Date
+    property :end_date,   Date
+    
+    belongs_to :user
+end
+
+class Education
+    include DataMapper::Resource
+
+    property :id,         Serial, :writer => :protected, :key => true
+    property :summary,    Text   
+    property :location,   Text,   :required => false
+
+    property :start_date, Date
+    property :end_date,   Date
+    
+    belongs_to :user
+end
+
+class Skill
+    include DataMapper::Resource
+
+    property :id,   Serial, :writer => :protected, :key => true
+    property :name, String
+
+    has n, :skillings
+    has n, :users, :through => :skillings
+
+end
+
+class Skilling #Stupid name I know, similar to tagging
+    include DataMapper::Resource
+
+    belongs_to :skill, :key => true
+    belongs_to :user,  :key => true
+
+end
+
+class Publication
+    include DataMapper::Resource
+
+    property :id,   Serial, :writer => :protected, :key => true
+    property :name, String
+    property :url,  String
+
+    belongs_to :user
 end
 
 DataMapper.auto_upgrade!
-
-
 
