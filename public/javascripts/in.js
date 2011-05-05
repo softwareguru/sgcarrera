@@ -5,6 +5,6 @@ function loadData() {
         profile = result.values[0];
         $("#title").val(profile.headline);
         $("#summary").val(profile.summary);
-        alert(JSON.stringify(result.mainAddress));
+        alert(JSON.stringify(profile));
     });
 }
