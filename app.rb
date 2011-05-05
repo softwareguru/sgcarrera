@@ -63,7 +63,7 @@ post '/token' do
     @info = @helper.auth_info(@token)
 
     if @info["identifier"]
-        if @user = User.first(:identifier => @info[:identifier])
+        if @user = User.first(:identifier => @info["identifier"])
             redirect "/#{@user.username}"
         else
             session[:identifier] = @info["identifier"]
