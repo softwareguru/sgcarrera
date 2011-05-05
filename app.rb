@@ -80,6 +80,7 @@ post '/token' do
 
     if @info["identifier"]
         if @user = User.first(:identifier => @info["identifier"])
+            session[:username]   = @user[:username]
             redirect "/#{@user.username}"
         else
             session[:identifier] = @info["identifier"]
