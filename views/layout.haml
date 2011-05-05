@@ -7,8 +7,9 @@
     %link{:rel => 'stylesheet', :href => 'http://fonts.googleapis.com/css?family=Nobile', :type => 'text/css', :media => 'all'}
     = yield_content :head
   %body
-    - [:notice, :warning].each do |type|
-      - if message = flash[type]
-        .flash{:class => type}= message
-    = yield
+    %div#main
+      - [:notice, :warning].each do |type|
+        - if message = flash[type]
+          .flash{:class => type}= message
+      = yield
 
