@@ -60,7 +60,6 @@ post '/select' do
     @user = User.new(params[:user])
     @user[:rpx] = true
     if @user.save
-        session[:username]   = nil
         session[:identifier] = nil
         session[:email]      = nil
         redirect "/#{@user.username}", :notice => 'Usuario creado!'
