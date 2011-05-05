@@ -26,6 +26,7 @@ end
 post '/new' do
     @user = User.new(params[:user])
     if @user.save
+        session[:username] = @user.username
         redirect "/#{@user.username}", :notice => 'Usuario creado!'
     else
         redirect '/new', :warning => 'Ocurrio un error'
@@ -102,16 +103,24 @@ end
 
 get '/edit' do 
     @user = User.first(:username => session[:username])
+    if not @details = @user.details
+        @details = Details.new()
+    end
     haml :edit
 end
 
 post '/edit' do 
-    #@user = User.get(params[:slug])
-    #if @userdata.save
-        #redirect "/#{@userdata.user_username}"
-    #else
-        #redirect "/#{@userdata.user_username}", :notice => 'Something went wrong'
-    #end
+    @user = User.first(:username => session[:username])
+    @details = Details.new(params[:details])
+    @details.user = @user
+
+    @details.save()
+
+    if @details.save
+        redirect "/#{@user.username}", :notice => "Data saved!"
+    else
+        redirect "/edit", :warning => 'Something went wrong'
+    end
 end
 
 get '/:slug' do 
