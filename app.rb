@@ -111,6 +111,7 @@ end
 post '/edit' do 
     @user = User.first(:username => session[:username])
     @details = Details.new(params[:details])
+    @details.email = @user.email
     @details.user = @user
 
     @details.save()
