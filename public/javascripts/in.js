@@ -1,6 +1,7 @@
 function loadData() {
     IN.API.Profile("me")
             .result(function(result) {
-        alert("Todo bien " + JSON.stringify(result));
+        profile = result.values[0];
+        $("#title").val(profile.headline);
     });
 }
