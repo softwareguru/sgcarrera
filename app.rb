@@ -32,6 +32,22 @@ post '/new' do
     end
 end
 
+get '/login' do
+    haml :login
+end
+
+post '/login' do
+    @username = params[:username]
+    @password = params[:password]
+
+    if @user = User.first(:username => @username, :password => @password)
+        session[:username] = @username
+        redirect "/#{@user.username}", :notice => 'Bienvenido'
+    else
+        redirect "/login", :notice => 'Error al entrar'
+    end
+end
+
 get '/select' do
     @username = session[:username]
     @identifier= session[:identifier]
@@ -83,12 +99,12 @@ get '/stylesheets/*' do
     sass '../styles/'.concat(params[:splat].join.chomp('.css')).to_sym
 end
 
-get '/:slug/edit' do 
-    @user = User.first(:username => params[:slug])
+get '/edit' do 
+    @user = User.first(:username => session[:username])
     haml :edit
 end
 
-post '/:slug/edit' do 
+post '/edit' do 
     #@user = User.get(params[:slug])
     #if @userdata.save
         #redirect "/#{@userdata.user_username}"

@@ -5,3 +5,42 @@
 
 %form{ :method => 'post', :action => 'edit' }
   %fieldset
+    %legend General
+    %p.title
+      %input{ :type => "text", :id => "title", :name => "details[title]" }/
+      %label{ :for => "title" } Title
+    %p.summary
+      %input{ :type => "text", :id => "summary", :name => "details[summary]" }/
+      %label{ :for => "summary" } Summary
+  %fieldset
+    %legend Address
+    %p.street
+      %input{ :type => "text", :id => "street", :name => "details[street]" }/
+      %label{ :for => "street" } Street
+    %p.locality
+      %input{ :type => "text", :id => "locality", :name => "details[locality]" }/
+      %label{ :for => "locality" } Locality
+    %p.region
+      %input{ :type => "text", :id => "region", :name => "details[region]" }/
+      %label{ :for => "region" } Region
+    %p.postal
+      %input{ :type => "text", :id => "postal", :name => "details[postal]" }/
+      %label{ :for => "postal" } Postal code
+  %fieldset
+    %legend Contact
+    %p.email
+      %input{ :type => "text", :id => "email", :name => "details[email]" }/
+      %label{ :for => "email" } Email
+    %p.phone
+      %input{ :type => "text", :id => "phone", :name => "details[tel]" }/
+      %label{ :for => "phone" } Phone
+    %p.url
+      %input{ :type => "text", :id => "url", :name => "details[url]" }/
+      %label{ :for => "url" } Web site
+
+    %p.submit
+      %input{ :type => 'submit', :value => 'Save changes' }
+      %script{ :type => "in/login" }
+        Import from LinkedIn, <?js= firstName ?> <?js= lastName ?>.
+
+
