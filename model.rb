@@ -33,14 +33,9 @@ class Details
     property :id,       Serial, :writer => :protected, :key => true
     property :summary,  Text,   :required => false
 
-    property :title,   String, :required => false
+    property :title,    String, :required => true
 
-    #This is the hCard format
-    property :street,   String, :required => false
-    property :locality, String, :required => false
-    property :region,   String, :required => false
-    property :postal,   String, :required => false
-
+    property :address,  String, :required => false
 
     property :email,    String, :required => false
     property :url,      String, :required => false
@@ -60,7 +55,7 @@ class Experience
 
     property :start_date, Date
     property :end_date,   Date
-    
+
     belongs_to :user
 end
 

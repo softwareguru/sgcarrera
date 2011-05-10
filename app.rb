@@ -114,6 +114,8 @@ post '/edit' do
     @details.email = @user.email
     @details.user = @user
 
+    puts params[:skills]
+
     @details.save()
 
     if @details.save

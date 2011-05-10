@@ -1,5 +1,7 @@
 - content_for :head do
+  %link{:rel => 'stylesheet', :href => '/stylesheets/tagit.css', :type => 'text/css', :media => 'all'}
   %link{:rel => 'stylesheet', :href => '/stylesheets/edit.css', :type => 'text/css', :media => 'all'}
+  %script{ :src => "/javascripts/tag-it.js", :type => "text/javascript" }
   %script{ :src => "/javascripts/in.js", :type => "text/javascript" }
   
 
@@ -14,20 +16,9 @@
     %p.summary
       %input{ :type => "text", :id => "summary", :name => "details[summary]", :value => @details.summary }/
       %label{ :for => "summary" } Summary
-  %fieldset
-    %legend Address
     %p.street
-      %input{ :type => "text", :id => "street", :name => "details[street]", :value => @details.street }/
-      %label{ :for => "street" } Street
-    %p.locality
-      %input{ :type => "text", :id => "locality", :name => "details[locality]", :value => @details.locality }/
-      %label{ :for => "locality" } Locality
-    %p.region
-      %input{ :type => "text", :id => "region", :name => "details[region]", :value => @details.region }/
-      %label{ :for => "region" } Region
-    %p.postal
-      %input{ :type => "text", :id => "postal", :name => "details[postal]", :value => @details.postal }/
-      %label{ :for => "postal" } Postal code
+      %input{ :type => "text", :id => "address", :name => "details[address]", :value => @details.address }/
+      %label{ :for => "address" } Address
   %fieldset
     %legend Contact
     %p.phone
@@ -36,6 +27,11 @@
     %p.url
       %input{ :type => "text", :id => "url", :name => "details[url]", :value => @details.url }/
       %label{ :for => "url" } Web site
+
+  %fieldset
+    %legend Skills
+    %p.skills
+      %ul#skills
 
     %p.submit
       %input{ :type => 'submit', :value => 'Save changes' }
