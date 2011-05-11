@@ -1,6 +1,7 @@
 $(function() {
     $("#skills").tagit({
         availableTags: ["c++", "java", "php", "coldfusion", "javascript", "asp", "ruby", "python", "c", "scala", "groovy", "haskell", "perl"],
+        startingTags: ["c++", "java"],
         name: 'skills[]'
     });
 });

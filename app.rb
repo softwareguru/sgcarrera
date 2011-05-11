@@ -114,11 +114,14 @@ post '/edit' do
     @details.email = @user.email
     @details.user = @user
 
-    puts params[:skills]
+    skills = params[:skills]
 
-    @details.save()
+    skills.each do |s|
+      skill = Skill.first_or_create(:name => s)
+      @user.skills << skill
+    end
 
-    if @details.save
+    if @details.save and @user.save
         redirect "/#{@user.username}", :notice => "Data saved!"
     else
         redirect "/edit", :warning => 'Something went wrong'
@@ -129,6 +132,7 @@ get '/:slug' do
     if @user = User.first(:username => params[:slug])
         #@userdata = Userdata.get(params[:slug])
         @digest = Digest::MD5.hexdigest(@user.email.downcase)
+
         haml :profile
     else
         halt 404
