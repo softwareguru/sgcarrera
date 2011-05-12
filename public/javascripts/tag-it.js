@@ -9,17 +9,24 @@
         const SPACE         = 32;
         const COMMA         = 44;
 
-        // add the tagit CSS class.
-        el.addClass("tagit");
 
         // create the input field.
-        var html_input_field = "<li class=\"tagit-new\"><input class=\"tagit-input\" type=\"text\" /></li>\n";
-        el.html (html_input_field);
-
-        tag_input       = el.children(".tagit-new").children(".tagit-input");
-
-        if (options.startingTagsUrl != null) {
+        if(options.action == null) {
+            // add the tagit CSS class.
+            el.addClass("tagit");
+            var html_input_field = "<li class=\"tagit-new\"><input class=\"tagit-input\" type=\"text\" /></li>\n";
+            el.html (html_input_field);
         }
+
+        tag_input = el.children(".tagit-new").children(".tagit-input");
+
+        if(options.action == 'add') {
+            if (is_new (options.value)) {
+                create_choice (options.value);
+            }
+            return;
+        }
+
 
         if (options.startingTags != null) {
             $.each(options.startingTags, function(key, tag) {

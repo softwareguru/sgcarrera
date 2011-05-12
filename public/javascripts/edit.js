@@ -24,6 +24,8 @@ $(function() {
                 name: 'skills[]'
             });
 
+            $("#skills").tagit({ action: 'add', value: 'Tosto' });
+
         });
 
     });

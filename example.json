@@ -1,0 +1,26 @@
+{"values":[{"skills":{"values":[{"id":3,"skill":{"name":"Java"}},{"id":4,"skill":{"name":"jQuery"}},{"id":5,"skill":
+{"name":"Python"}},{"id":6,"skill":{"name":"REST"}},{"id":7,"skill":{"name":"Rails"}},{"id":8,"skill":{"name":"Sinatra"}},{"id":
+9,"skill":{"name":"Plone"}},{"id":12,"skill":{"name":"Ruby"}}],"_total":8},"summary":"Application Developer, and UNIX management 
+my main experience has been with Python and Java languages.\n\nInterested in building web 2.0 applications, that really change 
+people's lives.","headline":"Web Developer and Consultant","positions":{"values":[{"summary":"","id":180115420,"startDate":
+{"month":4,"year":2011},"title":"Developer/Consultant","company":{"id":1937663,"name":"Freelancer / Contractor / 
+Consultant","industry":"Computer Software"},"isCurrent":true},{"summary":"","id":183079848,"startDate":{"month":4,"year":
+2011},"title":"Consultant","company":{"id":1121831,"name":"Sistemas Humanos","industry":"Professional Training & 
+Coaching","type":"Privately Held"},"isCurrent":true},{"summary":"Web development in Java and Python, designed critical modules and 
+integration with mobile systems.","id":104353935,"startDate":{"month":1,"year":2010},"title":"Product Developer","company":
+{"name":"Javanes Solutions","industry":"Computer Software"},"endDate":{"month":4,"year":2011},"isCurrent":false},
+{"summary":"Design and deploy zope infrastructure.\nWrite registration and reporting module.","id":102676423,"startDate":{"month":
+4,"year":2009},"title":"Plone Developer","company":{"id":265396,"name":"PAUTA Project Adopt a Talent","industry":"Education 
+Management","type":"Nonprofit"},"endDate":{"month":3,"year":2010},"isCurrent":false},{"summary":"Deploy plone site on dedicated 
+server.\nDesign system architecture.\nDevelop and customize simple plone products.","id":102674793,"startDate":{"month":3,"year":
+2009},"title":"Plone Developer","company":{"id":723315,"name":"Bionero.org","industry":"Online 
+Media","type":"Nonprofit"},"endDate":{"month":1,"year":2010},"isCurrent":false},{"summary":"J2EE Design, development and deployment
+\nApplication Migration\nUNIX deployment","id":18731115,"startDate":{"month":3,"year":2007},"title":"Java Developer","company":
+{"name":"Javanes Solutions","industry":"Computer Software"},"endDate":{"month":1,"year":2009},"isCurrent":false},{"summary":"PHP
++Smarty programming, wrote small modules to improve La Jornada's website","id":18844347,"startDate":{"month":6,"year":
+2006},"title":"Voluntary","company":{"id":91901,"name":"La Jornada","industry":"Newspapers","type":"Privately Held"},"endDate":
+{"month":7,"year":2006},"isCurrent":false}],"_total":7},"_key":"~","educations":{"values":[{"id":9659895,"startDate":{"year":
+2006},"fieldOfStudy":"Computer Systems","degree":"Engineer","schoolName":"Instituto Politécnico Nacional","endDate":{"year":
+2010},"activities":"Algorithms, IEEE","notes":"Designing embedded ARM system as thesis project."},{"id":9742080,"startDate":
+{"year":2003},"fieldOfStudy":"Math and Physics","schoolName":"Centro de Estudios Cientificos y Tecnologicos Juan de Dios Batiz 
+Paredes","endDate":{"year":2006}}],"_total":2},"mainAddress":""}],"_total":1}
