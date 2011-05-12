@@ -1,9 +1,34 @@
+var skills = new Array();
+var currentSkills = new Array();
+
 $(function() {
-    $("#skills").tagit({
-        availableTags: ["c++", "java", "php", "coldfusion", "javascript", "asp", "ruby", "python", "c", "scala", "groovy", "haskell", "perl"],
-        startingTags: ["c++", "java"],
-        name: 'skills[]'
+
+    
+
+    $.get('/skills/all', function(data) {
+
+        $.each(data, function(index, value) {
+            skills.push(value.name);
+        });
+
+        $.get('/skills/current', function(data) {
+            $.each(data, function(index, value) {
+                currentSkills.push(value.name);
+            });
+
+            
+            $("#skills").tagit({
+                availableTags: skills,
+                startingTags: currentSkills,
+                name: 'skills[]'
+            });
+
+        });
+
     });
+
+
+
 });
 
 function loadData() {

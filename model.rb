@@ -37,7 +37,6 @@ class Details
 
     property :address,  String, :required => false
 
-    property :email,    String, :required => false
     property :url,      String, :required => false
     property :tel,      String, :required => false
 

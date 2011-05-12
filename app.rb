@@ -16,125 +16,150 @@ use Rack::Flash
 enable :sessions
 
 get '/' do
-    haml :index
+  haml :index
 end
 
 get '/new' do
-    haml :new
+  haml :new
 end
 
 post '/new' do
-    @user = User.new(params[:user])
-    if @user.save
-        session[:username] = @user.username
-        redirect "/#{@user.username}", :notice => 'Usuario creado!'
-    else
-        redirect '/new', :warning => 'Ocurrio un error'
-    end
+  @user = User.new(params[:user])
+  if @user.save
+    session[:username] = @user.username
+    redirect "/#{@user.username}", :notice => 'Usuario creado!'
+  else
+    redirect '/new', :warning => 'Ocurrio un error'
+  end
 end
 
 get '/login' do
-    haml :login
+  haml :login
 end
 
 post '/login' do
-    @username = params[:username]
-    @password = params[:password]
+  @username = params[:username]
+  @password = params[:password]
 
-    if @user = User.first(:username => @username, :password => @password)
-        session[:username] = @username
-        redirect "/#{@user.username}", :notice => 'Bienvenido'
-    else
-        redirect "/login", :notice => 'Error al entrar'
-    end
+  if @user = User.first(:username => @username, :password => @password)
+    session[:username] = @username
+    redirect "/#{@user.username}", :notice => 'Bienvenido'
+  else
+    redirect "/login", :notice => 'Error al entrar'
+  end
 end
 
 get '/select' do
-    @username = session[:username]
-    @identifier= session[:identifier]
-    @email = session[:email]
-    haml :select
+  @username = session[:username]
+  @identifier= session[:identifier]
+  @email = session[:email]
+  haml :select
 end
 
 post '/select' do
-    @user = User.new(params[:user])
-    @user[:rpx] = true
-    if @user.save
-        session[:identifier] = nil
-        session[:email]      = nil
-        redirect "/#{@user.username}", :notice => 'Usuario creado!'
-    else
-        @user.errors.each do |e|
-            puts e
-        end
-        redirect '/select', :warning => 'Ocurrio un error'
+  @user = User.new(params[:user])
+  @user[:rpx] = true
+  if @user.save
+    session[:identifier] = nil
+    session[:email]      = nil
+    redirect "/#{@user.username}", :notice => 'Usuario creado!'
+  else
+    @user.errors.each do |e|
+      puts e
     end
+    redirect '/select', :warning => 'Ocurrio un error'
+  end
 end
 
 post '/token' do
-    @helper = Rpx::RpxHelper.new('0573d1252dde12c6f576c550e0d3ad5f63f08a22',
-                                 'https://rpxnow.com',
-                                 'sgcarrera')
-    @token = params[:token]
-    @info = @helper.auth_info(@token)
+  @helper = Rpx::RpxHelper.new('0573d1252dde12c6f576c550e0d3ad5f63f08a22',
+                               'https://rpxnow.com',
+                               'sgcarrera')
+  @token = params[:token]
+  @info = @helper.auth_info(@token)
 
-    if @info["identifier"]
-        if @user = User.first(:identifier => @info["identifier"])
-            session[:username]   = @user[:username]
-            redirect "/#{@user.username}"
-        else
-            session[:identifier] = @info["identifier"]
-            session[:username]   = @info["preferredUsername"]
-            session[:email]      = @info["email"]
-            redirect "/select"
-        end
+  if @info["identifier"]
+    if @user = User.first(:identifier => @info["identifier"])
+      session[:username]   = @user[:username]
+      redirect "/#{@user.username}"
     else
-        halt 403
+      session[:identifier] = @info["identifier"]
+      session[:username]   = @info["preferredUsername"]
+      session[:email]      = @info["email"]
+      redirect "/select"
     end
+  else
+    halt 403
+  end
 
-    haml :info
+  haml :info
 end
 
 get '/stylesheets/*' do
-    content_type 'text/css'
-    sass '../styles/'.concat(params[:splat].join.chomp('.css')).to_sym
+  content_type 'text/css'
+  sass '../styles/'.concat(params[:splat].join.chomp('.css')).to_sym
 end
 
 get '/edit' do 
-    @user = User.first(:username => session[:username])
-    if not @details = @user.details
-        @details = Details.new()
-    end
-    haml :edit
+  @user = User.first(:username => session[:username])
+  if not @details = @user.details
+    @details = Details.new()
+  end
+  haml :edit
 end
 
 post '/edit' do 
-    @user = User.first(:username => session[:username])
+  @user = User.first(:username => session[:username])
+
+  if not @details = @user.details
     @details = Details.new(params[:details])
-    @details.email = @user.email
-    @details.user = @user
+  end
 
-    skills = params[:skills]
+  @details.user = @user
 
-    skills.each do |s|
-      skill = Skill.first_or_create(:name => s)
-      @user.skills << skill
-    end
+  #Let's work with the skills
+  @user.skills.clear
 
-    if @details.save and @user.save
-        redirect "/#{@user.username}", :notice => "Data saved!"
-    else
-        redirect "/edit", :warning => 'Something went wrong'
-    end
+  skills = params[:skills]
+
+  skills.each do |s|
+    skill = Skill.first_or_create(:name => s)
+    @user.skills << skill
+  end
+
+  if @details.save and @user.save
+    redirect "/#{@user.username}", :notice => "Data saved!"
+  else
+    redirect "/edit", :warning => 'Something went wrong'
+  end
+end
+
+get '/skills/all' do
+  @skills = Skill.all
+
+  content_type :json
+
+  @skills.to_json(:only => [:name])
+end
+
+get '/skills/current' do 
+  if @user = User.first(:username => session[:username])
+    @user = User.first(:username => session[:username])
+    content_type :json
+    @user.skills.to_json(:only => [:name])
+  else
+    halt 404
+  end
 end
 
 get '/:slug' do 
-    if @user = User.first(:username => params[:slug])
-        #@userdata = Userdata.get(params[:slug])
-        @digest = Digest::MD5.hexdigest(@user.email.downcase)
+  if @user = User.first(:username => params[:slug])
+    @digest = Digest::MD5.hexdigest(@user.email.downcase)
 
-        haml :profile
-    else
-        halt 404
-    end
+    haml :profile
+  else
+    halt 404
+  end
 end
+
+
