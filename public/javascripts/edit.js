@@ -16,7 +16,8 @@ $(function() {
                 currentSkills.push(value.name);
             });
 
-            
+            //This might look weird but I don't fill the skills until
+            //both current and all skills have been loaded
             $("#skills").tagit({
                 availableTags: skills,
                 startingTags: currentSkills,

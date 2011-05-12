@@ -2,7 +2,7 @@
   %link{:rel => 'stylesheet', :href => '/stylesheets/tagit.css', :type => 'text/css', :media => 'all'}
   %link{:rel => 'stylesheet', :href => '/stylesheets/edit.css', :type => 'text/css', :media => 'all'}
   %script{ :src => "/javascripts/tag-it.js", :type => "text/javascript" }
-  %script{ :src => "/javascripts/in.js", :type => "text/javascript" }
+  %script{ :src => "/javascripts/edit.js", :type => "text/javascript" }
   
 
 %h1 Editando: #{@user.username}
@@ -32,6 +32,15 @@
     %legend Skills
     %p.skills
       %ul#skills
+
+  %fieldset
+    %legend Experience
+
+  %fieldset
+    %legend Education
+
+  %fieldset
+    %legend Publications
 
     %p.submit
       %input{ :type => 'submit', :value => 'Save changes' }
