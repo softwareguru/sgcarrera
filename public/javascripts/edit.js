@@ -43,7 +43,7 @@ function loadData() {
         $("#title").val(profile.headline);
         $("#summary").val(profile.summary);
         $.each(profile.skills.values, function(index, value) {
-            $("#skills").tagit({ action: 'add', value: value });
+            $("#skills").tagit({ action: 'add', value: value.skill.name });
         });
     });
 }
