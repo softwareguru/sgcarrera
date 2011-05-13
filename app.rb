@@ -15,6 +15,8 @@ require 'rpx'
 use Rack::Flash
 enable :sessions
 
+#Here start the unsecured thingies
+
 get '/' do
   haml :index
 end
@@ -71,6 +73,7 @@ post '/select' do
   end
 end
 
+
 post '/token' do
   @helper = Rpx::RpxHelper.new('0573d1252dde12c6f576c550e0d3ad5f63f08a22',
                                'https://rpxnow.com',
@@ -100,7 +103,13 @@ get '/stylesheets/*' do
   sass '../styles/'.concat(params[:splat].join.chomp('.css')).to_sym
 end
 
-get '/edit' do 
+before '/users/*' do
+  if not session[:username]
+    redirect to('/')
+  end
+end
+
+get '/users/edit' do 
   @user = User.first(:username => session[:username])
   if not @details = @user.details
     @details = Details.new()
@@ -108,7 +117,7 @@ get '/edit' do
   haml :edit
 end
 
-post '/edit' do 
+post '/users/edit' do 
   @user = User.first(:username => session[:username])
 
   if not @details = @user.details
@@ -134,23 +143,6 @@ post '/edit' do
   end
 end
 
-get '/skills/all' do
-  @skills = Skill.all
-
-  content_type :json
-
-  @skills.to_json(:only => [:name])
-end
-
-get '/skills/current' do 
-  if @user = User.first(:username => session[:username])
-    @user = User.first(:username => session[:username])
-    content_type :json
-    @user.skills.to_json(:only => [:name])
-  else
-    halt 404
-  end
-end
 
 get '/:slug' do 
   if @user = User.first(:username => params[:slug])
