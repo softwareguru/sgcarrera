@@ -24,7 +24,8 @@ $(function() {
                 name: 'skills[]'
             });
 
-            $("#skills").tagit({ action: 'add', value: 'Tosto' });
+            //Sample of how tags work here
+            //$("#skills").tagit({ action: 'add', value: 'Tosto' });
 
         });
 
@@ -38,9 +39,11 @@ function loadData() {
     IN.API.Profile("me")
           .fields(["headline","summary","mainAddress", "skills", "positions","publications", "educations"])
           .result(function(result) {
-        alert(JSON.stringify(result));
         profile = result.values[0];
         $("#title").val(profile.headline);
         $("#summary").val(profile.summary);
+        $.each(profile.skills.values, function(index, value) {
+            $("#skills").tagit({ action: 'add', value: value });
+        });
     });
 }
