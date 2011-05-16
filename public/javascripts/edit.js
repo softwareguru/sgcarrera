@@ -1,8 +1,9 @@
-var skills = new Array();
-var currentSkills = new Array();
+var skills = [];
+var currentSkills = [];
 
 $(function() {
-
+    var experienceTemplate = "<fieldset>" + $("#experience").html() + "</fieldset>";
+    var currJob = 1;
     
 
     $.get('/skills/all', function(data) {
@@ -24,13 +25,24 @@ $(function() {
                 name: 'skills[]'
             });
 
-            //Sample of how tags work here
-            //$("#skills").tagit({ action: 'add', value: 'Tosto' });
-
         });
 
     });
 
+
+    var addJobFunc = function() {
+        var newExp = experienceTemplate.replace(/1/g, ++currJob);
+        var addJob = $("#addJob");
+
+        $("#numJobs").val(currJob);
+
+        addJob.parent().after(newExp);
+        addJob.remove();
+
+        $("#addJob.submit").click(addJobFunc);
+    };
+
+    $("#addJob.submit").click(addJobFunc);
 
 
 });

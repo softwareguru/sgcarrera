@@ -33,8 +33,25 @@
     %p.skills
       %ul#skills
 
-  %fieldset
-    %legend Experience
+  %fieldset#experience
+    %legend Experience - Company 1
+    %p.title
+      %input{ :type => "text", :id => "title1", :name => "experience1[title]"}/
+      %label{ :for => "title1" } Title
+    %p.company
+      %input{ :type => "text", :id => "company1", :name => "company1[name]"}/
+      %label{ :for => "company1" } Company
+    %p.summary
+      %input{ :type => "text", :id => "summary1", :name => "experience1[summary]"}/
+      %label{ :for => "summary1" } Summary
+    %p.startDate
+      %input{ :type => "text", :id => "expStartDate1`", :name => "experience1[startDate]"}/
+      %label{ :for => "expStartDate1" } Start Date
+    %p.hasEnded
+      %input{ :type => "text", :id => "expEndDate1`", :name => "experience1[endDate]"}/
+      %label{ :for => "expStartDate1" } End Date (if ended)
+    %p#addJob.submit
+      %input{ :type => 'button', :value => 'Add job' }
 
   %fieldset
     %legend Education
@@ -46,6 +63,7 @@
     %legend Affiliations
 
     %p.submit
+      %input{ :type => 'hidden', :value => '1', :name => "jobs", :id => "numJobs" }
       %input{ :type => 'submit', :value => 'Save changes' }
       :plain
         <script type="in/login" data-onAuth="loadData">

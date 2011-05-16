@@ -44,17 +44,26 @@ class Details
     belongs_to :user
 end
 
+class Company
+    include DataMapper::Resource
+
+    property :id,   Serial, :writer => :protected, :key => true
+    property :name, String
+
+    has n, :experiences
+end
 
 class Experience
     include DataMapper::Resource
 
     property :id,         Serial, :writer => :protected, :key => true
+    property :title,     String
     property :summary,    Text   
-    property :location,   Text,   :required => false
 
     property :start_date, Date
     property :end_date,   Date
 
+    belongs_to :company
     belongs_to :user
 end
 

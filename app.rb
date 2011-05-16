@@ -47,7 +47,7 @@ post '/login' do
     session[:username] = @username
     redirect "/#{@user.username}", :notice => 'Bienvenido'
   else
-    redirect "/login", :notice => 'Error al entrar'
+    redirect "/login", :warning => 'Error al entrar'
   end
 end
 
@@ -143,6 +143,31 @@ post '/users/edit' do
   end
 end
 
+get '/skills/all' do
+  @skills = Skill.all
+
+  content_type :json
+
+  @skills.to_json(:only => [:name])
+end
+
+get '/skills/current' do 
+  if @user = User.first(:username => session[:username])
+    @user = User.first(:username => session[:username])
+    content_type :json
+    @user.skills.to_json(:only => [:name])
+  else
+    halt 404
+  end
+end
+
+get '/companies/all' do
+  @companies = Company.all
+
+  content_type :json
+
+  @companies.to_json(:only => [:name])
+end
 
 get '/:slug' do 
   if @user = User.first(:username => params[:slug])
