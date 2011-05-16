@@ -45,16 +45,30 @@
       %input{ :type => "text", :id => "summary1", :name => "experience1[summary]"}/
       %label{ :for => "summary1" } Summary
     %p.startDate
-      %input{ :type => "text", :id => "expStartDate1`", :name => "experience1[startDate]"}/
+      %input{ :type => "text", :id => "expStartDate1`", :name => "experience1[start_date]"}/
       %label{ :for => "expStartDate1" } Start Date
     %p.hasEnded
-      %input{ :type => "text", :id => "expEndDate1`", :name => "experience1[endDate]"}/
+      %input{ :type => "text", :id => "expEndDate1`", :name => "experience1[end_date]"}/
       %label{ :for => "expStartDate1" } End Date (if ended)
     %p#addJob.submit
       %input{ :type => 'button', :value => 'Add job' }
 
-  %fieldset
-    %legend Education
+  %fieldset#school
+    %legend Education - School 1
+    %p.title
+      %input{ :type => "text", :id => "degree1", :name => "education1[summary]"}/
+      %label{ :for => "degree1" } Degree
+    %p.company
+      %input{ :type => "text", :id => "location1", :name => "education1[location]"}/
+      %label{ :for => "location1" } School
+    %p.startDate
+      %input{ :type => "text", :id => "edStartDate1`", :name => "education1[start_date]"}/
+      %label{ :for => "edStartDate1" } Start Date
+    %p.hasEnded
+      %input{ :type => "text", :id => "edEndDate1`", :name => "education1[end_date]"}/
+      %label{ :for => "edStartDate1" } End Date (if has already ended)
+    %p#addSchool.submit
+      %input{ :type => 'button', :value => 'Add school' }
 
   %fieldset
     %legend Publications
@@ -64,6 +78,7 @@
 
     %p.submit
       %input{ :type => 'hidden', :value => '1', :name => "jobs", :id => "numJobs" }
+      %input{ :type => 'hidden', :value => '1', :name => "schools", :id => "numSchools" }
       %input{ :type => 'submit', :value => 'Save changes' }
       :plain
         <script type="in/login" data-onAuth="loadData">

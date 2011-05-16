@@ -3,7 +3,9 @@ var currentSkills = [];
 
 $(function() {
     var experienceTemplate = "<fieldset>" + $("#experience").html() + "</fieldset>";
+    var schoolTemplate = "<fieldset>" + $("#school").html() + "</fieldset>";
     var currJob = 1;
+    var currSchool = 1;
     
 
     $.get('/skills/all', function(data) {
@@ -42,7 +44,20 @@ $(function() {
         $("#addJob.submit").click(addJobFunc);
     };
 
+    var addSchoolFunc = function() {
+        var newSchool = schoolTemplate.replace(/1/g, ++currSchool);
+        var addSchool = $("#addSchool");
+
+        $("#numSchools").val(currSchool);
+
+        addSchool.parent().after(newSchool);
+        addSchool.remove();
+
+        $("#addSchool.submit").click(addSchoolFunc);
+    };
+
     $("#addJob.submit").click(addJobFunc);
+    $("#addSchool.submit").click(addSchoolFunc);
 
 
 });
