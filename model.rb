@@ -25,6 +25,7 @@ class User
     has n, :skillings
     has n, :skills, :through => :skillings
     has n, :publications
+    has n, :affiliations
 end
 
 class Details
@@ -105,6 +106,15 @@ class Publication
     property :id,   Serial, :writer => :protected, :key => true
     property :name, String
     property :url,  String
+
+    belongs_to :user
+end
+
+class Affiliation
+    include DataMapper::Resource
+
+    property :id,   Serial, :writer => :protected, :key => true
+    property :name, String
 
     belongs_to :user
 end

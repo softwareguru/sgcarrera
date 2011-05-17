@@ -117,30 +117,60 @@
       %p#addSchool.submit
         %input{ :type => 'button', :value => 'Add school' }
 
-  %fieldset#publication
-    %legend Publication 1
-    %p.title
-      %input{ :type => "text", :id => "pubTitle1", :name => "publication1[title]"}/
-      %label{ :for => "pubTitle1" } Title
-    %p.link
-      %input{ :type => "text", :id => "pubLink1", :name => "publication1[link]"}/
-      %label{ :for => "pubLink1" } Link
-    %p#addPublication.submit
-      %input{ :type => 'button', :value => 'Add publication' }
+  - if not @user.publications.empty?
+    - @user.publications.each_with_index do |pub, i|
+      %fieldset
+        Publication
+        = i + 1
+        %p.title
+          %input{ :type => "text", :id => "pubTitle#{i + 1}", :name => "publication#{i + 1}[name]"}/
+          %label{ :for => "pubTitle#{i + 1}" } Title
+        %p.link
+          %input{ :type => "text", :id => "pubLink#{i + 1}", :name => "publication#{i + 1}[url]"}/
+          %label{ :for => "pubLink#{i + 1}" } Link
+        - if @user.publications.count == i + 1
+          %p#addPublication.submit
+            %input{ :type => 'button', :value => 'Add publication' }
+  - else 
+    %fieldset
+      %legend Publication 1
+      %p.title
+        %input{ :type => "text", :id => "pubTitle1", :name => "publication1[name]"}/
+        %label{ :for => "pubTitle1" } Title
+      %p.link
+        %input{ :type => "text", :id => "pubLink1", :name => "publication1[url]"}/
+        %label{ :for => "pubLink1" } Link
+      %p#addPublication.submit
+        %input{ :type => 'button', :value => 'Add publication' }
 
-  %fieldset#affiliation
-    %legend Affiliation 1
-    %p.title
-      %input{ :type => "text", :id => "affTitle1", :name => "affiliation1[title]"}/
-      %label{ :for => "affTitle1" } Title
-    %p#addAffiliation.submit
-      %input{ :type => 'button', :value => 'Add affiliation' }
+  - if not @user.affiliations.empty?
+    - @user.affiliations.each_with_index do |a, i|
+      %fieldset
+        Affiliation
+        = i + 1
+        %p.title
+          %input{ :type => "hidden", :name => "affiliation#{i + 1}[id]", :value => a.id}/
+          %input{ :type => "text", :id => "affTitle#{i + 1}", :name => "affiliation#{i + 1}[name]", :value => a.name}/
+          %label{ :for => "affTitle#{i + 1}" } Title
+        - if @user.affiliations.count == i + 1
+          %p#addAffiliation.submit
+            %input{ :type => 'button', :value => 'Add affiliation' }
+  - else
+    %fieldset
+      %legend Affiliation 1
+      %p.title
+        %input{ :type => "text", :id => "affTitle1", :name => "affiliation1[name]"}/
+        %label{ :for => "affTitle1" } Title
+      %p#addAffiliation.submit
+        %input{ :type => 'button', :value => 'Add affiliation' }
 
+  %fieldset
+    %legend Save data
     %p.submit
       %input{ :type => 'hidden', :value => (@user.experiences.count != 0? @user.experiences.count : 1), :name => "jobs", :id => "numJobs" }
       %input{ :type => 'hidden', :value => (@user.educations.count != 0? @user.educations.count : 1), :name => "schools", :id => "numSchools" }
-      %input{ :type => 'hidden', :value => '1', :name => "affiliations", :id => "numAffiliations" }
-      %input{ :type => 'hidden', :value => '1', :name => "publications", :id => "numPublications" }
+      %input{ :type => 'hidden', :value => (@user.affiliations.count != 0? @user.affiliations.count : 1), :name => "affiliations", :id => "numAffiliations" }
+      %input{ :type => 'hidden', :value => (@user.publications.count != 0? @user.publications.count : 1), :name => "publications", :id => "numPublications" }
       %input{ :type => 'submit', :value => 'Save changes' }
       :plain
         <script type="in/login" data-onAuth="loadData">
@@ -168,17 +198,17 @@
   %fieldset#publication
     %legend Publication 1
     %p.title
-      %input{ :type => "text", :id => "pubTitle1", :name => "publication1[title]"}/
+      %input{ :type => "text", :id => "pubTitle1", :name => "publication1[name]"}/
       %label{ :for => "pubTitle1" } Title
     %p.link
-      %input{ :type => "text", :id => "pubLink1", :name => "publication1[link]"}/
+      %input{ :type => "text", :id => "pubLink1", :name => "publication1[url]"}/
       %label{ :for => "pubLink1" } Link
     %p#addPublication.submit
       %input{ :type => 'button', :value => 'Add publication' }
   %fieldset#affiliation
     %legend Affiliation 1
     %p.title
-      %input{ :type => "text", :id => "affTitle1", :name => "affiliation1[title]"}/
+      %input{ :type => "text", :id => "affTitle1", :name => "affiliation1[name]"}/
       %label{ :for => "affTitle1" } Title
     %p#addAffiliation.submit
       %input{ :type => 'button', :value => 'Add affiliation' }

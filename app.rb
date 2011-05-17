@@ -175,6 +175,36 @@ post '/users/edit' do
     @user.educations << school
   end
 
+  #Now with the publications
+  for i in 1..numPublications
+    pub_data = params["publication#{i}".intern]
+
+    if pub_data.has_key?("id")
+      pub = Publication.get(pub_data["id"])
+      pub_data.delete("id")
+      pub.attributes = pub_data
+    else
+      pub = Publication.new(pub_data)
+    end
+
+    @user.publications << pub
+  end
+
+  #Now with the affiliations
+  for i in 1..numAffiliations
+    aff_data = params["affiliation#{i}".intern]
+
+    if aff_data.has_key?("id")
+      aff = Affiliation.get(aff_data["id"])
+      aff_data.delete("id")
+      aff.attributes = aff_data
+    else
+      aff = Affiliation.new(aff_data)
+    end
+
+    @user.affiliations << aff
+  end
+
   if @details.save and @user.save
     redirect "/#{@user.username}", :notice => "Data saved!"
   else
