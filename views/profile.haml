@@ -31,7 +31,7 @@
         %strong= exp.title
         at
         %strong
-          %a{ :href => "/companies/#{URI.escape(exp.company.name)}", :style => "text-decoration: none" }= exp.company.name
+          %a{ :href => "/companies/#{exp.company.id}", :style => "text-decoration: none" }= exp.company.name
       %p
         From
         %strong= exp.start_date

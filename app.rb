@@ -297,7 +297,7 @@ get '/companies/all' do
 end
 
 get '/companies/:slug' do
-  @company = Company.first(:name => params[:slug])
+  @company = Company.get(params[:slug])
   @users   = @company.users
 
   unless params[:format] == 'json'
