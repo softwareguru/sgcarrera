@@ -165,7 +165,7 @@ function loadData() {
         $("#summary").val(profile.summary);
         $("#address").val(profile.mainAddress);
         $.each(profile.skills.values, function(index, value) {
-            $("#skills").tagit({ action: 'add', value: value.skill.name });
+            $("#skills").tagit({ action: 'add', value: value.skill.name, name: "skills[]" });
         });
         $.each(profile.positions.values, function(index, position) {
             fillerFunctions.job(position.title,
