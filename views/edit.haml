@@ -70,15 +70,30 @@
     %p#addSchool.submit
       %input{ :type => 'button', :value => 'Add school' }
 
-  %fieldset
-    %legend Publications
+  %fieldset#publication
+    %legend Publication 1
+    %p.title
+      %input{ :type => "text", :id => "pubTitle1", :name => "publication1[title]"}/
+      %label{ :for => "pubTitle1" } Title
+    %p.link
+      %input{ :type => "text", :id => "pubLink1", :name => "publication1[link]"}/
+      %label{ :for => "pubLink1" } Link
+    %p#addPublication.submit
+      %input{ :type => 'button', :value => 'Add publication' }
 
-  %fieldset
-    %legend Affiliations
+  %fieldset#affiliation
+    %legend Affiliation 1
+    %p.title
+      %input{ :type => "text", :id => "affTitle1", :name => "affiliation1[title]"}/
+      %label{ :for => "affTitle1" } Title
+    %p#addAffiliation.submit
+      %input{ :type => 'button', :value => 'Add affiliation' }
 
     %p.submit
       %input{ :type => 'hidden', :value => '1', :name => "jobs", :id => "numJobs" }
       %input{ :type => 'hidden', :value => '1', :name => "schools", :id => "numSchools" }
+      %input{ :type => 'hidden', :value => '1', :name => "affiliations", :id => "numAffiliations" }
+      %input{ :type => 'hidden', :value => '1', :name => "publications", :id => "numPublications" }
       %input{ :type => 'submit', :value => 'Save changes' }
       :plain
         <script type="in/login" data-onAuth="loadData">

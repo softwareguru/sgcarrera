@@ -119,6 +119,10 @@ end
 
 post '/users/edit' do 
   @user = User.first(:username => session[:username])
+  numJobs = params[:jobs].to_i
+  numSchools = params[:schools].to_i
+  numPublications = params[:publications].to_i
+  numAffiliations = params[:affiliations].to_i
 
   if not @details = @user.details
     @details = Details.new(params[:details])
@@ -134,6 +138,11 @@ post '/users/edit' do
   skills.each do |s|
     skill = Skill.first_or_create(:name => s)
     @user.skills << skill
+  end
+
+  #Now with the jobs
+  for i in 1..numJobs
+
   end
 
   if @details.save and @user.save

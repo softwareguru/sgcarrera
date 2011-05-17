@@ -4,8 +4,12 @@ var currentSkills = [];
 $(function() {
     var experienceTemplate = "<fieldset>" + $("#experience").html() + "</fieldset>";
     var schoolTemplate = "<fieldset>" + $("#school").html() + "</fieldset>";
+    var pubTemplate = "<fieldset>" + $("#publication").html() + "</fieldset>";
+    var affTemplate = "<fieldset>" + $("#affiliation").html() + "</fieldset>";
     var currJob = 1;
     var currSchool = 1;
+    var currAff = 1;
+    var currPub = 1;
     
 
     $.get('/skills/all', function(data) {
@@ -41,6 +45,9 @@ $(function() {
         addJob.parent().after(newExp);
         addJob.remove();
 
+        $("#expStartDate" + currJob).datepicker();
+        $("#expEndDate" + currJob).datepicker();
+
         $("#addJob.submit").click(addJobFunc);
     };
 
@@ -56,10 +63,38 @@ $(function() {
         $("#addSchool.submit").click(addSchoolFunc);
     };
 
+    var addAffiliationFunc = function() {
+        var newAff = affTemplate.replace(/1/g, ++currAff);
+        var addAff = $("#addAffiliation");
+
+        $("#numAffiliations").val(currAff);
+
+        addAff.parent().after(newAff);
+        addAff.remove();
+
+        $("#addAffiliation.submit").click(addAffiliationFunc);
+    };
+
+    var addPublicationFunc = function() {
+        var newPub = pubTemplate.replace(/1/g, ++currPub);
+        var addPub = $("#addPublication");
+
+        $("#numPublications").val(currPub);
+
+        addPub.parent().after(newPub);
+        addPub.remove();
+
+        $("#addPublication.submit").click(addPublicationFunc);
+    };
+
     $("#addJob.submit").click(addJobFunc);
     $("#addSchool.submit").click(addSchoolFunc);
+    $("#addPublication.submit").click(addPublicationFunc);
+    $("#addAffiliation.submit").click(addAffiliationFunc);
 
 
+    $("#expStartDate1").datepicker();
+    $("#expEndDate1").datepicker();
 });
 
 function loadData() {
