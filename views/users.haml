@@ -11,7 +11,7 @@
   %div
     %img{ :src => "http://www.gravatar.com/avatar/#{user.digest}?s=20", :alt => "Avatar"  }/
     %strong
-      %a{ :href => "/#{user.username}" }= user.username
+      %a{ :href => "/#{URI.escape(user.username)}" }= user.username
     -if user.details
       is a happy
       = user.details.title
