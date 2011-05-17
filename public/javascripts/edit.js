@@ -147,6 +147,7 @@ function loadData() {
           .fields(["headline","summary","mainAddress", "skills", "positions","publications", "educations", "associations"])
           .result(function(result) {
         profile = result.values[0];
+        $("#firstexp").remove();
         $("#title").val(profile.headline);
         $("#summary").val(profile.summary);
         $("#address").val(profile.mainAddress);
