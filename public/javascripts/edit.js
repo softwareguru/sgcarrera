@@ -146,8 +146,8 @@ $(function() {
 function formatDate(date) {
     if(date !== undefined) {
         var result = "";
-        if(date.moth !== undefined) {
-            result = date.moth + "/1/";
+        if(date.month !== undefined) {
+            result = date.month + "/1/";
         }
         result += date.year;
         return result;
