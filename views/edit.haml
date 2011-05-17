@@ -91,7 +91,7 @@
           %input{ :type => "text", :id => "location#{i + 1}", :name => "education#{i + 1}[location]", :value => edu.location}/
           %label{ :for => "location#{i + 1}" } School
         %p.startDate
-          %input.date{ :type => "text", :id => "edStartDate#{i + 1}", :name => "education#{i + 1}[start_date]", :value => edu.start_date.strftime("%m/%d/%Y")}/
+          %input.date{ :type => "text", :id => "edStartDate#{i + 1}", :name => "education#{i + 1}
           %label{ :for => "edStartDate#{i + 1}" } Start Date
         %p.hasEnded
           %input.date{ :type => "text", :id => "edEndDate#{i + 1}", :name => "education#{i + 1}[end_date]", :value => edu.end_date.strftime("%m/%d/%Y")}/
@@ -188,10 +188,10 @@
       %input{ :type => "text", :id => "location1", :name => "education1[location]", :value => "#location#"}/
       %label{ :for => "location1" } School
     %p.startDate
-      %input.date{ :type => "text", :id => "edStartDate1", :name => "education1[start_date]", :value => "#start_date#"}/
+      %input.date{ :type => "text", :id => "edStartDate1", :name => "education1[start_date]", :value => "#startDate#"}/
       %label{ :for => "edStartDate1" } Start Date
     %p.hasEnded
-      %input.date{ :type => "text", :id => "edEndDate1", :name => "education1[end_date]", :value => "#end_date#"}/
+      %input.date{ :type => "text", :id => "edEndDate1", :name => "education1[end_date]", :value => "#endDate#"}/
       %label{ :for => "edStartDate1" } End Date (if has already ended)
     %p#addSchool.submit
       %input{ :type => 'button', :value => 'Add school' }
