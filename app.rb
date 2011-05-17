@@ -145,6 +145,10 @@ post '/users/edit' do
     exp_data = params["experience#{i}".intern]
     company_data = params["company#{i}".intern]
 
+    if company_data[:name].empty? or exp_data[:title].empty?
+      next
+    end
+
     company = Company.first_or_create(:name => company_data[:name])
 
     if exp_data.has_key?("id")
@@ -164,6 +168,10 @@ post '/users/edit' do
   for i in 1..numSchools
     school_data = params["education#{i}".intern]
 
+    if school_data[:summary].empty?
+      next
+    end
+
     if school_data.has_key?("id")
       school = Education.get(school_data["id"])
       school_data.delete("id")
@@ -179,6 +187,10 @@ post '/users/edit' do
   for i in 1..numPublications
     pub_data = params["publication#{i}".intern]
 
+    if pub_data[:name].empty?
+      next
+    end
+
     if pub_data.has_key?("id")
       pub = Publication.get(pub_data["id"])
       pub_data.delete("id")
@@ -193,6 +205,10 @@ post '/users/edit' do
   #Now with the affiliations
   for i in 1..numAffiliations
     aff_data = params["affiliation#{i}".intern]
+
+    if aff_data[:name].empty?
+      next
+    end
 
     if aff_data.has_key?("id")
       aff = Affiliation.get(aff_data["id"])

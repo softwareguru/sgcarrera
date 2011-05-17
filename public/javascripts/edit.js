@@ -1,6 +1,7 @@
 var skills = [];
 var currentSkills = [];
 var companies = [];
+var fillerFunctions = [];
 
 $(function() {
     var experienceTemplate = "<fieldset>" + $("#experience").html() + "</fieldset>";
@@ -44,8 +45,19 @@ $(function() {
         });
     });
 
-    var addJobFunc = function() {
-        var newExp = experienceTemplate.replace(/1/g, ++currJob);
+    var addJobFunc = function(title, company, summary, startDate, endDate) {
+        title   = typeof(title) == 'string' ? title : '';
+        company = typeof(company) == 'string' ? company : '';
+        summary = typeof(summary) == 'string' ? summary: '';
+        startDate = typeof(startDate) == 'string' ? startDate : '';
+        endDate = typeof(endDate) == 'string' ? endDate : '';
+
+        var newExp = experienceTemplate.replace(/1/g, ++currJob)
+                                       .replace("#title#", title)
+                                       .replace("#company#", company)
+                                       .replace("#summary#", summary)
+                                       .replace("#startDate#", startDate)
+                                       .replace("#endDate#", endDate);
         var addJob = $("#addJob");
 
         $("#numJobs").val(currJob);
@@ -90,9 +102,15 @@ $(function() {
         $("#addAffiliation.submit").click(addAffiliationFunc);
     };
 
-    var addPublicationFunc = function() {
-        var newPub = pubTemplate.replace(/1/g, ++currPub);
+    var addPublicationFunc = function(name, link) {
+        name = typeof(name) == 'string' ? name : '';
+        link = typeof(link) == 'string' ? link : '';
+
+        var newPub = pubTemplate.replace(/1/g, ++currPub).
+                                 replace("#name#", name).
+                                 replace("#url#", link);
         var addPub = $("#addPublication");
+
 
         $("#numPublications").val(currPub);
 
@@ -109,17 +127,42 @@ $(function() {
 
     $(".date").datepicker();
 
+    fillerFunctions.job = addJobFunc;
+    fillerFunctions.school = addSchoolFunc;
+    fillerFunctions.publication = addPublicationFunc;
+    fillerFunctions.affiliation = addAffiliationFunc;
+
 });
+
+function formatDate(date) {
+    if(date !== null) {
+        return date.month + "/1/" + date.year;
+    } else {
+        return "";
+    }
+}
 
 function loadData() {
     IN.API.Profile("me")
-          .fields(["headline","summary","mainAddress", "skills", "positions","publications", "educations"])
+          .fields(["headline","summary","mainAddress", "skills", "positions","publications", "educations", "associations"])
           .result(function(result) {
         profile = result.values[0];
         $("#title").val(profile.headline);
         $("#summary").val(profile.summary);
+        $("#address").val(profile.mainAddress);
         $.each(profile.skills.values, function(index, value) {
             $("#skills").tagit({ action: 'add', value: value.skill.name });
+        });
+        $.each(profile.positions.values, function(index, position) {
+            fillerFunctions.job(position.title,
+                position.company.name,
+                position.summary,
+                formatDate(position.startDate),
+                formatDate(position.endDate));
+        });
+        $.each(profile.publications.values, function(index, position) {
+        });
+        $.each(profile.associations.values, function(index, position) {
         });
     });
 }
