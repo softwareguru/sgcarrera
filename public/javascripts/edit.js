@@ -75,8 +75,17 @@ $(function() {
         $("#addJob.submit").click(addJobFunc);
     };
 
-    var addSchoolFunc = function() {
-        var newSchool = schoolTemplate.replace(/1/g, ++currSchool);
+    var addSchoolFunc = function(summary, loc, startDate, endDate) {
+        summary = typeof(summary) == 'string' ? summary: '';
+        loc = typeof(loc) == 'string' ? loc : '';
+        startDate = typeof(startDate) == 'string' ? startDate : '';
+        endDate = typeof(endDate) == 'string' ? endDate : '';
+
+        var newSchool = schoolTemplate.replace(/1/g, ++currSchool)
+                                      .replace("#summary#", summary)
+                                      .replace("#location#", loc)
+                                      .replace("#startDate#", startDate)
+                                      .replace("#endDate#", endDate);
         var addSchool = $("#addSchool");
 
         $("#numSchools").val(currSchool);
@@ -147,7 +156,6 @@ function loadData() {
           .fields(["headline","summary","mainAddress", "skills", "positions","publications", "educations", "associations"])
           .result(function(result) {
         profile = result.values[0];
-        $("#firstexp").remove();
         $("#title").val(profile.headline);
         $("#summary").val(profile.summary);
         $("#address").val(profile.mainAddress);
@@ -160,6 +168,12 @@ function loadData() {
                 position.summary,
                 formatDate(position.startDate),
                 formatDate(position.endDate));
+        });
+        $.each(profile.educations.values, function(index, education) {
+            fillerFunctions.school(education.fieldOfStudy,
+                education.schoolName,
+                formatDate(education.startDate),
+                formatDate(education.endDate));
         });
         $.each(profile.publications.values, function(index, position) {
         });

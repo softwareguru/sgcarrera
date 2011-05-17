@@ -182,16 +182,16 @@
   %fieldset#school
     %legend Education - School 1
     %p.title
-      %input{ :type => "text", :id => "degree1", :name => "education1[summary]"}/
+      %input{ :type => "text", :id => "degree1", :name => "education1[summary]", :value => "#summary#"}/
       %label{ :for => "degree1" } Degree
     %p.company
-      %input{ :type => "text", :id => "location1", :name => "education1[location]"}/
+      %input{ :type => "text", :id => "location1", :name => "education1[location]", :value => "#location#"}/
       %label{ :for => "location1" } School
     %p.startDate
-      %input.date{ :type => "text", :id => "edStartDate1", :name => "education1[start_date]"}/
+      %input.date{ :type => "text", :id => "edStartDate1", :name => "education1[start_date]", :value => "#start_date#"}/
       %label{ :for => "edStartDate1" } Start Date
     %p.hasEnded
-      %input.date{ :type => "text", :id => "edEndDate1", :name => "education1[end_date]"}/
+      %input.date{ :type => "text", :id => "edEndDate1", :name => "education1[end_date]", :value => "#end_date#"}/
       %label{ :for => "edStartDate1" } End Date (if has already ended)
     %p#addSchool.submit
       %input{ :type => 'button', :value => 'Add school' }
