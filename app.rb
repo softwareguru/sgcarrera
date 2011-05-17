@@ -142,13 +142,43 @@ post '/users/edit' do
 
   #Now with the jobs
   for i in 1..numJobs
+    exp_data = params["experience#{i}".intern]
+    company_data = params["company#{i}".intern]
 
+    company = Company.first_or_create(:name => company_data[:name])
+
+    if exp_data.has_key?("id")
+      experience = Experience.get(exp_data["id"])
+      exp_data.delete("id")
+      experience.attributes = exp_data
+    else
+      experience = Experience.new(exp_data)
+    end
+
+    experience.company = company
+
+    @user.experiences << experience
+  end
+
+  #Now with the educations
+  for i in 1..numSchools
+    school_data = params["education#{i}".intern]
+
+    if school_data.has_key?("id")
+      school = Education.get(school_data["id"])
+      school_data.delete("id")
+      school.attributes = school_data
+    else
+      school = Education.new(school_data)
+    end
+
+    @user.educations << school
   end
 
   if @details.save and @user.save
     redirect "/#{@user.username}", :notice => "Data saved!"
   else
-    redirect "/edit", :warning => 'Something went wrong'
+    redirect "/users/edit", :warning => 'Something went wrong'
   end
 end
 

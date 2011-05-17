@@ -33,42 +33,89 @@
     %p.skills
       %ul#skills
 
-  %fieldset#experience
-    %legend Experience - Company 1
-    %p.title
-      %input{ :type => "text", :id => "title1", :name => "experience1[title]"}/
-      %label{ :for => "title1" } Title
-    %p.company
-      %input{ :type => "text", :id => "company1", :name => "company1[name]"}/
-      %label{ :for => "company1" } Company
-    %p.summary
-      %input{ :type => "text", :id => "summary1", :name => "experience1[summary]"}/
-      %label{ :for => "summary1" } Summary
-    %p.startDate
-      %input{ :type => "text", :id => "expStartDate1`", :name => "experience1[start_date]"}/
-      %label{ :for => "expStartDate1" } Start Date
-    %p.hasEnded
-      %input{ :type => "text", :id => "expEndDate1`", :name => "experience1[end_date]"}/
-      %label{ :for => "expStartDate1" } End Date (if ended)
-    %p#addJob.submit
-      %input{ :type => 'button', :value => 'Add job' }
+  - if not @user.experiences.empty?
+    - @user.experiences.each_with_index do |exp, i|
+      %fieldset
+        Experience - Company 
+        = i + 1
+        %p.title
+          %input{ :type => "hidden", :name => "experience#{i + 1}[id]", :value => exp.id}/
+          %input{ :type => "text", :id => "title#{i + 1}", :name => "experience#{i + 1}[title]", :value => exp.title}/
+          %label{ :for => "title1" } Title
+        %p.company
+          %input.companies{ :type => "text", :id => "company#{i + 1}", :name => "company#{i + 1}[name]", :value => exp.company.name}/
+          %label{ :for => "company#{i + 1}" } Company
+        %p.summary
+          %input{ :type => "text", :id => "summary#{i + 1}", :name => "experience#{i + 1}[summary]", :value => exp.summary}/
+          %label{ :for => "summary#{i + 1}" } Summary
+        %p.startDate
+          %input.date{ :type => "text", :id => "expStartDate#{i + 1}", :name => "experience#{i + 1}[start_date]", :value => exp.start_date.strftime("%m/%d/%Y")}/
+          %label{ :for => "expStartDate#{i + 1}" } Start Date
+        %p.hasEnded
+          %input.date{ :type => "text", :id => "expEndDate#{i + 1}", :name => "experience#{i + 1}[end_date]", :value => exp.end_date.strftime("%m/%d/%Y")}/
+          %label{ :for => "expEndDate#{i + 1}" } End Date (if ended)
+        - if @user.experiences.count == i + 1
+          %p#addJob.submit
+            %input{ :type => 'button', :value => 'Add job' }
+  - else
+    %fieldset
+      %legend Experience - Company 1
+      %p.title
+        %input{ :type => "text", :id => "title1", :name => "experience1[title]"}/
+        %label{ :for => "title1" } Title
+      %p.company
+        %input.companies{ :type => "text", :id => "company1", :name => "company1[name]"}/
+        %label{ :for => "company1" } Company
+      %p.summary
+        %input{ :type => "text", :id => "summary1", :name => "experience1[summary]"}/
+        %label{ :for => "summary1" } Summary
+      %p.startDate
+        %input.date{ :type => "text", :id => "expStartDate1", :name => "experience1[start_date]"}/
+        %label{ :for => "expStartDate1" } Start Date
+      %p.hasEnded
+        %input.date{ :type => "text", :id => "expEndDate1", :name => "experience1[end_date]"}/
+        %label{ :for => "expEndDate1" } End Date (if ended)
+      %p#addJob.submit
+        %input{ :type => 'button', :value => 'Add job' }
 
-  %fieldset#school
-    %legend Education - School 1
-    %p.title
-      %input{ :type => "text", :id => "degree1", :name => "education1[summary]"}/
-      %label{ :for => "degree1" } Degree
-    %p.company
-      %input{ :type => "text", :id => "location1", :name => "education1[location]"}/
-      %label{ :for => "location1" } School
-    %p.startDate
-      %input{ :type => "text", :id => "edStartDate1`", :name => "education1[start_date]"}/
-      %label{ :for => "edStartDate1" } Start Date
-    %p.hasEnded
-      %input{ :type => "text", :id => "edEndDate1`", :name => "education1[end_date]"}/
-      %label{ :for => "edStartDate1" } End Date (if has already ended)
-    %p#addSchool.submit
-      %input{ :type => 'button', :value => 'Add school' }
+  - if not @user.educations.empty?
+    - @user.educations.each_with_index do |edu, i|
+      %fieldset
+        Education - School
+        = i + 1
+        %p.title
+          %input{ :type => "hidden", :name => "education#{i + 1}[id]", :value => edu.id}/
+          %input{ :type => "text", :id => "degree#{i + 1}", :name => "education#{i + 1}[summary]", :value => edu.summary}/
+          %label{ :for => "degree#{i + 1}" } Degree
+        %p.company
+          %input{ :type => "text", :id => "location#{i + 1}", :name => "education#{i + 1}[location]", :value => edu.location}/
+          %label{ :for => "location#{i + 1}" } School
+        %p.startDate
+          %input.date{ :type => "text", :id => "edStartDate#{i + 1}", :name => "education#{i + 1}[start_date]", :value => edu.start_date.strftime("%m/%d/%Y")}/
+          %label{ :for => "edStartDate#{i + 1}" } Start Date
+        %p.hasEnded
+          %input.date{ :type => "text", :id => "edEndDate#{i + 1}", :name => "education#{i + 1}[end_date]", :value => edu.end_date.strftime("%m/%d/%Y")}/
+          %label{ :for => "edStartDate#{i + 1}" } End Date (if has already ended)
+        - if @user.educations.count == i + 1
+          %p#addSchool.submit
+            %input{ :type => 'button', :value => 'Add school' }
+  -else 
+    %fieldset
+      %legend Education - School 1
+      %p.title
+        %input{ :type => "text", :id => "degree1", :name => "education1[summary]"}/
+        %label{ :for => "degree1" } Degree
+      %p.company
+        %input{ :type => "text", :id => "location1", :name => "education1[location]"}/
+        %label{ :for => "location1" } School
+      %p.startDate
+        %input.date{ :type => "text", :id => "edStartDate1", :name => "education1[start_date]"}/
+        %label{ :for => "edStartDate1" } Start Date
+      %p.hasEnded
+        %input.date{ :type => "text", :id => "edEndDate1", :name => "education1[end_date]"}/
+        %label{ :for => "edStartDate1" } End Date (if has already ended)
+      %p#addSchool.submit
+        %input{ :type => 'button', :value => 'Add school' }
 
   %fieldset#publication
     %legend Publication 1
@@ -90,8 +137,8 @@
       %input{ :type => 'button', :value => 'Add affiliation' }
 
     %p.submit
-      %input{ :type => 'hidden', :value => '1', :name => "jobs", :id => "numJobs" }
-      %input{ :type => 'hidden', :value => '1', :name => "schools", :id => "numSchools" }
+      %input{ :type => 'hidden', :value => (@user.experiences.count != 0? @user.experiences.count : 1), :name => "jobs", :id => "numJobs" }
+      %input{ :type => 'hidden', :value => (@user.educations.count != 0? @user.educations.count : 1), :name => "schools", :id => "numSchools" }
       %input{ :type => 'hidden', :value => '1', :name => "affiliations", :id => "numAffiliations" }
       %input{ :type => 'hidden', :value => '1', :name => "publications", :id => "numPublications" }
       %input{ :type => 'submit', :value => 'Save changes' }
@@ -100,4 +147,57 @@
         Hi, <?js= firstName ?> <?js= lastName ?>.
         </script>
 
+%div#hidden
+  %fieldset#school
+    %legend Education - School 1
+    %p.title
+      %input{ :type => "text", :id => "degree1", :name => "education1[summary]"}/
+      %label{ :for => "degree1" } Degree
+    %p.company
+      %input{ :type => "text", :id => "location1", :name => "education1[location]"}/
+      %label{ :for => "location1" } School
+    %p.startDate
+      %input.date{ :type => "text", :id => "edStartDate1", :name => "education1[start_date]"}/
+      %label{ :for => "edStartDate1" } Start Date
+    %p.hasEnded
+      %input.date{ :type => "text", :id => "edEndDate1", :name => "education1[end_date]"}/
+      %label{ :for => "edStartDate1" } End Date (if has already ended)
+    %p#addSchool.submit
+      %input{ :type => 'button', :value => 'Add school' }
 
+  %fieldset#publication
+    %legend Publication 1
+    %p.title
+      %input{ :type => "text", :id => "pubTitle1", :name => "publication1[title]"}/
+      %label{ :for => "pubTitle1" } Title
+    %p.link
+      %input{ :type => "text", :id => "pubLink1", :name => "publication1[link]"}/
+      %label{ :for => "pubLink1" } Link
+    %p#addPublication.submit
+      %input{ :type => 'button', :value => 'Add publication' }
+  %fieldset#affiliation
+    %legend Affiliation 1
+    %p.title
+      %input{ :type => "text", :id => "affTitle1", :name => "affiliation1[title]"}/
+      %label{ :for => "affTitle1" } Title
+    %p#addAffiliation.submit
+      %input{ :type => 'button', :value => 'Add affiliation' }
+  %fieldset#experience
+    %legend Experience - Company 1
+    %p.title
+      %input{ :type => "text", :id => "title1", :name => "experience1[title]"}/
+      %label{ :for => "title1" } Title
+    %p.company
+      %input.companies{ :type => "text", :id => "company1", :name => "company1[name]"}/
+      %label{ :for => "company1" } Company
+    %p.summary
+      %input{ :type => "text", :id => "summary1", :name => "experience1[summary]"}/
+      %label{ :for => "summary1" } Summary
+    %p.startDate
+      %input.date{ :type => "text", :id => "expStartDate1", :name => "experience1[start_date]"}/
+      %label{ :for => "expStartDate1" } Start Date
+    %p.hasEnded
+      %input.date{ :type => "text", :id => "expEndDate1", :name => "experience1[end_date]"}/
+      %label{ :for => "expEndDate1" } End Date (if ended)
+    %p#addJob.submit
+      %input{ :type => 'button', :value => 'Add job' }

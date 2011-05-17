@@ -1,16 +1,16 @@
 var skills = [];
 var currentSkills = [];
+var companies = [];
 
 $(function() {
     var experienceTemplate = "<fieldset>" + $("#experience").html() + "</fieldset>";
     var schoolTemplate = "<fieldset>" + $("#school").html() + "</fieldset>";
     var pubTemplate = "<fieldset>" + $("#publication").html() + "</fieldset>";
     var affTemplate = "<fieldset>" + $("#affiliation").html() + "</fieldset>";
-    var currJob = 1;
-    var currSchool = 1;
-    var currAff = 1;
-    var currPub = 1;
-    
+    var currJob = $("#numJobs").val();
+    var currSchool = $("#numSchools").val();
+    var currAff = $("#numAffiliations").val();
+    var currPub = $("#numPublications").val();
 
     $.get('/skills/all', function(data) {
 
@@ -35,6 +35,14 @@ $(function() {
 
     });
 
+    $.get('/companies/all', function(data) {
+        $.each(data, function(index, value) {
+            companies.push(value.name);
+        });
+        $(".companies").autocomplete({
+            source: companies
+        });
+    });
 
     var addJobFunc = function() {
         var newExp = experienceTemplate.replace(/1/g, ++currJob);
@@ -47,6 +55,10 @@ $(function() {
 
         $("#expStartDate" + currJob).datepicker();
         $("#expEndDate" + currJob).datepicker();
+        $(".companies").autocomplete({
+            source: companies
+        });
+
 
         $("#addJob.submit").click(addJobFunc);
     };
@@ -61,6 +73,9 @@ $(function() {
         addSchool.remove();
 
         $("#addSchool.submit").click(addSchoolFunc);
+
+        $("#edStartDate" + currSchool).datepicker();
+        $("#edEndDate" + currSchool).datepicker();
     };
 
     var addAffiliationFunc = function() {
@@ -92,9 +107,8 @@ $(function() {
     $("#addPublication.submit").click(addPublicationFunc);
     $("#addAffiliation.submit").click(addAffiliationFunc);
 
+    $(".date").datepicker();
 
-    $("#expStartDate1").datepicker();
-    $("#expEndDate1").datepicker();
 });
 
 function loadData() {

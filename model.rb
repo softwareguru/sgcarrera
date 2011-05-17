@@ -61,7 +61,7 @@ class Experience
     property :summary,    Text   
 
     property :start_date, Date
-    property :end_date,   Date
+    property :end_date,   Date,   :required => false
 
     belongs_to :company
     belongs_to :user
@@ -75,7 +75,7 @@ class Education
     property :location,   Text,   :required => false
 
     property :start_date, Date
-    property :end_date,   Date
+    property :end_date,   Date,   :required => false
     
     belongs_to :user
 end
