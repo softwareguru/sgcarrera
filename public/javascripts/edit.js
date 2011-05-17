@@ -135,7 +135,7 @@ $(function() {
 });
 
 function formatDate(date) {
-    if(date !== null) {
+    if(date !== undefined) {
         return date.month + "/1/" + date.year;
     } else {
         return "";
