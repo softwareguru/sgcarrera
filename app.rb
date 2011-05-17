@@ -16,9 +16,16 @@ use Rack::Flash
 enable :sessions
 
 #Here start the unsecured thingies
+before do
+  @logged_in = session[:username]
+end
 
 get '/' do
+  if @logged_in
+    redirect "/#{@logged_in}"
+  else
   haml :index
+  end
 end
 
 get '/new' do
@@ -102,6 +109,7 @@ get '/stylesheets/*' do
   content_type 'text/css'
   sass '../styles/'.concat(params[:splat].join.chomp('.css')).to_sym
 end
+
 
 before '/users/*' do
   if not session[:username]
