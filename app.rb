@@ -71,6 +71,7 @@ post '/select' do
   if @user.save
     session[:identifier] = nil
     session[:email]      = nil
+    session[:username]   = @user.username
     redirect "/#{@user.username}", :notice => 'Usuario creado!'
   else
     @user.errors.each do |e|
