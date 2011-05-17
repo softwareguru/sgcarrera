@@ -145,7 +145,12 @@ $(function() {
 
 function formatDate(date) {
     if(date !== undefined) {
-        return date.month + "/1/" + date.year;
+        var result = "";
+        if(date.moth !== undefined) {
+            result = date.moth + "/1/";
+        }
+        result += date.year;
+        return result;
     } else {
         return "";
     }
