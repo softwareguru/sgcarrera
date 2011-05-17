@@ -133,11 +133,11 @@ post '/users/edit' do
   #Let's work with the skills
   @user.skills.clear
 
-  skills = params[:skills]
-
-  skills.each do |s|
-    skill = Skill.first_or_create(:name => s)
-    @user.skills << skill
+  if skills = params[:skills]
+    skills.each do |s|
+      skill = Skill.first_or_create(:name => s)
+      @user.skills << skill
+    end
   end
 
   #Now with the jobs
@@ -147,6 +147,10 @@ post '/users/edit' do
 
     if company_data[:name].empty? or exp_data[:title].empty?
       next
+    end
+
+    if exp_data["end_date"].empty?
+      exp_data.delete("end_date")
     end
 
     company = Company.first_or_create(:name => company_data[:name])
@@ -159,9 +163,20 @@ post '/users/edit' do
       experience = Experience.new(exp_data)
     end
 
+
     experience.company = company
 
     @user.experiences << experience
+
+    if experience.save
+      puts "HOLA"
+    else
+      puts "ADIOS"
+      experience.errors.each do |e|
+        puts e
+      end
+    end
+
   end
 
   #Now with the educations
@@ -170,6 +185,10 @@ post '/users/edit' do
 
     if school_data[:summary].empty?
       next
+    end
+
+    if school_data["end_date"].empty?
+      school_data.delete("end_date")
     end
 
     if school_data.has_key?("id")

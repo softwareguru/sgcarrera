@@ -148,6 +148,8 @@ function formatDate(date) {
         var result = "";
         if(date.month !== undefined) {
             result = date.month + "/1/";
+        } else {
+            result = "1/1/";
         }
         result += date.year;
         return result;

@@ -52,7 +52,7 @@
           %input.date{ :type => "text", :id => "expStartDate#{i + 1}", :name => "experience#{i + 1}[start_date]", :value => exp.start_date.strftime("%m/%d/%Y")}/
           %label{ :for => "expStartDate#{i + 1}" } Start Date
         %p.hasEnded
-          %input.date{ :type => "text", :id => "expEndDate#{i + 1}", :name => "experience#{i + 1}[end_date]", :value => exp.end_date.strftime("%m/%d/%Y")}/
+          %input.date{ :type => "text", :id => "expEndDate#{i + 1}", :name => "experience#{i + 1}[end_date]", :value => (exp.end_date.nil? ? '' : exp.end_date.strftime("%m/%d/%Y")) }/
           %label{ :for => "expEndDate#{i + 1}" } End Date (if ended)
         - if @user.experiences.count == i + 1
           %p#addJob.submit
@@ -94,7 +94,7 @@
           %input.date{ :type => "text", :id => "edStartDate#{i + 1}", :name => "education#{i + 1}[start_date]", :value => edu.start_date.strftime("%m/%d/%Y") }/
           %label{ :for => "edStartDate#{i + 1}" } Start Date
         %p.hasEnded
-          %input.date{ :type => "text", :id => "edEndDate#{i + 1}", :name => "education#{i + 1}[end_date]", :value => edu.end_date.strftime("%m/%d/%Y")}/
+          %input.date{ :type => "text", :id => "edEndDate#{i + 1}", :name => "education#{i + 1}[end_date]", :value => (edu.end_date.nil? ? '' : edu.end_date.strftime("%m/%d/%Y")) }/
           %label{ :for => "edStartDate#{i + 1}" } End Date (if has already ended)
         - if @user.educations.count == i + 1
           %p#addSchool.submit
