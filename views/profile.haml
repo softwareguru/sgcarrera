@@ -20,7 +20,7 @@
   %ul.tagit
     - @user.skills.each do |skill|
       %li.tagit-choice
-        %a{ :href => "#", :style => "text-decoration: none; color: #00E;" }= skill.name
+        %a{ :href => "/skills/#{skill.name}", :style => "text-decoration: none; color: #00E;" }= skill.name
 
 - if @user.experiences.count > 0
   %hr
@@ -30,7 +30,8 @@
       %p
         %strong= exp.title
         at
-        %strong= exp.company.name
+        %strong
+          %a{ :href => "/companies/#{exp.company.name}", :style => "text-decoration: none" }= exp.company.name
       %p
         From
         %strong= exp.start_date

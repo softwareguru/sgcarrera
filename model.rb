@@ -4,6 +4,8 @@ require 'dm-migrations'
 require 'dm-timestamps'
 require 'dm-serializer/to_json'
 
+require 'digest/md5'
+
 DataMapper.setup(:default, ENV['DATABASE_URL'] || "sqlite3://#{Dir.pwd}/sgcarrera.sqlite3")
 
 class User
@@ -26,6 +28,11 @@ class User
     has n, :skills, :through => :skillings
     has n, :publications
     has n, :affiliations
+
+    def digest
+      Digest::MD5.hexdigest(email.downcase)
+    end
+
 end
 
 class Details
@@ -52,6 +59,7 @@ class Company
     property :name, String
 
     has n, :experiences
+    has n, :users, :through => :experiences
 end
 
 class Experience

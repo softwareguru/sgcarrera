@@ -273,12 +273,42 @@ get '/skills/current' do
   end
 end
 
+get '/skills/:slug' do
+  @skill = Skill.first(:name => params[:slug])
+  @users = @skill.users
+
+  unless params[:format] == 'json'
+    haml :users
+  else
+    #content_type :json, 'charset' => 'utf-8'
+    #@users.to_json
+    #Not yet implemented
+    halt 401
+  end
+
+end
+
 get '/companies/all' do
   @companies = Company.all
 
   content_type :json
 
   @companies.to_json(:only => [:name])
+end
+
+get '/companies/:slug' do
+  @company = Company.first(:name => params[:slug])
+  @users   = @company.users
+
+  unless params[:format] == 'json'
+    haml :users
+  else
+    #content_type :json, 'charset' => 'utf-8'
+    #@users.to_json
+    #Not yet implemented
+    halt 401
+  end
+
 end
 
 get '/:slug' do 
