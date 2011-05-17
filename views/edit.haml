@@ -91,7 +91,7 @@
           %input{ :type => "text", :id => "location#{i + 1}", :name => "education#{i + 1}[location]", :value => edu.location}/
           %label{ :for => "location#{i + 1}" } School
         %p.startDate
-          %input.date{ :type => "text", :id => "edStartDate#{i + 1}", :name => "education#{i + 1}
+          %input.date{ :type => "text", :id => "edStartDate#{i + 1}", :name => "education#{i + 1}", :value => edu.start_date.strftime("%m/%d/%Y") }/
           %label{ :for => "edStartDate#{i + 1}" } Start Date
         %p.hasEnded
           %input.date{ :type => "text", :id => "edEndDate#{i + 1}", :name => "education#{i + 1}[end_date]", :value => edu.end_date.strftime("%m/%d/%Y")}/
