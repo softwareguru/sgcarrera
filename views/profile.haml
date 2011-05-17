@@ -9,16 +9,18 @@
     %div
       %a{ :title => 'Aqui', :href => "/users/edit" } Editar datos
 %h1= @user.username
-%h2= @user.details.title
+-if @user.details
+  %h2= @user.details.title
 
-%div= @user.details.summary
+  %div= @user.details.summary
 
-%hr
-%h3 Skills
-%ul.tagit
-  - @user.skills.each do |skill|
-    %li.tagit-choice
-      %a{ :href => "#", :style => "text-decoration: none; color: #00E;" }= skill.name
+-if @user.skills.count > 0
+  %hr
+  %h3 Skills
+  %ul.tagit
+    - @user.skills.each do |skill|
+      %li.tagit-choice
+        %a{ :href => "#", :style => "text-decoration: none; color: #00E;" }= skill.name
 
 - if @user.experiences.count > 0
   %hr
