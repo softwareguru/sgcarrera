@@ -137,6 +137,8 @@ post '/users/edit' do
     @details = Details.new(params[:details])
   end
 
+  @details.attributes = params[:details]
+
   @details.user = @user
 
   #Let's work with the skills
