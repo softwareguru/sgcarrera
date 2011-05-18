@@ -166,22 +166,28 @@ function loadData() {
         $("#title").val(profile.headline);
         $("#summary").val(profile.summary);
         $("#address").val(profile.mainAddress);
-        $.each(profile.skills.values, function(index, value) {
-            $("#skills").tagit({ action: 'add', value: value.skill.name, name: "skills[]" });
-        });
-        $.each(profile.positions.values, function(index, position) {
-            fillerFunctions.job(position.title,
-                position.company.name,
-                position.summary,
-                formatDate(position.startDate),
-                formatDate(position.endDate));
-        });
-        $.each(profile.educations.values, function(index, education) {
-            fillerFunctions.school(education.fieldOfStudy,
-                education.schoolName,
-                formatDate(education.startDate),
-                formatDate(education.endDate));
-        });
+        if(profile.skills !== undefined && profile.skills.values !== undefined) {
+            $.each(profile.skills.values, function(index, value) {
+                $("#skills").tagit({ action: 'add', value: value.skill.name, name: "skills[]" });
+            });
+        }
+        if(profile.positions !== undefined && profile.positions.values !== undefined) {
+            $.each(profile.positions.values, function(index, position) {
+                fillerFunctions.job(position.title,
+                    position.company.name,
+                    position.summary,
+                    formatDate(position.startDate),
+                    formatDate(position.endDate));
+            });
+        }
+        if(profile.educations !== undefined && profile.educations.values !== undefined) {
+            $.each(profile.educations.values, function(index, education) {
+                fillerFunctions.school(education.fieldOfStudy,
+                    education.schoolName,
+                    formatDate(education.startDate),
+                    formatDate(education.endDate));
+            });
+        }
         $.each(profile.publications.values, function(index, position) {
         });
         $.each(profile.associations.values, function(index, position) {

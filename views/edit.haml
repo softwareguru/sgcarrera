@@ -7,6 +7,12 @@
 
 %h1 Editando: #{@user.username}
 
+
+:plain
+  <script type="in/login" data-onAuth="loadData">
+  Hi, <?js= firstName ?> <?js= lastName ?>.
+  </script>
+
 %form{ :method => 'post', :action => 'edit' }
   %fieldset
     %legend General
@@ -173,10 +179,6 @@
       %input{ :type => 'hidden', :value => (@user.affiliations.count != 0? @user.affiliations.count : 1), :name => "affiliations", :id => "numAffiliations" }
       %input{ :type => 'hidden', :value => (@user.publications.count != 0? @user.publications.count : 1), :name => "publications", :id => "numPublications" }
       %input{ :type => 'submit', :value => 'Save changes' }
-      :plain
-        <script type="in/login" data-onAuth="loadData">
-        Hi, <?js= firstName ?> <?js= lastName ?>.
-        </script>
 
 %div#hidden
   %fieldset#school
