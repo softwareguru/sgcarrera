@@ -8,10 +8,12 @@
 %h1 Editando: #{@user.username}
 
 
-:plain
-  <script type="in/login" data-onAuth="loadData">
-  Hi, <?js= firstName ?> <?js= lastName ?>.
-  </script>
+%fieldset
+  %legend Import from linkedin
+  :plain
+    <script type="in/login" data-onAuth="loadData">
+    Hi, <?js= firstName ?> <?js= lastName ?>.
+    </script>
 
 %form{ :method => 'post', :action => 'edit' }
   %fieldset
