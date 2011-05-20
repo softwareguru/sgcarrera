@@ -3,15 +3,20 @@ var currentSkills = [];
 var companies = [];
 var fillerFunctions = [];
 
+var currJob;
+var currSchool;
+var currAff;
+var currPub;
+
 $(function() {
     var experienceTemplate = "<fieldset>" + $("#experience").html() + "</fieldset>";
     var schoolTemplate = "<fieldset>" + $("#school").html() + "</fieldset>";
     var pubTemplate = "<fieldset>" + $("#publication").html() + "</fieldset>";
     var affTemplate = "<fieldset>" + $("#affiliation").html() + "</fieldset>";
-    var currJob = $("#numJobs").val();
-    var currSchool = $("#numSchools").val();
-    var currAff = $("#numAffiliations").val();
-    var currPub = $("#numPublications").val();
+    currJob = $("#numJobs").val();
+    currSchool = $("#numSchools").val();
+    currAff = $("#numAffiliations").val();
+    currPub = $("#numPublications").val();
 
     $.get('/skills/all', function(data) {
 
@@ -177,6 +182,7 @@ function loadData() {
             });
         }
         if(profile.positions !== undefined && profile.positions.values !== undefined) {
+            currJob -= 1;
             $.each(profile.positions.values, function(index, position) {
                 var remove = (index === 0);
                 fillerFunctions.job(position.title,
