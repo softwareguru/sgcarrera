@@ -45,12 +45,13 @@ $(function() {
         });
     });
 
-    var addJobFunc = function(title, company, summary, startDate, endDate) {
+    var addJobFunc = function(title, company, summary, startDate, endDate, remove) {
         title   = typeof(title) == 'string' ? title : '';
         company = typeof(company) == 'string' ? company : '';
         summary = typeof(summary) == 'string' ? summary: '';
         startDate = typeof(startDate) == 'string' ? startDate : '';
         endDate = typeof(endDate) == 'string' ? endDate : '';
+        remote = remove || false;
 
         var newExp = experienceTemplate.replace(/1/g, ++currJob)
                                        .replace("#title#", title)
@@ -63,7 +64,11 @@ $(function() {
         $("#numJobs").val(currJob);
 
         addJob.parent().after(newExp);
-        addJob.remove();
+        if(remove) {
+            addJob.parent().remove();
+        } else {
+            addJob.remove();
+        }
 
         $("#expStartDate" + currJob).datepicker();
         $("#expEndDate" + currJob).datepicker();
@@ -173,12 +178,20 @@ function loadData() {
         }
         if(profile.positions !== undefined && profile.positions.values !== undefined) {
             $.each(profile.positions.values, function(index, position) {
+                var remove = (index === 0);
                 fillerFunctions.job(position.title,
                     position.company.name,
                     position.summary,
                     formatDate(position.startDate),
-                    formatDate(position.endDate));
+                    formatDate(position.endDate),
+                    remove);
             });
+            fillerFunctions.job("",
+                "",
+                "",
+                "",
+                "",
+                remove);
         }
         if(profile.educations !== undefined && profile.educations.values !== undefined) {
             $.each(profile.educations.values, function(index, education) {
