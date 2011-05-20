@@ -85,11 +85,12 @@ $(function() {
         $("#addJob.submit").click(addJobFunc);
     };
 
-    var addSchoolFunc = function(summary, loc, startDate, endDate) {
+    var addSchoolFunc = function(summary, loc, startDate, endDate, remove) {
         summary = typeof(summary) == 'string' ? summary: '';
         loc = typeof(loc) == 'string' ? loc : '';
         startDate = typeof(startDate) == 'string' ? startDate : '';
         endDate = typeof(endDate) == 'string' ? endDate : '';
+        remote = remove || false;
 
         var newSchool = schoolTemplate.replace(/1/g, ++currSchool)
                                       .replace("#summary#", summary)
@@ -116,7 +117,11 @@ $(function() {
         $("#numAffiliations").val(currAff);
 
         addAff.parent().after(newAff);
-        addAff.remove();
+        if(remove) {
+            addAff.parent().remove();
+        } else {
+            addAff.remove();
+        }
 
         $("#addAffiliation.submit").click(addAffiliationFunc);
     };
@@ -197,19 +202,31 @@ function loadData() {
                 "",
                 "",
                 "",
-                true);
+                false);
         }
         if(profile.educations !== undefined && profile.educations.values !== undefined) {
+            currSchool -= 1;
             $.each(profile.educations.values, function(index, education) {
+                var remove = (index === 0);
                 fillerFunctions.school(education.fieldOfStudy,
                     education.schoolName,
                     formatDate(education.startDate),
-                    formatDate(education.endDate));
+                    formatDate(education.endDate),
+                    remove);
+            });
+            fillerFunctions.school("",
+                "",
+                "",
+                "",
+                false);
+        }
+        if(profile.publications !== undefined && profile.publications.values !== undefined) {
+            $.each(profile.publications.values, function(index, position) {
             });
         }
-        $.each(profile.publications.values, function(index, position) {
-        });
-        $.each(profile.associations.values, function(index, position) {
-        });
+        if(profile.associations !== undefined && profile.associations.values !== undefined) {
+            $.each(profile.associations.values, function(index, position) {
+            });
+        }
     });
 }
