@@ -197,7 +197,7 @@ function loadData() {
                 "",
                 "",
                 "",
-                remove);
+                true);
         }
         if(profile.educations !== undefined && profile.educations.values !== undefined) {
             $.each(profile.educations.values, function(index, education) {
