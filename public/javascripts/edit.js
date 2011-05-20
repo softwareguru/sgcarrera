@@ -56,7 +56,6 @@ $(function() {
         summary = typeof(summary) == 'string' ? summary: '';
         startDate = typeof(startDate) == 'string' ? startDate : '';
         endDate = typeof(endDate) == 'string' ? endDate : '';
-        remote = remove || false;
 
         var newExp = experienceTemplate.replace(/1/g, ++currJob)
                                        .replace("#title#", title)
@@ -90,7 +89,6 @@ $(function() {
         loc = typeof(loc) == 'string' ? loc : '';
         startDate = typeof(startDate) == 'string' ? startDate : '';
         endDate = typeof(endDate) == 'string' ? endDate : '';
-        remote = remove || false;
 
         var newSchool = schoolTemplate.replace(/1/g, ++currSchool)
                                       .replace("#summary#", summary)
@@ -102,7 +100,11 @@ $(function() {
         $("#numSchools").val(currSchool);
 
         addSchool.parent().after(newSchool);
-        addSchool.remove();
+        if(remove) {
+            addSchool.parent().remove();
+        } else {
+            addSchool.remove();
+        }
 
         $("#addSchool.submit").click(addSchoolFunc);
 
@@ -117,11 +119,7 @@ $(function() {
         $("#numAffiliations").val(currAff);
 
         addAff.parent().after(newAff);
-        if(remove) {
-            addAff.parent().remove();
-        } else {
-            addAff.remove();
-        }
+        addAff.remove();
 
         $("#addAffiliation.submit").click(addAffiliationFunc);
     };
