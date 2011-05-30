@@ -56,7 +56,7 @@ class Company
     include DataMapper::Resource
 
     property :id,   Serial, :writer => :protected, :key => true
-    property :name, String
+    property :name, String,   :length => 512
 
     has n, :experiences
     has n, :users, :through => :experiences
@@ -66,8 +66,8 @@ class Experience
     include DataMapper::Resource
 
     property :id,         Serial, :writer => :protected, :key => true
-    property :title,     String
-    property :summary,    Text   
+    property :title,     String,   :length => 512
+    property :summary,    Text,   :length => 512
 
     property :start_date, Date
     property :end_date,   Date,   :required => false
@@ -80,8 +80,8 @@ class Education
     include DataMapper::Resource
 
     property :id,         Serial, :writer => :protected, :key => true
-    property :summary,    Text   
-    property :location,   Text,   :required => false
+    property :summary,    Text,   :length => 512
+    property :location,   Text,   :required => false,   :length => 512
 
     property :start_date, Date
     property :end_date,   Date,   :required => false

@@ -19,21 +19,21 @@
   %fieldset
     %legend General
     %p.title
-      %input{ :type => "text", :id => "title", :name => "details[title]", :value => @details.title }/
+      %input{ :type => "text", :id => "title", :name => "details[title]", :value => @details.title, :maxlength => "512" }/
       %label{ :for => "title" } Title
     %p.summary
-      %input{ :type => "text", :id => "summary", :name => "details[summary]", :value => @details.summary }/
+      %input{ :type => "text", :id => "summary", :name => "details[summary]", :value => @details.summary , :maxlength => "512" }/
       %label{ :for => "summary" } Summary
     %p.street
-      %input{ :type => "text", :id => "address", :name => "details[address]", :value => @details.address }/
+      %input{ :type => "text", :id => "address", :name => "details[address]", :value => @details.address, :maxlength => "512"  }/
       %label{ :for => "address" } Address
   %fieldset
     %legend Contact
     %p.phone
-      %input{ :type => "text", :id => "phone", :name => "details[tel]", :value => @details.tel }/
+      %input{ :type => "text", :id => "phone", :name => "details[tel]", :value => @details.tel, :maxlength => "128"  }/
       %label{ :for => "phone" } Phone
     %p.url
-      %input{ :type => "text", :id => "url", :name => "details[url]", :value => @details.url }/
+      %input{ :type => "text", :id => "url", :name => "details[url]", :value => @details.url, :maxlength => "128" }/
       %label{ :for => "url" } Web site
 
   %fieldset
