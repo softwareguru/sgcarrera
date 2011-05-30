@@ -180,9 +180,8 @@ post '/users/edit' do
     @user.experiences << experience
 
     if experience.save
-      puts "HOLA"
+      puts "Data saved"
     else
-      puts "ADIOS"
       experience.errors.each do |e|
         puts e
       end
@@ -255,6 +254,10 @@ post '/users/edit' do
     redirect "/#{@user.username}", :notice => "Data saved!"
   else
     redirect "/users/edit", :warning => 'Something went wrong'
+  end
+
+  @user.errors.each do |e|
+    puts e
   end
 end
 
