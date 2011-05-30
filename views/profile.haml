@@ -8,6 +8,8 @@
   - if @logged_in
     %div
       %a{ :title => 'Aqui', :href => "/users/edit" } Editar datos
+    %div
+      %a{ :title => 'Logout', :href => "/users/logout" } Logout
 %h1= @user.username
 -if @user.details
   %h2= @user.details.title

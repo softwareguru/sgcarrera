@@ -267,6 +267,10 @@ post '/users/edit' do
 
 end
 
+get '/users/logout' do 
+  session.clear
+end
+
 get '/skills/all' do
   @skills = Skill.all
 
