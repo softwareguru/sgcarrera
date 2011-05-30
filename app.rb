@@ -256,7 +256,13 @@ post '/users/edit' do
     redirect "/users/edit", :warning => 'Something went wrong'
   end
 
+  puts "Writing errors"
   @user.errors.each do |e|
+    puts e
+  end
+
+  puts "Writing detail errors"
+  @details.errors.each do |e|
     puts e
   end
 end
