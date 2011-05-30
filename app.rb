@@ -269,6 +269,7 @@ end
 
 get '/users/logout' do 
   session.clear
+  redirect "/"
 end
 
 get '/skills/all' do
