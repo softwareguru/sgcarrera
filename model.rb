@@ -41,12 +41,12 @@ class Details
     property :id,       Serial, :writer => :protected, :key => true
     property :summary,  Text,   :required => false
 
-    property :title,    String, :required => true
+    property :title,    String, :required => true, :length => 512
 
-    property :address,  String, :required => false
+    property :address,  String, :required => false, :length => 512
 
-    property :url,      String, :required => false
-    property :tel,      String, :required => false
+    property :url,      String, :required => false, :length => 512
+    property :tel,      String, :required => false, :length => 512
 
 
     belongs_to :user
