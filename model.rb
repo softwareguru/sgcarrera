@@ -67,9 +67,9 @@ class Experience
 
     property :id,         Serial, :writer => :protected, :key => true
     property :title,     String,   :length => 512
-    property :summary,    Text,   :length => 512
+    property :summary,    Text,   :length => 512, :required => false
 
-    property :start_date, Date
+    property :start_date, Date, :required => false
     property :end_date,   Date,   :required => false
 
     belongs_to :company
@@ -83,7 +83,7 @@ class Education
     property :summary,    Text,   :length => 512
     property :location,   Text,   :required => false,   :length => 512
 
-    property :start_date, Date
+    property :start_date, Date, :required => false
     property :end_date,   Date,   :required => false
     
     belongs_to :user
