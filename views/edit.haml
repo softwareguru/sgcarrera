@@ -48,19 +48,19 @@
         = i + 1
         %p.title
           %input{ :type => "hidden", :name => "experience#{i + 1}[id]", :value => exp.id}/
-          %input{ :type => "text", :id => "title#{i + 1}", :name => "experience#{i + 1}[title]", :value => exp.title}/
+          %input{ :type => "text", :id => "title#{i + 1}", :name => "experience#{i + 1}[title]", :value => exp.title, :maxlength => "128"}/
           %label{ :for => "title1" } Title
         %p.company
-          %input.companies{ :type => "text", :id => "company#{i + 1}", :name => "company#{i + 1}[name]", :value => exp.company.name}/
+          %input.companies{ :type => "text", :id => "company#{i + 1}", :name => "company#{i + 1}[name]", :value => exp.company.name, :maxlength => "128"}/
           %label{ :for => "company#{i + 1}" } Company
         %p.summary
-          %input{ :type => "text", :id => "summary#{i + 1}", :name => "experience#{i + 1}[summary]", :value => exp.summary}/
+          %input{ :type => "text", :id => "summary#{i + 1}", :name => "experience#{i + 1}[summary]", :value => exp.summary, :maxlength => "128"}/
           %label{ :for => "summary#{i + 1}" } Summary
         %p.startDate
-          %input.date{ :type => "text", :id => "expStartDate#{i + 1}", :name => "experience#{i + 1}[start_date]", :value => exp.start_date.strftime("%m/%d/%Y")}/
+          %input.date{ :type => "text", :id => "expStartDate#{i + 1}", :name => "experience#{i + 1}[start_date]", :value => exp.start_date.strftime("%m/%d/%Y"), :maxlength => "128"}/
           %label{ :for => "expStartDate#{i + 1}" } Start Date
         %p.hasEnded
-          %input.date{ :type => "text", :id => "expEndDate#{i + 1}", :name => "experience#{i + 1}[end_date]", :value => (exp.end_date.nil? ? '' : exp.end_date.strftime("%m/%d/%Y")) }/
+          %input.date{ :type => "text", :id => "expEndDate#{i + 1}", :name => "experience#{i + 1}[end_date]", :value => (exp.end_date.nil? ? '' : exp.end_date.strftime("%m/%d/%Y")), :maxlength => "128" }/
           %label{ :for => "expEndDate#{i + 1}" } End Date (if ended)
         - if @user.experiences.count == i + 1
           %p#addJob.submit
@@ -72,16 +72,16 @@
         %input{ :type => "text", :id => "title1", :name => "experience1[title]"}/
         %label{ :for => "title1" } Title
       %p.company
-        %input.companies{ :type => "text", :id => "company1", :name => "company1[name]"}/
+        %input.companies{ :type => "text", :id => "company1", :name => "company1[name]", :maxlength => "128"}/
         %label{ :for => "company1" } Company
       %p.summary
-        %input{ :type => "text", :id => "summary1", :name => "experience1[summary]"}/
+        %input{ :type => "text", :id => "summary1", :name => "experience1[summary]", :maxlength => "128"}/
         %label{ :for => "summary1" } Summary
       %p.startDate
-        %input.date{ :type => "text", :id => "expStartDate1", :name => "experience1[start_date]"}/
+        %input.date{ :type => "text", :id => "expStartDate1", :name => "experience1[start_date]", :maxlength => "128"}/
         %label{ :for => "expStartDate1" } Start Date
       %p.hasEnded
-        %input.date{ :type => "text", :id => "expEndDate1", :name => "experience1[end_date]"}/
+        %input.date{ :type => "text", :id => "expEndDate1", :name => "experience1[end_date]", :maxlength => "128"}/
         %label{ :for => "expEndDate1" } End Date (if ended)
       %p#addJob.submit
         %input{ :type => 'button', :value => 'Add job' }
@@ -93,16 +93,16 @@
         = i + 1
         %p.title
           %input{ :type => "hidden", :name => "education#{i + 1}[id]", :value => edu.id}/
-          %input{ :type => "text", :id => "degree#{i + 1}", :name => "education#{i + 1}[summary]", :value => edu.summary}/
+          %input{ :type => "text", :id => "degree#{i + 1}", :name => "education#{i + 1}[summary]", :value => edu.summary, :maxlength => "128"}/
           %label{ :for => "degree#{i + 1}" } Degree
         %p.company
-          %input{ :type => "text", :id => "location#{i + 1}", :name => "education#{i + 1}[location]", :value => edu.location}/
+          %input{ :type => "text", :id => "location#{i + 1}", :name => "education#{i + 1}[location]", :value => edu.location, :maxlength => "128"}/
           %label{ :for => "location#{i + 1}" } School
         %p.startDate
-          %input.date{ :type => "text", :id => "edStartDate#{i + 1}", :name => "education#{i + 1}[start_date]", :value => edu.start_date.strftime("%m/%d/%Y") }/
+          %input.date{ :type => "text", :id => "edStartDate#{i + 1}", :name => "education#{i + 1}[start_date]", :value => edu.start_date.strftime("%m/%d/%Y"), :maxlength => "128" }/
           %label{ :for => "edStartDate#{i + 1}" } Start Date
         %p.hasEnded
-          %input.date{ :type => "text", :id => "edEndDate#{i + 1}", :name => "education#{i + 1}[end_date]", :value => (edu.end_date.nil? ? '' : edu.end_date.strftime("%m/%d/%Y")) }/
+          %input.date{ :type => "text", :id => "edEndDate#{i + 1}", :name => "education#{i + 1}[end_date]", :value => (edu.end_date.nil? ? '' : edu.end_date.strftime("%m/%d/%Y")), :maxlength => "128" }/
           %label{ :for => "edStartDate#{i + 1}" } End Date (if has already ended)
         - if @user.educations.count == i + 1
           %p#addSchool.submit
@@ -111,16 +111,16 @@
     %fieldset
       %legend Education - School 1
       %p.title
-        %input{ :type => "text", :id => "degree1", :name => "education1[summary]"}/
+        %input{ :type => "text", :id => "degree1", :name => "education1[summary]", :maxlength => "128"}/
         %label{ :for => "degree1" } Degree
       %p.company
-        %input{ :type => "text", :id => "location1", :name => "education1[location]"}/
+        %input{ :type => "text", :id => "location1", :name => "education1[location]", :maxlength => "128"}/
         %label{ :for => "location1" } School
       %p.startDate
-        %input.date{ :type => "text", :id => "edStartDate1", :name => "education1[start_date]"}/
+        %input.date{ :type => "text", :id => "edStartDate1", :name => "education1[start_date]", :maxlength => "128"}/
         %label{ :for => "edStartDate1" } Start Date
       %p.hasEnded
-        %input.date{ :type => "text", :id => "edEndDate1", :name => "education1[end_date]"}/
+        %input.date{ :type => "text", :id => "edEndDate1", :name => "education1[end_date]", :maxlength => "128"}/
         %label{ :for => "edStartDate1" } End Date (if has already ended)
       %p#addSchool.submit
         %input{ :type => 'button', :value => 'Add school' }
@@ -132,10 +132,10 @@
         = i + 1
         %p.title
           %input{ :type => "hidden", :name => "publication#{i + 1}[id]", :value => pub.id}/
-          %input{ :type => "text", :id => "pubTitle#{i + 1}", :name => "publication#{i + 1}[name]", :value => pub.name}/
+          %input{ :type => "text", :id => "pubTitle#{i + 1}", :name => "publication#{i + 1}[name]", :value => pub.name, :maxlength => "128"}/
           %label{ :for => "pubTitle#{i + 1}" } Title
         %p.link
-          %input{ :type => "text", :id => "pubLink#{i + 1}", :name => "publication#{i + 1}[url]", :value => pub.url}/
+          %input{ :type => "text", :id => "pubLink#{i + 1}", :name => "publication#{i + 1}[url]", :value => pub.url, :maxlength => "128"}/
           %label{ :for => "pubLink#{i + 1}" } Link
         - if @user.publications.count == i + 1
           %p#addPublication.submit
@@ -144,10 +144,10 @@
     %fieldset
       %legend Publication 1
       %p.title
-        %input{ :type => "text", :id => "pubTitle1", :name => "publication1[name]"}/
+        %input{ :type => "text", :id => "pubTitle1", :name => "publication1[name]", :maxlength => "128"}/
         %label{ :for => "pubTitle1" } Title
       %p.link
-        %input{ :type => "text", :id => "pubLink1", :name => "publication1[url]"}/
+        %input{ :type => "text", :id => "pubLink1", :name => "publication1[url]", :maxlength => "128"}/
         %label{ :for => "pubLink1" } Link
       %p#addPublication.submit
         %input{ :type => 'button', :value => 'Add publication' }
@@ -159,7 +159,7 @@
         = i + 1
         %p.title
           %input{ :type => "hidden", :name => "affiliation#{i + 1}[id]", :value => a.id}/
-          %input{ :type => "text", :id => "affTitle#{i + 1}", :name => "affiliation#{i + 1}[name]", :value => a.name}/
+          %input{ :type => "text", :id => "affTitle#{i + 1}", :name => "affiliation#{i + 1}[name]", :value => a.name, :maxlength => "128"}/
           %label{ :for => "affTitle#{i + 1}" } Title
         - if @user.affiliations.count == i + 1
           %p#addAffiliation.submit
@@ -168,7 +168,7 @@
     %fieldset
       %legend Affiliation 1
       %p.title
-        %input{ :type => "text", :id => "affTitle1", :name => "affiliation1[name]"}/
+        %input{ :type => "text", :id => "affTitle1", :name => "affiliation1[name]", :maxlength => "128"}/
         %label{ :for => "affTitle1" } Title
       %p#addAffiliation.submit
         %input{ :type => 'button', :value => 'Add affiliation' }
@@ -186,16 +186,16 @@
   %fieldset#school
     %legend Education - School 1
     %p.title
-      %input{ :type => "text", :id => "degree1", :name => "education1[summary]", :value => "#summary#"}/
+      %input{ :type => "text", :id => "degree1", :name => "education1[summary]", :value => "#summary#", :maxlength => "128"}/
       %label{ :for => "degree1" } Degree
     %p.company
-      %input{ :type => "text", :id => "location1", :name => "education1[location]", :value => "#location#"}/
+      %input{ :type => "text", :id => "location1", :name => "education1[location]", :value => "#location#", :maxlength => "128"}/
       %label{ :for => "location1" } School
     %p.startDate
-      %input.date{ :type => "text", :id => "edStartDate1", :name => "education1[start_date]", :value => "#startDate#"}/
+      %input.date{ :type => "text", :id => "edStartDate1", :name => "education1[start_date]", :value => "#startDate#", :maxlength => "128"}/
       %label{ :for => "edStartDate1" } Start Date
     %p.hasEnded
-      %input.date{ :type => "text", :id => "edEndDate1", :name => "education1[end_date]", :value => "#endDate#"}/
+      %input.date{ :type => "text", :id => "edEndDate1", :name => "education1[end_date]", :value => "#endDate#", :maxlength => "128"}/
       %label{ :for => "edStartDate1" } End Date (if has already ended)
     %p#addSchool.submit
       %input{ :type => 'button', :value => 'Add school' }
@@ -203,36 +203,36 @@
   %fieldset#publication
     %legend Publication 1
     %p.title
-      %input{ :type => "text", :id => "pubTitle1", :name => "publication1[name]", :value => "#name#"}/
+      %input{ :type => "text", :id => "pubTitle1", :name => "publication1[name]", :value => "#name#", :maxlength => "128"}/
       %label{ :for => "pubTitle1" } Title
     %p.link
-      %input{ :type => "text", :id => "pubLink1", :name => "publication1[url]", :value => "#url#"}/
+      %input{ :type => "text", :id => "pubLink1", :name => "publication1[url]", :value => "#url#", :maxlength => "128"}/
       %label{ :for => "pubLink1" } Link
     %p#addPublication.submit
       %input{ :type => 'button', :value => 'Add publication' }
   %fieldset#affiliation
     %legend Affiliation 1
     %p.title
-      %input{ :type => "text", :id => "affTitle1", :name => "affiliation1[name]"}/
+      %input{ :type => "text", :id => "affTitle1", :name => "affiliation1[name]", :maxlength => "128"}/
       %label{ :for => "affTitle1" } Title
     %p#addAffiliation.submit
       %input{ :type => 'button', :value => 'Add affiliation' }
   %fieldset#experience
     %legend Experience - Company 1
     %p.title
-      %input{ :type => "text", :id => "title1", :name => "experience1[title]", :value => "#title#"}/
+      %input{ :type => "text", :id => "title1", :name => "experience1[title]", :value => "#title#", :maxlength => "128"}/
       %label{ :for => "title1" } Title
     %p.company
-      %input.companies{ :type => "text", :id => "company1", :name => "company1[name]", :value => "#company#"}/
+      %input.companies{ :type => "text", :id => "company1", :name => "company1[name]", :value => "#company#", :maxlength => "128"}/
       %label{ :for => "company1" } Company
     %p.summary
-      %input{ :type => "text", :id => "summary1", :name => "experience1[summary]", :value => "#summary#"}/
+      %input{ :type => "text", :id => "summary1", :name => "experience1[summary]", :value => "#summary#", :maxlength => "128"}/
       %label{ :for => "summary1" } Summary
     %p.startDate
-      %input.date{ :type => "text", :id => "expStartDate1", :name => "experience1[start_date]", :value => "#startDate#"}/
+      %input.date{ :type => "text", :id => "expStartDate1", :name => "experience1[start_date]", :value => "#startDate#", :maxlength => "128"}/
       %label{ :for => "expStartDate1" } Start Date
     %p.hasEnded
-      %input.date{ :type => "text", :id => "expEndDate1", :name => "experience1[end_date]", :value => "#endDate#"}/
+      %input.date{ :type => "text", :id => "expEndDate1", :name => "experience1[end_date]", :value => "#endDate#", :maxlength => "128"}/
       %label{ :for => "expEndDate1" } End Date (if ended)
     %p#addJob.submit
       %input{ :type => 'button', :value => 'Add job' }
