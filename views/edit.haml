@@ -1,9 +1,10 @@
 - content_for :head do
   %link{:rel => 'stylesheet', :href => '/stylesheets/tagit.css', :type => 'text/css', :media => 'all'}
   %link{:rel => 'stylesheet', :href => '/stylesheets/edit.css', :type => 'text/css', :media => 'all'}
+  %script{ :src => "/javascripts/jquery.validate.min.js", :type => "text/javascript" }
+  %script{ :src => "/javascripts/additional-methods.min.js", :type => "text/javascript" }
   %script{ :src => "/javascripts/tag-it.js", :type => "text/javascript" }
   %script{ :src => "/javascripts/edit.js", :type => "text/javascript" }
-  
 
 %h1 Editando: #{@user.username}
 
@@ -15,11 +16,11 @@
     Hi, <?js= firstName ?> <?js= lastName ?>.
     </script>
 
-%form{ :method => 'post', :action => 'edit' }
+%form{ :method => 'post', :action => 'edit', :id => "editForm" }
   %fieldset
     %legend General
     %p.title
-      %input{ :type => "text", :id => "title", :name => "details[title]", :value => @details.title, :maxlength => "512" }/
+      %input{ :type => "text", :id => "title", :name => "details[title]", :value => @details.title, :maxlength => "512", :class => "required" }/
       %label{ :for => "title" } Title
     %p.summary
       %textarea{ :id => "summary", :name => "details[summary]", :value => @details.summary , :maxlength => "512" }

@@ -80,6 +80,20 @@ $(function() {
             source: companies
         });
 
+        $("#title" + currJob + ", #company" + currJob).keyup(function() {
+            var val1 = $("#title" + currJob).val();
+            var val2 = $("#company" + currJob).val();
+
+            if(val1 && val2) {
+                if(!$("#expStartDate" + currJob).hasClass('required')) {
+                    $("#expStartDate" + currJob).addClass('required');
+                }
+            } else {
+                $("#expStartDate" + currJob).removeClass('required');
+            }
+
+        });
+
 
         $("#addJob.submit").click(addJobFunc);
     };
@@ -107,6 +121,19 @@ $(function() {
         }
 
         $("#addSchool.submit").click(addSchoolFunc);
+
+        $("#degree" + currSchool).keyup(function() {
+            var val1 = $("#degree" + currSchool).val();
+
+            if(val1) {
+                if(!$("#edStartDate" + currSchool).hasClass('required')) {
+                    $("#edStartDate" + currSchool).addClass('required');
+                }
+            } else {
+                $("#edStartDate" + currSchool).removeClass('required');
+            }
+
+        });
 
         $("#edStartDate" + currSchool).datepicker();
         $("#edEndDate" + currSchool).datepicker();
@@ -149,11 +176,39 @@ $(function() {
 
     $(".date").datepicker();
 
+    $("#title1, #company1").keyup(function() {
+        var val1 = $("#title1").val();
+        var val2 = $("#company1").val();
+
+        if(val1 && val2) {
+            if(!$("#expStartDate1").hasClass('required')) {
+                $("#expStartDate1").addClass('required');
+            }
+        } else {
+            $("#expStartDate1").removeClass('required');
+        }
+
+    });
+
+    $("#degree1").keyup(function() {
+        var val1 = $("#degree1").val();
+
+        if(val1) {
+            if(!$("#edStartDate1").hasClass('required')) {
+                $("#edStartDate1").addClass('required');
+            }
+        } else {
+            $("#edStartDate1").removeClass('required');
+        }
+
+    });
+
     fillerFunctions.job = addJobFunc;
     fillerFunctions.school = addSchoolFunc;
     fillerFunctions.publication = addPublicationFunc;
     fillerFunctions.affiliation = addAffiliationFunc;
 
+    $("#editForm").validate();
 });
 
 function formatDate(date) {
