@@ -1,9 +1,2 @@
-#Ignoring vim files (yes I use vim, so what?)
+#ignoring vim files
 *.swp
-
-#I don't wan sass cache
-.sass-cache
-
-#The database can stay away
-*.sqlite3
-
