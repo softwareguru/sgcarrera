@@ -1,0 +1,213 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-weight: inherit;
+	font-style: inherit;
+	font-size: 100%;
+	font-family: inherit;
+	vertical-align: baseline;
+}
+
+html {-webkit-font-smoothing: antialiased;}
+
+body {
+	line-height:1;
+	color:#6a6a6a;
+	font-family:"Lucida Sans Unicode", "Lucida Grande", Arial, Helvetica, sans-serif;
+	font-size:13px; 
+	font-weight:normal;
+}
+
+blockquote, q {quotes:none;}
+
+blockquote:before, blockquote:after,
+q:before, q:after {content:''; content:none;}
+
+ul {list-style:none;}
+
+a img {border:none;}
+
+.clear {clear:both;}
+
+.clearfix:after {content:"."; display:block; height:0; clear:both; visibility:hidden;}
+
+.page-break {page-break-after:always;}
+
+h1 {font-size:55px;}
+h2 {font-size:36px;}
+h3 {font-size:26px;}
+h4 {font-size:24px;}
+h5 {font-size:22px;}
+h6 {font-size:20px;}
+
+p, li, li a, blockquote {
+	line-height:1.4em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	text-rendering: optimizeLegibility;
+	font-family:'Yanone Kaffeesatz', Arial, Helvetica, sans-serif;
+}
+
+h2 {
+	float:left;
+	line-height:40px;
+	border-bottom:2px solid #000;
+	margin:0 0 20px 0;
+	color:#000;
+}
+
+a {
+	color:#000; 
+	text-decoration: underline;
+}
+
+a:hover {
+	color:#000000;
+}
+
+a:hover, a:active {
+	outline: none;
+}
+
+small {
+	font-size:85%;
+}
+
+strong { 
+	font-weight: bold;
+}
+
+#main-nav {
+	display:none;
+}
+
+#page {
+	width:100%; 
+}
+
+.content-innertube {
+}
+
+#content-left { 
+	float:left;
+	width:45%; 
+}
+
+#content-right { 
+	float:left;
+	width:45%;
+	margin:0 0 0 10%;
+}
+
+#header {
+	border-bottom:1px dotted #000;
+	margin:0 0 40px 0;
+}
+
+#text {
+	display:none;
+}
+
+#stripe {
+	display:none;
+}
+
+#footer {
+	display:none;
+}
+
+#personal-details li {
+	margin:0 0 20px 0;
+}
+
+#personal-details li span {
+	width:150px;
+	float:left;
+	font-weight:bold;
+}
+
+#personal-details li.last {
+	margin-bottom:0;
+}
+
+#address-lines {
+	float:left;
+}
+
+#address-lines li {
+	display:block;
+	margin:0;
+	padding:0;
+}
+
+.section h3 {
+	color:#000;
+	font-size:27px;
+}
+
+.section h4 {
+	color:#000;
+	font-size:18px;
+	margin:5px 0 0 0;
+}
+
+h4.refer {
+	margin:20px 0 20px 0;
+}
+
+.item {
+	margin:0 0 30px 0;
+	position: relative;
+}
+
+.item.last {
+	margin-bottom:0;
+}
+
+p.margin {
+	margin:0 0 10px 0;
+}
+
+.description ul {
+	margin:0 0 0 20px;
+	list-style: disc;
+	list-style-type: disc;
+}
+
+.description ul li {
+	padding:10px 0 0 0;
+}
+
+.description p {
+	margin-top:20px;
+}
+
+.description p.first {
+	margin-top:0;
+}
+
+.date {
+	position: absolute;
+	top: 6px;
+	right: 0;
+	font-size:14px;
+}
+
+.stars {
+	margin:5px 0 0 0;
+}
+ 
+ .stars li { 
+ 	float:left;
+	display:block;
+}

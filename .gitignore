@@ -4,3 +4,5 @@
 #NPM modules
 node_modules
 
+#We don't want you to know our config
+conf.js

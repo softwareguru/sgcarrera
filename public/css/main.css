@@ -1,0 +1,958 @@
+/*
+Theme Name: Careera Next Portfolio/Resume HTML Template
+Theme URI: http://themeforest.net/user/Passionetta
+Version: 1.6
+Author URI: http://themeforest.net/user/Passionetta
+*/
+
+/*
+1. GLOBAL RESET
+
+2. GLOBAL TYPOGRAPHY
+
+3. CORE STRUCTURE
+	3.1 Main navigation
+	3.2 Main content
+	3.3 Footer
+
+4. RESUME PAGE
+
+5. PORTFOLIO PAGE
+
+6. PROJECT PAGE
+
+7. ABOUT ME PAGE
+	7.1 Chart
+	7.2 Twitter
+8. CONTACT PAGE
+*/
+
+/*======================================================================================
+1. GLOBAL RESET
+/*======================================================================================*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-weight: inherit;
+	font-style: inherit;
+	font-size: 100%;
+	font-family: inherit;
+	vertical-align: baseline;
+}
+
+html {-webkit-font-smoothing: antialiased;}
+
+body {
+	background: #e0e0e0;
+	line-height:1;
+	color:#6a6a6a;
+	font-family:"Lucida Sans Unicode", "Lucida Grande", Arial, Helvetica, sans-serif;
+	font-size:13px; 
+	font-weight:normal;
+}
+
+blockquote, q {quotes:none;}
+
+blockquote:before, blockquote:after,
+q:before, q:after {content:''; content:none;}
+
+ul {list-style:none;}
+
+a img {border:none;}
+
+.clear {clear:both;}
+
+.clearfix:after {content:"."; display:block; height:0; clear:both; visibility:hidden;}
+
+/*======================================================================================
+2. GLOBAL TYPOGRAPHY
+/*======================================================================================*/
+h1 {font-size:45px;}
+h2 {font-size:36px;}
+h3 {font-size:26px;}
+h4 {font-size:24px;}
+h5 {font-size:22px;}
+h6 {font-size:20px;}
+
+p, li, li a, blockquote {
+	line-height:1.4em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	text-rendering: optimizeLegibility;
+	font-family:'Yanone Kaffeesatz', Arial, Helvetica, sans-serif;
+}
+
+h2 {
+	float:left;
+	line-height:40px;
+	border-bottom:2px solid #000;
+	margin:0 0 20px 0;
+	color:#000;
+}
+
+a {
+	color:#000; 
+	text-decoration: underline;
+}
+
+a:hover {
+	color:#000000;
+}
+
+a:hover, a:active {
+	outline: none;
+}
+
+.raquo {
+	font-size:18px;
+	line-height:0;
+	padding:0 0 0 5px;
+}
+
+small {
+	font-size:85%;
+}
+
+strong { 
+	font-weight: bold;
+}
+
+::-moz-selection {
+	background: #000000; 
+	color:#fff; 
+	text-shadow: none;
+}
+
+::selection {
+	background:#000000; 
+	color:#fff; 
+	text-shadow: none;
+} 
+
+/*======================================================================================
+3. CORE STRUCTURE
+/*======================================================================================*/
+
+/*-------------------------------------------------------------------
+3.1 Main navigation
+---------------------------------------------------------------------*/
+#main-nav {
+	float: right;
+	font-size:22px;
+	font-family:'Yanone Kaffeesatz', Arial, Helvetica, sans-serif;
+	margin:20px 0 0 0;
+}
+
+#main-nav li {
+	float: left;
+	padding:0 0 0 30px;
+}
+
+#main-nav li a {
+	display: block;
+	text-transform: uppercase;
+	text-decoration:none;
+	color: #fff;
+	padding:0 0 20px 0;
+}
+
+#main-nav li a:hover, #main-nav li.current a {
+	background: url(../img/trigle.png) no-repeat center bottom;
+	width:100%;
+	height:100%;
+}
+
+/*-------------------------------------------------------------------
+3.2 Main content
+---------------------------------------------------------------------*/
+#page {
+	width:1000px; 
+	margin:0 auto;
+	padding:0;
+	background:#fff;
+}
+
+.content-innertube {
+	padding:0 80px 0 80px;
+}
+
+#content-left { 
+	float:left;
+	width:390px; 
+	margin:0 30px 0 0;
+}
+
+#content-right { 
+	float:left;
+	width:390px; 
+	margin:0 0 0 30px;
+}
+
+#header {
+	background:#000;
+	margin:0 0 40px 0;
+	width:840px;
+	padding:30px 80px 0 80px;
+}
+
+#header h1 {
+	color:#fff;
+}
+
+#text {
+	height:59px;
+}
+
+#stripe {
+	background: url(../img/stripe.png) repeat-x;
+	height:14px;
+	width:100%;
+	margin:0 0 40px 0;
+}
+
+/*-------------------------------------------------------------------
+3.3 Footer
+---------------------------------------------------------------------*/
+#footer {
+	background:#000;
+	width:1000px;
+	margin:40px 0 0 0;
+}
+
+#footer-innertube {
+	padding:40px 80px 40px 80px;
+}
+
+#footer-address h5,
+#footer-contact h5,
+#footer-social h5,
+#footer-resume h5 {
+	margin:0 0 20px 0;
+}
+
+#footer-address,
+#footer-contact,
+#footer-social {
+	float:left;
+	width:230px;
+	margin:0 20px 0 0;
+	color:#fff;
+}
+
+#footer-resume {
+	float:left;
+	color:#fff;
+	width:90px;
+}
+
+#download-resume a {
+	background: url(../img/download.png) no-repeat 0 0;
+	width:80px;
+	height:80px;
+	display:block;
+}
+
+#download-resume a:hover {
+	background-position:0 -80px;
+}
+
+#footer-address ul li,
+#footer-contact ul li {
+	margin:0 0 5px 0;
+}
+
+#footer-address ul li.last,
+#footer-contact ul li.last {
+	margin-bottom:0;
+}
+
+#footer-address ul li a,
+#footer-contact ul li a,
+#footer-address ul li a:hover,
+#footer-contact ul li a:hover {
+	color:#fff;
+	text-decoration:none;
+}
+
+#footer-social ul li {
+	float:left;
+	margin:0 10px 0 0;
+}
+
+#footer-nav {
+	font-size:18px;
+	font-family:'Yanone Kaffeesatz', Arial, Helvetica, sans-serif;
+	border-top:1px dotted #999;
+	margin:40px 0 0 0;
+	padding:20px 0 0 0;
+}
+
+#footer-nav li {
+	float: left;
+	padding:0 30px 0 0;
+}
+
+#footer-nav li a {
+	display: block;
+	text-transform: uppercase;
+	text-decoration:none;
+	color: #fff;
+}
+
+#go-top {
+	background: url(../img/top.png) no-repeat;
+	width:22px;
+	height:22px;
+	float:right;
+	cursor:pointer;
+}
+
+/*======================================================================================
+4. RESUME PAGE
+/*======================================================================================*/
+#personal-details li {
+	margin:0 0 20px 0;
+}
+
+#personal-details li span {
+	width:150px;
+	float:left;
+	font-weight:bold;
+}
+
+#personal-details li.last {
+	margin-bottom:0;
+}
+
+#address-lines {
+	float:left;
+}
+
+#address-lines li {
+	display:block;
+	margin:0;
+	padding:0;
+}
+
+.section h3 {
+	color:#000;
+	font-size:27px;
+}
+
+.section h4 {
+	color:#000;
+	font-size:18px;
+	margin:5px 0 0 0;
+}
+
+h4.refer {
+	margin:20px 0 20px 0;
+}
+
+.item {
+	margin:0 0 30px 0;
+	position: relative;
+}
+
+.item.last {
+	margin-bottom:0;
+}
+
+p.margin {
+	margin:0 0 10px 0;
+}
+
+.description ul {
+	margin:0 0 0 20px;
+	list-style: disc;
+	list-style-type: disc;
+}
+
+.description ul li {
+	padding:10px 0 0 0;
+}
+
+.description p {
+	margin-top:20px;
+}
+
+.description p.first {
+	margin-top:0;
+}
+
+.date {
+	position: absolute;
+	top: 6px;
+	right: 0;
+	font-size:14px;
+}
+
+.stars {
+	margin:5px 0 0 0;
+}
+ 
+.stars li { 
+ 	float:left;
+	display:block;
+}
+
+/*======================================================================================
+5. PORTFOLIO PAGE
+/*======================================================================================*/
+.portfolio-nav {
+	margin:0 0 40px 0;
+	font-family:'Yanone Kaffeesatz', Arial, Helvetica, sans-serif;
+}
+
+.portfolio-nav li {
+	float: left;
+	padding:0 30px 0 0;
+}
+
+.portfolio-nav li.last {
+	padding-right:0;
+}
+
+.portfolio-nav li a {
+	font-size:20px;
+	font-weight:bold;
+	color:#000;
+	text-decoration:none;
+}
+
+.portfolio-nav li a:hover {
+	color:#979797;
+}
+
+.portfolio-nav li a span {
+	font-weight:normal;
+	padding:0 5px 0 0;
+}
+
+.portfolio-nav li.selected-1 a,
+.portfolio-nav li.selected-2 a,
+.portfolio-nav li.selected-3 a,
+.portfolio-nav li.selected-4 a,
+.portfolio-nav li.selected-0 a {
+	color:#979797;
+}
+
+#prev-next {
+	margin:40px 0 0 0;
+}
+
+#prev-next li {
+	float:right;
+	margin:0 0 0 10px;
+}
+
+#prev-next li a {
+	background: url(../img/prev-next.png) no-repeat;
+	width:50px;
+	height:50px;
+	display:block;
+}
+
+#prev-next li.next a {
+	background-position:-50px 0;
+}
+
+#prev-next li.next a:hover {
+	background-position:-50px -50px;
+}
+
+#prev-next li.prev a {
+	background-position:0 0;
+}
+
+#prev-next li.prev a:hover {
+	background-position:0 -50px;
+}
+
+.portfolio li {
+	float:left;
+	position:relative;
+	width:167px;
+	height:167px;
+	margin:0 1px 1px 0;
+	overflow: hidden;
+}
+
+span.portfolio-overlay {
+	position: absolute; 
+	top:0; 
+	left:0; 
+	background: url(../img/inner-shadow.png) no-repeat; 
+	width: 167px; 
+	height: 167px;
+}
+
+.portfolio li .info {
+	display: none;
+}
+
+.portfolio li:hover .info {
+	display: block;
+	position: absolute;
+	left:0;
+	bottom:0;
+	background: url(../img/portfolio-opacity.png) repeat;
+	z-index: 1;
+	width: 147px;
+	height:147px;
+	padding:10px;
+}
+
+.portfolio li:hover .info .enlarge a,
+.portfolio li:hover .info .enlarge a:hover,
+.portfolio li:hover .info .visit a,
+.portfolio li:hover .info .visit a:hover,
+.portfolio li:hover .info .read-more a,
+.portfolio li:hover .info .read-more a:hover,
+.portfolio li:hover .info .play a,
+.portfolio li:hover .info .play a:hover{
+	width:42px;
+	height:42px;
+	position:absolute;
+	bottom:10px;
+}
+
+.portfolio li:hover .info .read-more a {
+	background: url(../img/readmore-ico.png) no-repeat 0 0;
+}
+
+.portfolio li:hover .info .read-more a:hover {
+	background-position:0 -42px;
+}
+
+.portfolio li:hover .info .enlarge a {
+	background: url(../img/enlarge-ico.png) no-repeat 0 0;
+	margin:0 0 0 52px;
+}
+
+.portfolio li:hover .info .enlarge a:hover {
+	background-position:0 -42px;
+}
+
+.portfolio li:hover .info .visit a {
+	background: url(../img/visit-ico.png) no-repeat 0 0;
+	margin:0 0 0 104px;
+}
+
+.portfolio li:hover .info .visit a:hover {
+	background-position:0 -42px;;
+}
+
+.portfolio li:hover .info .play a {
+	background: url(../img/play-ico.png) no-repeat 0 0;
+	margin:0 0 0 52px;
+}
+
+.portfolio li:hover .info .play a:hover {
+	background-position:0 -42px;
+}
+
+.portfolio li:hover .info p.info-title {
+	color:#bcbcbc;
+	margin:0 0 10px 0;
+	font-size:15px;
+}
+
+.portfolio li:hover .info p.info-desc {
+	color:#bcbcbc;
+	margin:0 0 10px 0;
+}
+
+/*======================================================================================
+6. PROJECT PAGE
+/*======================================================================================*/
+#project-gall {
+}
+
+#project-gall li {
+	float:left;
+	display:block;
+	position:relative;
+	width:167px;
+	height:167px;
+	margin:0 1px 1px 0;
+}
+
+#project-nav {
+	margin:40px 0 0 0;
+}
+
+#project-nav li {
+	float:right;
+	margin:0 0 0 10px;
+}
+
+#project-nav li a {
+	width:50px;
+	height:50px;
+	display:block;
+}
+
+#project-nav li.online a {
+	background: url(../img/online-btn.png) no-repeat;
+	background-position:0 0;
+}
+
+#project-nav li.online a:hover {
+	background-position:0 -50px;
+}
+
+#project-nav li.portfolio a {
+	background: url(../img/portfolio-btn.png) no-repeat;
+	background-position:0 0;
+}
+
+#project-nav li.portfolio a:hover {
+	background-position:0 -50px;
+}
+
+.project-desc {
+	margin:40px 0 0 0;
+}
+
+#project-lists {
+	margin:40px 0 0 0;
+}
+
+#check { 
+}
+
+#check li {
+	background: url(../img/list-check.png) no-repeat;
+	display:block;
+	padding:0 0 0 27px;
+	margin:0 0 15px 0;
+}
+
+#check li.last {
+	margin-bottom:0;
+}
+
+#arrow {
+}
+
+#arrow li {
+	background: url(../img/list-arrow.png) no-repeat;
+	display:block;
+	padding:0 0 0 27px;
+	margin:0 0 15px 0;
+}
+
+#arrow li.last {
+	margin-bottom:0;
+}
+
+/*======================================================================================
+7. ABOUT ME PAGE
+/*======================================================================================*/
+#about img {
+	float:left; 
+	width:300px; 
+	height:315px; 
+	margin:0 40px 0 0;
+}
+
+#about p.about-text {
+	float:left; width:500px;
+}
+
+blockquote.about-me {
+	background:#f1f1f1;
+	float:left;
+	width:460px;
+	padding:20px;
+	margin:20px 0 0 0;
+	font-style: italic;
+	color:#5f5f5f;
+	position:relative;
+}
+
+blockquote .quote-top {
+	background: url(../img/quote-top.png) no-repeat;
+	width:12px;
+	height:12px;
+	position:absolute;
+	top:-12px;
+    right:40px;
+}
+
+blockquote.about-me p.quote-author {
+	font-family: Arial, Helvetica, sans-serif;
+	font-style: normal;
+	margin:10px 0 0 0;
+	font-size: 12px;
+	font-weight: bold;
+	color: #5f5f5f;
+	text-align:right;
+}
+
+#about-middle {
+	border-top:1px solid #000;
+	margin:40px 0 0 0;
+	padding:40px 0 0 0;
+}
+
+/*-------------------------------------------------------------------
+7.1 Chart
+---------------------------------------------------------------------*/
+#chart {}
+
+#chart li {
+	height:35px; 
+	color:#000; 
+	font-style:italic; 
+	line-height:35px; 
+	padding:0 10px 0 10px; 
+	margin:0 0 5px 0; 
+	background:#cccdce;
+}
+
+#chart li.one {
+	width:58px;
+}
+
+#chart li.two {
+	width:136px;
+}
+
+#chart li.three {
+	width:214px;
+}
+
+#chart li.four {
+	width:292px;
+}
+
+#chart li.five {
+	width:370px;
+}
+
+#axis {
+	background:url(../img/axis.png); 
+	height:31px;
+}
+
+/*-------------------------------------------------------------------
+7.2 Twitter
+---------------------------------------------------------------------*/
+#twitter {
+	border-top:1px solid #000;
+	margin:40px 0 0 0;
+	padding:20px 0 0 0;
+}
+
+#twitter-btn a {
+	background: url(../img/tweets-btn.png) 0 0 no-repeat;
+	float:left;
+	width:122px;
+	height:122px;
+	margin:20px 40px 0 0;
+}
+
+#twitter-btn a:hover {
+	background-position: 0 -122px;
+	float:left;
+	width:122px;
+	height:122px;
+}
+
+#last-tweets {
+	float:left;
+	width:678px;
+}
+
+.tweet, .query {}
+
+p.loading { 
+	margin:20px 0 0 0;
+}
+
+.tweet .tweet_list, .query .tweet_list {
+	list-style-type: none;
+	margin: 0;
+    padding: 0;
+}
+
+.tweet .tweet_list .awesome, .tweet .tweet_list .epic, .query .tweet_list .awesome, .query .tweet_list .epic {
+	text-transform: uppercase;
+}
+
+.tweet .tweet_list li, .query .tweet_list li {
+	overflow-y: hidden;
+	overflow-x: hidden;
+	padding: 20px 0 0 0;
+}
+
+.tweet .tweet_list li a, .query .tweet_list li a {
+	text-decoration:none;
+}
+		  
+.tweet .tweet_list li a:hover, .query .tweet_list li a:hover {
+	text-decoration:none;
+}
+
+.tweet .tweet_list .tweet_even, .query .tweet_list .tweet_even {}
+
+.tweet .tweet_list .tweet_avatar, .query .tweet_list .tweet_avatar {}
+
+.tweet .tweet_list .tweet_avatar img, .query .tweet_list .tweet_avatar img {
+	vertical-align: middle; 
+	float: left; 
+	margin:0 10px 0 0;
+}
+
+.tweet_time a { 
+	font-size:10px; 
+	display:block; 
+	color:#8a8a8a; 
+}
+
+.tweet_text { 
+	float:left; 
+	width:678px;
+}
+
+/*======================================================================================
+8. CONTACT PAGE
+/*======================================================================================*/
+#contact-columns {
+	border-bottom:1px solid #000;
+	margin:0 0 40px 0;
+	padding:0 0 40px 0;
+}
+
+#contact-columns li {
+	float: left;
+	width: 260px;
+	margin: 0 20px 0 0;
+}
+
+#contact-columns li img {
+	float: left;
+	padding:0 15px 0 0;
+}
+
+#contact-columns li p {
+	margin: 15px 0 0 0;
+}
+
+#contact-columns li.address p {
+	margin-top: 0;
+}
+
+#contact-info li {
+	margin:0 0 30px 0;
+}
+
+#form-container label { 
+	float:left; 
+	width:100px;
+	font-family:"Lucida Sans Unicode", "Lucida Grande", Arial, Helvetica, sans-serif;
+	font-size:14px;
+	text-transform: uppercase;
+	position: relative;
+	top: 0;
+	left:0;
+}
+
+#form-container input {
+	width:288px;
+	border-bottom: 1px dashed #989895;
+	border-right: none;
+	border-left: none;
+	border-top: none;
+	background: none;
+	font-family:'Just Another Hand', Arial, Helvetica, sans-serif;
+	font-size:28px;
+	position: relative;
+	bottom: 12px;
+	left:0;
+}
+
+#form-container textarea {
+	width:390px;
+	height:250px;
+	background: none;
+	font-family:'Just Another Hand', Arial, Helvetica, sans-serif;
+	font-size:28px;
+	border-bottom: 4px double #989895;
+	border-right: none;
+	border-left: none;
+	border-top: 1px solid #989895;
+	float:left;
+}
+
+#form-container textarea:focus {
+	outline:none;
+}
+
+#submit-btn {
+	float: right;
+}
+
+#submit-btn input {
+	margin:20px 0 0 0;
+	cursor: pointer;
+	background: url(../img/submit-btn.png) no-repeat;
+	width: 90px;
+	height: 90px;
+	border: none;
+	text-indent: -9999px;
+}
+
+#form-container input:hover, #form-container input:focus, #form-container label:hover + input {
+	border-bottom: 1px dashed #000000;
+	outline:none;
+}
+
+#submit-btn input:hover {
+	background-position: 0 -90px;
+	border-bottom: none;
+}
+
+#submit-btn input:focus {
+	border-bottom: none;
+	outline:none;
+}
+
+.error {
+	background-color:#ab0000;
+	color:#ffffff;
+	font-size:12px;
+	font-weight:bold;
+	padding:10px;
+	line-height:20px;
+	width:250px;
+	position:relative;
+	top:0;
+	left:0;
+	-moz-border-radius: 5px 5px 5px 5px;
+	-webkit-border-radius: 5px 5px 5px 5px;
+	border-radius: 5px 5px 5px 5px;
+}
+
+#contact-loading {
+	position:relative;
+	top:25px;
+	left:200px;
+	visibility:hidden;
+}
+
+h1.mail-sent {
+	color:#000;
+}
