@@ -1,15 +1,43 @@
 var everyauth = require('everyauth');
 var conf = require('./conf');
+var model = require('./model');
 
 var usersByLinkedinId = {};
-var usersByGhId = {};
+
+var Promise = everyauth.Promise;
+var User = model.User;
 
 everyauth.linkedin
     .myHostname(conf.url)
     .consumerKey(conf.linkedin.key)
     .consumerSecret(conf.linkedin.secret)
     .findOrCreateUser( function (session, accessToken, accessTokenSecret, linkedinUser) {
-        return usersByLinkedinId[linkedinUser.id] || (usersByLinkedinId[linkedinUser.id] = linkedinUser);
+        var promise = new Promise();
+        User.findOne({
+            'services.type':'linkedin',
+            'services.id': linkedinUser.id
+        }, function(err, user) {
+            if(!err && user) {
+                return promise.fulfill(user);
+            } else {
+                var newUser = new User({
+                    slug:'',
+                    email:'',
+                    registered: false,
+                    services: [
+                        {
+                            type: 'linkedin',
+                            id: linkedinUser.id,
+                            data: linkedinUser
+                        }
+                    ],
+                    created: new Date()
+                });
+                newUser.save();
+                return promise.fulfill(newUser);
+            }
+        });
+        return promise;
     })
     .redirectPath('/');
 
@@ -18,11 +46,32 @@ everyauth.github
     .appId(conf.github.id)
     .appSecret(conf.github.secret)
     .findOrCreateUser( function (sess, accessToken, accessTokenExtra, ghUser) {
-        console.log(ghUser);
-        return usersByGhId[ghUser.id] || (usersByGhId[ghUser.id] = ghUser);
+        var promise = new Promise();
+        User.findOne({
+            'services.type':'github',
+            'services.id': String(ghUser.id)
+        }, function(err, user) {
+            if(!err && user) {
+                return promise.fulfill(user);
+            } else {
+                var newUser = new User({
+                    slug:'',
+                    email:'',
+                    registered: false,
+                    services: [
+                        {
+                            type: 'github',
+                            id: String(ghUser.id),
+                            data: ghUser
+                        }
+                    ],
+                    created: new Date()
+                });
+                newUser.save();
+                return promise.fulfill(newUser);
+            }
+        });
+        return promise;
     })
     .redirectPath('/');
-
-//And finally define exports
-exports.everyauth = everyauth;
 

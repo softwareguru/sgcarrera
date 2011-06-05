@@ -1,15 +1,16 @@
 var express = require('express');
 var auth = require('./auth');
 var conf = require('./conf');
+var routes = require('./routes');
+var everyauth = require('everyauth');
 
-var everyauth = auth.everyauth;
 var port = conf.port;
 
 //Here we create the server
 var app = express.createServer(
     express.logger(),
     express.cookieParser(),
-    express.session({ secret: "iamedu" }),
+    express.session({ secret: conf.secret }),
     everyauth.middleware()
 );
 
@@ -34,10 +35,8 @@ app.configure('production', function(){
   app.use(express.errorHandler());
 });
 
-//And add our routes
-app.get('/', function(req, res) {
-    res.render('index');
-});
+routes.configure(app);
+
 
 console.log("Listening on " + port);
 

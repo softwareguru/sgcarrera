@@ -15,7 +15,10 @@ html(lang="en")
   body
     #page
       #header.clearfix
-        h1 Carreras SG
+        - if(person)
+          h1= person.slug
+        - else 
+          h1 Carreras SG
 
         ul#main-nav
           li.current
@@ -29,4 +32,5 @@ html(lang="en")
             li
               a(href="/") Index
           #go-top
-
+    a(href="http://github.com/softwareguru/sgcarrera")
+      img(style="position: absolute; top: 0; left: 0; border: 0;",src="https://d3nwyuy0nl342s.cloudfront.net/img/c641758e06304bc53ae7f633269018169e7e5851/687474703a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f6c6566745f77686974655f6666666666662e706e67",alt="Fork me on GitHub")
