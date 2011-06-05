@@ -1,2 +1,6 @@
 #ignoring vim files
 *.swp
+
+#NPM modules
+node_modules
+
