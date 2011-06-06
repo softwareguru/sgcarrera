@@ -1,0 +1,19 @@
+#text
+  img(src="/img/aboutme.png", alt="Resume", title="Resume")
+#stripe
+
+h2 Hola #{person.slug}, edita tus datos
+
+.clear
+
+h3 Importar de linkedin
+
+- if(hasLinkedin)
+  p
+    | Para importar tus datos de linked in tienes que 
+    a(href="/interact/importLinkedin") dar click aqui
+- else
+  p
+    | Para poder importar de linkedin, primero tienes que
+    | amarrar la cuenta 
+    a(href="/auth/linkedin") haciendo click aqui

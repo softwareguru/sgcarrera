@@ -13,30 +13,47 @@ everyauth.linkedin
     .consumerSecret(conf.linkedin.secret)
     .findOrCreateUser( function (session, accessToken, accessTokenSecret, linkedinUser) {
         var promise = new Promise();
-        User.findOne({
-            'services.type':'linkedin',
-            'services.id': linkedinUser.id
-        }, function(err, user) {
-            if(!err && user) {
-                return promise.fulfill(user);
-            } else {
-                var newUser = new User({
-                    slug:'',
-                    email:'',
-                    registered: false,
-                    services: [
-                        {
-                            type: 'linkedin',
-                            id: linkedinUser.id,
-                            data: linkedinUser
-                        }
-                    ],
-                    created: new Date()
-                });
-                newUser.save();
-                return promise.fulfill(newUser);
-            }
-        });
+
+        session.linkedin = {  accessToken: accessToken, accessTokenSecret: accessTokenSecret };
+
+        if(session.auth && session.auth.loggedIn) {
+            User.findById(session.auth.userId, function(err,user) {
+                if(!err) {
+                    user.services.push({
+                        type: 'linkedin',
+                        id: linkedinUser.id,
+                        data: linkedinUser
+                    });
+                    user.save();
+                    return promise.fulfill(user);
+                }
+            });
+        } else {
+            User.findOne({
+                'services.type':'linkedin',
+                'services.id': linkedinUser.id
+            }, function(err, user) {
+                if(!err && user) {
+                    return promise.fulfill(user);
+                } else {
+                    var newUser = new User({
+                        slug:'',
+                        email:'',
+                        registered: false,
+                        services: [
+                            {
+                                type: 'linkedin',
+                                id: linkedinUser.id,
+                                data: linkedinUser
+                            }
+                        ],
+                        created: new Date()
+                    });
+                    newUser.save();
+                    return promise.fulfill(newUser);
+                }
+            });
+        }
         return promise;
     })
     .redirectPath('/');
@@ -45,32 +62,47 @@ everyauth.github
     .myHostname(conf.url)
     .appId(conf.github.id)
     .appSecret(conf.github.secret)
-    .findOrCreateUser( function (sess, accessToken, accessTokenExtra, ghUser) {
+    .findOrCreateUser( function (session, accessToken, accessTokenSecret, ghUser) {
         var promise = new Promise();
-        User.findOne({
-            'services.type':'github',
-            'services.id': String(ghUser.id)
-        }, function(err, user) {
-            if(!err && user) {
-                return promise.fulfill(user);
-            } else {
-                var newUser = new User({
-                    slug:'',
-                    email:'',
-                    registered: false,
-                    services: [
-                        {
-                            type: 'github',
-                            id: String(ghUser.id),
-                            data: ghUser
-                        }
-                    ],
-                    created: new Date()
-                });
-                newUser.save();
-                return promise.fulfill(newUser);
-            }
-        });
+        session.github = {  accessToken: accessToken, accessTokenSecret: accessTokenSecret };
+        if(session.auth && session.auth.loggedIn) {
+            User.findById(session.auth.userId, function(err,user) {
+                if(!err) {
+                    user.services.push({
+                        type: 'github',
+                        id: String(ghUser.id),
+                        data: ghUser
+                    });
+                    user.save();
+                    return promise.fulfill(user);
+                }
+            });
+        } else {
+            User.findOne({
+                'services.type':'github',
+                'services.id': String(ghUser.id)
+            }, function(err, user) {
+                if(!err && user) {
+                    return promise.fulfill(user);
+                } else {
+                    var newUser = new User({
+                        slug:'',
+                        email:'',
+                        registered: false,
+                        services: [
+                            {
+                                type: 'github',
+                                id: String(ghUser.id),
+                                data: ghUser
+                            }
+                        ],
+                        created: new Date()
+                    });
+                    newUser.save();
+                    return promise.fulfill(newUser);
+                }
+            });
+        }
         return promise;
     })
     .redirectPath('/');

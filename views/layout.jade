@@ -15,7 +15,7 @@ html(lang="en")
   body
     #page
       #header.clearfix
-        - if(person)
+        - if(typeof(person) != 'undefined')
           h1= person.slug
         - else 
           h1 Carreras SG
@@ -24,6 +24,15 @@ html(lang="en")
           li.current
             a(href="/") Index
       .content-innertube
+        - var infoMessages = request.flash('info')
+        - var warningMessages = request.flash('warning')
+        - var successMessages = request.flash('success')
+        - each info in infoMessages
+          .info= info
+        - each warning in warningMessages
+          .warning= warning
+        - each success in successMessages
+          .success= success
         != body
       #footer
         #footer-innertube

@@ -2,6 +2,7 @@ var express = require('express');
 var auth = require('./auth');
 var conf = require('./conf');
 var routes = require('./routes');
+var services = require('./services');
 var everyauth = require('everyauth');
 
 var port = conf.port;
@@ -36,7 +37,7 @@ app.configure('production', function(){
 });
 
 routes.configure(app);
-
+services.configure(app);
 
 console.log("Listening on " + port);
 
