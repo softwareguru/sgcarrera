@@ -883,14 +883,10 @@ p.loading {
 
 #form-container textarea {
 	width:390px;
-	height:250px;
 	background: none;
 	font-family:'Just Another Hand', Arial, Helvetica, sans-serif;
 	font-size:28px;
-	border-bottom: 4px double #989895;
-	border-right: none;
-	border-left: none;
-	border-top: 1px solid #989895;
+	border: 1px solid #989895;
 	float:left;
 }
 
@@ -985,4 +981,9 @@ body{
     color: #D8000C;
     background-color: #FFBABA;
     background-image: url('../img/error.png');
+}
+
+/* Jobs an such */
+.job {
+    padding-top: 20px;
 }

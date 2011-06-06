@@ -17,8 +17,8 @@ form#form-container(method="post")
     | Tu slug es tu username y es tu perfil publico
   br/
 
-  label Slug:
-  input(type='text',name='user[slug]',value=slug)
+  label(for='slug') Slug:
+  input#slug(type='text',name='user[slug]',value=slug)
 
   .clear
 
@@ -29,8 +29,8 @@ form#form-container(method="post")
 
   br/
 
-  label Email:
-  input(type='text',name='user[email]',value=email)
+  label(for='email') Email:
+  input#email(type='text',name='user[email]',value=email)
 
   #submit-btn
     input.submit(type="submit",value="Registrarse")

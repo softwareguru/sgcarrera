@@ -8,12 +8,92 @@ h2 Hola #{person.slug}, edita tus datos
 
 h3 Importar de linkedin
 
-- if(hasLinkedin)
+- if(request.session.linkedin)
   p
     | Para importar tus datos de linked in tienes que 
-    a(href="/interact/importLinkedin") dar click aqui
+    a#linkedButton.button dar click aqui
 - else
   p
     | Para poder importar de linkedin, primero tienes que
-    | amarrar la cuenta 
-    a(href="/auth/linkedin") haciendo click aqui
+    | permitir el acceso
+    a.button(href="/auth/linkedin") haciendo click aqui
+
+form#form-container
+
+  input#numJobs(type='hidden',name='numJobs',value='0')
+
+  h3 Experiencia laboral
+
+  div(style="float: right")
+    a#addJob.button Agregar trabajo
+
+  .clear
+
+  div#jobPlaceholder
+
+
+  .clear
+
+  h3 Educación
+
+  div#educationPlaceholder
+
+  div(style="float: right")
+    a#addSchool.button Agregar escuela
+
+  .clear
+
+  h3 Publicaciones
+
+  div#publicationPlaceholder
+
+  div(style="float: right")
+    a#addPublication.button Agregar publicación
+
+  .clear
+
+  h3 Afiliaciones
+
+  div#affiliationPlaceholder
+
+  div(style="float: right")
+    a#addAffiliation.button Agregar afiliacion
+
+  .clear
+
+div#hidden(style="display: none")
+  div#linkedDialog
+    | Va a importar su información de linkedin, si procede la información del
+    | formulario que ha llenado a mano se borrará
+    | ¿está seguro de querer continuar?
+
+  div.job
+    hr(style='margin-bottom: 20px')
+
+    div(style="float: right")
+      a.removeJob.button Eliminar trabajo
+
+    label(for='titlenumJob') Título
+    input#titlenumJob(type='text',name='jobnumJob[title]',value='titleValue')
+
+    .clear
+
+    label(for='companynumJob') Empresa
+    input#companynumJob(type='text',name='jobnumJob[company]',value='companyValue')
+
+    .clear
+
+    label(for='summarynumJob') Descripción
+    textarea#summarynumJob(name='jobnumJob[summary]') summaryValue
+
+    .clear(style='padding-top: 20px')
+
+    label(for='jobStartnumJob') Fecha de inicio
+    input#jobStartnumJob(type='text',name='jobnumJob[start]',value='startValue')
+
+    .clear
+
+    label(for='jobEndnumJob') Fecha de término
+    input#jobEndnumJob(type='text',name='jobnumJob[end]',value='endValue')
+
+    .clear
