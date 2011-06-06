@@ -1,0 +1,93 @@
+#text
+  img(src="/img/aboutme.png", alt="Resume", title="Resume")
+#stripe
+
+#content-left
+  .section
+    .clearfix
+      h2 Detalles personales
+
+    .item
+      div(style="text-align: center")
+        -var gravatarUrl = "http://www.gravatar.com/avatar/" + gravatar + "?s=300"
+        img(src=gravatarUrl, alt=person.slug, title="Tu gravatar")
+
+      ul#personal-details
+        li
+          span Nombre:
+          span Eduardo Diaz Real
+      
+
+  .section(style='padding-top: 50px')
+    .clearfix
+      h2 Experiencia laboral
+
+    .item
+      h3 Freelance
+      h4 Mi empresa
+      .date 2008-presente
+      .description
+        p.margin Headline
+        p
+          | El puesto 
+          | Era muy feliz
+
+  .section(style='padding-top: 50px')
+    .clearfix
+      h2 Educación
+
+    .item
+      h3 Ingeniería en sistemas
+      h4 ESCOM
+      .date 2000-2100
+      .description
+        p
+          | La escuela
+          | Era muy feliz
+    
+
+#content-right
+  .section
+    .clearfix
+      h2 Skills
+    .item
+      h3 Ruby
+      ul.stars.clearfix
+        li
+          img(src="/img/star-active.png")
+        li
+          img(src="/img/star-active.png")
+        li
+          img(src="/img/star-active.png")
+        li
+          img(src="/img/star-active.png")
+        li
+          img(src="/img/star-active.png")
+      h3 Java
+      ul.stars.clearfix
+        li
+          img(src="/img/star-active.png")
+        li
+          img(src="/img/star-active.png")
+        li
+          img(src="/img/star-active.png")
+        li
+          img(src="/img/star-active.png")
+        li
+          img(src="/img/star-inactive.png")
+      h3 node.js
+      ul.stars.clearfix
+        li
+          img(src="/img/star-active.png")
+        li
+          img(src="/img/star-active.png")
+        li
+          img(src="/img/star-active.png")
+        li
+          img(src="/img/star-inactive.png")
+        li
+          img(src="/img/star-inactive.png")
+  
+
+
+.clear

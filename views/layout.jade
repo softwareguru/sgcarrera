@@ -1,0 +1,52 @@
+!!! 5
+html(lang="en")
+  head
+    meta(charset="utf-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge,chrome=1")
+    title Carreras SG
+    link(rel="stylesheet", type="text/css", media="screen", href="/css/main.css")/
+    link(rel="stylesheet", type="text/css", media="print", href="/css/print.css")/
+    /if lt IE 7
+      link(rel="stylesheet", type="text/css", media="screen", href="/css/ie-fix.css")/
+    link(href="/img/favicon.ico", rel="shortcut icon")/
+
+    - if(typeof(styles) != 'undefined')
+      - each style in styles
+        link(rel="stylesheet",type="text/css",media="screen",href=style)/
+
+    script(type="text/javascript",src="https://www.google.com/jsapi?key=ABQIAAAA3Eakgp3sm3cNojBMoT6bGRSAHfZ3LDll5Gx94ZHFBbc4ydTNQRRNaWxJGsOdY3GEDvZ6dvynCETGaw")
+    script(type="text/javascript",src="/js/loader.js")
+    - if(typeof(scripts) != 'undefined')
+      - each script in scripts
+        script(type="text/javascript",src=script)
+  body
+    #page
+      #header.clearfix
+        - if(typeof(person) != 'undefined')
+          h1= person.slug
+        - else 
+          h1 Carreras SG
+
+        ul#main-nav
+          li.current
+            a(href="/") Index
+      .content-innertube
+        - var infoMessages = request.flash('info')
+        - var warningMessages = request.flash('warning')
+        - var successMessages = request.flash('success')
+        - each info in infoMessages
+          .info= info
+        - each warning in warningMessages
+          .warning= warning
+        - each success in successMessages
+          .success= success
+        != body
+      #footer
+        #footer-innertube
+          .clear
+          ul#footer-nav
+            li
+              a(href="/") Index
+          #go-top
+    a(href="http://github.com/softwareguru/sgcarrera")
+      img(style="position: absolute; top: 0; left: 0; border: 0;",src="https://d3nwyuy0nl342s.cloudfront.net/img/c641758e06304bc53ae7f633269018169e7e5851/687474703a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f6c6566745f77686974655f6666666666662e706e67",alt="Fork me on GitHub")

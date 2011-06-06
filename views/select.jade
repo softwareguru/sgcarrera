@@ -1,0 +1,38 @@
+#text
+  img(src="/img/resume.png", alt="Resume", title="Resume")
+#stripe
+
+h2 Bienvenido a carreras SG
+
+.clear
+
+p 
+  | Ya casi tienes un lugar en SG Carrera,
+  | solo te falta elegir tu slug y tu correo
+
+form#form-container(method="post")
+  h3 Selecciona tu slug
+
+  p
+    | Tu slug es tu username y es tu perfil publico
+  br/
+
+  label(for='slug') Slug:
+  input#slug(type='text',name='user[slug]',value=slug)
+
+  .clear
+
+  h3 Selecciona tu email
+
+  p
+    | Lo necesitamos para contactarte
+
+  br/
+
+  label(for='email') Email:
+  input#email(type='text',name='user[email]',value=email)
+
+  #submit-btn
+    input.submit(type="submit",value="Registrarse")
+
+  .clear
