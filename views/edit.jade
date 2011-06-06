@@ -129,3 +129,34 @@ div#hidden(style="display: none")
     input#schoolEndnumSchool(type='text',name='schoolnumSchool[end]',value='endValue')
 
     .clear
+
+  div.publication
+    hr(style='margin-bottom: 20px')
+
+    div(style="float: right")
+      a.removePublication.button Eliminar publicación
+
+    label(for='stitlenumSchool') Título
+    input#stitlenumSchool(type='text',name='schoolnumSchool[title]',value='titleValue')
+
+    .clear
+
+    label(for='schoolnumSchool') Escuela
+    input#schoolnumSchool(type='text',name='schoolnumSchool[school]',value='schoolValue')
+
+    .clear
+
+    label(for='ssummarynumSchool') Descripción
+    textarea#ssummarynumSchool(name='schoolnumSchool[summary]') summaryValue
+
+    .clear(style='padding-top: 20px')
+
+    label(for='schoolStartnumSchool') Fecha de inicio
+    input#schoolStartnumSchool(type='text',name='schoolnumSchool[start]',value='startValue')
+
+    .clear
+
+    label(for='schoolEndnumSchool') Fecha de término
+    input#schoolEndnumSchool(type='text',name='schoolnumSchool[end]',value='endValue')
+
+    .clear

@@ -65,6 +65,30 @@ $(function() {
         });
     };
 
+    var addPublication = function(title, url) {
+        var numPublications = Number($("#numPublications").val()) + 1;
+        var htmlText = "<div class='publication' id='publication" + numPublications + "' style='display:none;'>" + $("#hidden .publication").html() + "</div>";
+
+        title = title || '';
+        url = url || '';
+
+        htmlText = htmlText.replace(/numPublication/g, numPublications);
+        htmlText = htmlText.replace('titleValue', title);
+        htmlText = htmlText.replace('urlValue', url);
+
+        $("#publicationPlaceholder").before(htmlText);
+
+        $("#publication" + numPublications).show(effect, {}, effectTime);
+        $("#numPublications").val(numPublications);
+
+        $("#publication" + numPublications + " .removePublication").click(function() {
+            var numPublications = Number($("#numPublications").val()) - 1;
+            $(this).parent().parent().hide(effect, {}, effectTime);
+            $(this).parent().parent().remove();
+            $("#numPublications").val(numPublications);
+        });
+    };
+
     var fillLinkedin = function() {
     };
 
@@ -95,7 +119,9 @@ $(function() {
         addSchool();
     });
     $("#addPublication").click(function() {
+        addPublication();
     });
     $("#addAffiliation").click(function() {
+        addAffiliation();
     });
 });
