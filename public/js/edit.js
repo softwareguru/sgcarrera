@@ -3,9 +3,25 @@ $(function() {
     var effect = 'blind';
     var effectTime = 500;
 
-    var addJob = function(jobNum, title, company, summary, start, end) {
+    var addJob = function(title, company, summary, start, end) {
         var numJobs = Number($("#numJobs").val()) + 1;
-        $("#jobPlaceholder").before("<div class='job' id='job" + numJobs + "' style='display:none;'>" + $("#hidden .job").html() + "</div>");
+        var htmlText = "<div class='job' id='job" + numJobs + "' style='display:none;'>" + $("#hidden .job").html() + "</div>";
+
+        title = title || '';
+        company = company || '';
+        summary = summary || '';
+        start = start || '';
+        end = end || '';
+
+
+        htmlText = htmlText.replace(/numJob/g, numJobs);
+        htmlText = htmlText.replace('titleValue', title);
+        htmlText = htmlText.replace('companyValue', company);
+        htmlText = htmlText.replace('summaryValue', summary);
+        htmlText = htmlText.replace('startValue', start);
+        htmlText = htmlText.replace('endValue', end);
+
+        $("#jobPlaceholder").before(htmlText);
 
         $("#job" + numJobs).show(effect, {}, effectTime);
         $("#numJobs").val(numJobs);
@@ -15,6 +31,37 @@ $(function() {
             $(this).parent().parent().hide(effect, {}, effectTime);
             $(this).parent().parent().remove();
             $("#numJobs").val(numJobs);
+        });
+    };
+
+    var addSchool = function(title, school, summary, start, end) {
+        var numSchools = Number($("#numSchools").val()) + 1;
+        var htmlText = "<div class='school' id='school" + numSchools + "' style='display:none;'>" + $("#hidden .school").html() + "</div>";
+
+        title = title || '';
+        school = school || '';
+        summary = summary || '';
+        start = start || '';
+        end = end || '';
+
+
+        htmlText = htmlText.replace(/numSchool/g, numSchools);
+        htmlText = htmlText.replace('titleValue', title);
+        htmlText = htmlText.replace('schoolValue', school);
+        htmlText = htmlText.replace('summaryValue', summary);
+        htmlText = htmlText.replace('startValue', start);
+        htmlText = htmlText.replace('endValue', end);
+
+        $("#schoolPlaceholder").before(htmlText);
+
+        $("#school" + numSchools).show(effect, {}, effectTime);
+        $("#numSchools").val(numSchools);
+
+        $("#school" + numSchools + " .removeSchool").click(function() {
+            var numSchools = Number($("#numSchools").val()) - 1;
+            $(this).parent().parent().hide(effect, {}, effectTime);
+            $(this).parent().parent().remove();
+            $("#numSchools").val(numSchools);
         });
     };
 
@@ -45,6 +92,7 @@ $(function() {
         addJob();
     });
     $("#addSchool").click(function() {
+        addSchool();
     });
     $("#addPublication").click(function() {
     });

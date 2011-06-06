@@ -21,6 +21,7 @@ h3 Importar de linkedin
 form#form-container
 
   input#numJobs(type='hidden',name='numJobs',value='0')
+  input#numSchools(type='hidden',name='numSchools',value='0')
 
   h3 Experiencia laboral
 
@@ -36,7 +37,7 @@ form#form-container
 
   h3 Educación
 
-  div#educationPlaceholder
+  div#schoolPlaceholder
 
   div(style="float: right")
     a#addSchool.button Agregar escuela
@@ -95,5 +96,36 @@ div#hidden(style="display: none")
 
     label(for='jobEndnumJob') Fecha de término
     input#jobEndnumJob(type='text',name='jobnumJob[end]',value='endValue')
+
+    .clear
+
+  div.school
+    hr(style='margin-bottom: 20px')
+
+    div(style="float: right")
+      a.removeSchool.button Eliminar escuela
+
+    label(for='stitlenumSchool') Título
+    input#stitlenumSchool(type='text',name='schoolnumSchool[title]',value='titleValue')
+
+    .clear
+
+    label(for='schoolnumSchool') Escuela
+    input#schoolnumSchool(type='text',name='schoolnumSchool[school]',value='schoolValue')
+
+    .clear
+
+    label(for='ssummarynumSchool') Descripción
+    textarea#ssummarynumSchool(name='schoolnumSchool[summary]') summaryValue
+
+    .clear(style='padding-top: 20px')
+
+    label(for='schoolStartnumSchool') Fecha de inicio
+    input#schoolStartnumSchool(type='text',name='schoolnumSchool[start]',value='startValue')
+
+    .clear
+
+    label(for='schoolEndnumSchool') Fecha de término
+    input#schoolEndnumSchool(type='text',name='schoolnumSchool[end]',value='endValue')
 
     .clear
