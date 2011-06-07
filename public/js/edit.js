@@ -25,11 +25,13 @@ $(function() {
 
         $("#job" + numJobs).show(effect, {}, effectTime);
         $("#numJobs").val(numJobs);
+        $(".formError").remove();
 
         $("#job" + numJobs + " .removeJob").click(function() {
             var numJobs = Number($("#numJobs").val()) - 1;
             $(this).parent().parent().hide(effect, {}, effectTime);
             $(this).parent().parent().remove();
+            $(".formError").remove();
             $("#numJobs").val(numJobs);
         });
     };
@@ -56,11 +58,13 @@ $(function() {
 
         $("#school" + numSchools).show(effect, {}, effectTime);
         $("#numSchools").val(numSchools);
+        $(".formError").remove();
 
         $("#school" + numSchools + " .removeSchool").click(function() {
             var numSchools = Number($("#numSchools").val()) - 1;
             $(this).parent().parent().hide(effect, {}, effectTime);
             $(this).parent().parent().remove();
+            $(".formError").remove();
             $("#numSchools").val(numSchools);
         });
     };
@@ -80,12 +84,40 @@ $(function() {
 
         $("#publication" + numPublications).show(effect, {}, effectTime);
         $("#numPublications").val(numPublications);
+        $(".formError").remove();
 
         $("#publication" + numPublications + " .removePublication").click(function() {
             var numPublications = Number($("#numPublications").val()) - 1;
             $(this).parent().parent().hide(effect, {}, effectTime);
             $(this).parent().parent().remove();
+            $(".formError").remove();
             $("#numPublications").val(numPublications);
+        });
+    };
+
+    var addAffiliation = function(title) {
+        var numAffiliations = Number($("#numAffiliations").val()) + 1;
+        var htmlText = "<div class='affiliation' id='affiliation" + numAffiliations + "' style='display:none;'>" + $("#hidden .affiliation").html() + "</div>";
+
+
+        title = title || '';
+
+
+        htmlText = htmlText.replace(/numAffiliation/g, numAffiliations);
+        htmlText = htmlText.replace('titleValue', title);
+
+        $("#affiliationPlaceholder").before(htmlText);
+
+        $("#affiliation" + numAffiliations).show(effect, {}, effectTime);
+        $("#numAffiliations").val(numAffiliations);
+        $(".formError").remove();
+
+        $("#affiliation" + numAffiliations + " .removeAffiliation").click(function() {
+            var numAffiliations = Number($("#numAffiliations").val()) - 1;
+            $(this).parent().parent().hide(effect, {}, effectTime);
+            $(this).parent().parent().remove();
+            $(".formError").remove();
+            $("#numAffiliations").val(numAffiliations);
         });
     };
 
@@ -124,4 +156,7 @@ $(function() {
     $("#addAffiliation").click(function() {
         addAffiliation();
     });
+
+    $("#form-container").validationEngine();
+
 });

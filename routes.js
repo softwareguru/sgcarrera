@@ -102,8 +102,8 @@ configure = function(app) {
                                 break;
                             }
                         }
-                        scripts=['/js/edit.js'];
-                        styles=['http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.13/themes/base/jquery-ui.css'];
+                        scripts=['/js/jquery.validationEngine.js','/js/jquery.validationEngine-es.js','/js/edit.js'];
+                        styles=['http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.13/themes/base/jquery-ui.css','/css/validationEngine.jquery.css'];
                         res.render('edit', {person:user, hasLinkedin: hasLinkedin, scripts:scripts});
                     } else {
                         res.redirect('select');

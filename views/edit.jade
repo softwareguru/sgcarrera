@@ -18,10 +18,12 @@ h3 Importar de linkedin
     | permitir el acceso
     a.button(href="/auth/linkedin") haciendo click aqui
 
-form#form-container
+form#form-container(method="post")
 
   input#numJobs(type='hidden',name='numJobs',value='0')
   input#numSchools(type='hidden',name='numSchools',value='0')
+  input#numPublications(type='hidden',name='numPublications',value='0')
+  input#numAffiliations(type='hidden',name='numAffiliations',value='0')
 
   h3 Experiencia laboral
 
@@ -30,14 +32,14 @@ form#form-container
 
   .clear
 
-  div#jobPlaceholder
+  #jobPlaceholder
 
 
   .clear
 
   h3 Educación
 
-  div#schoolPlaceholder
+  #schoolPlaceholder
 
   div(style="float: right")
     a#addSchool.button Agregar escuela
@@ -46,7 +48,7 @@ form#form-container
 
   h3 Publicaciones
 
-  div#publicationPlaceholder
+  #publicationPlaceholder
 
   div(style="float: right")
     a#addPublication.button Agregar publicación
@@ -55,10 +57,15 @@ form#form-container
 
   h3 Afiliaciones
 
-  div#affiliationPlaceholder
+  #affiliationPlaceholder
 
   div(style="float: right")
     a#addAffiliation.button Agregar afiliacion
+
+  .clear
+
+  #submit-btn
+    input.submit(type="submit",value="Guardar!")
 
   .clear
 
@@ -75,12 +82,12 @@ div#hidden(style="display: none")
       a.removeJob.button Eliminar trabajo
 
     label(for='titlenumJob') Título
-    input#titlenumJob(type='text',name='jobnumJob[title]',value='titleValue')
+    input#titlenumJob(type='text',name='jobnumJob[title]',value='titleValue',class='validate[required]')
 
     .clear
 
     label(for='companynumJob') Empresa
-    input#companynumJob(type='text',name='jobnumJob[company]',value='companyValue')
+    input#companynumJob(type='text',name='jobnumJob[company]',value='companyValue',class='validate[required]')
 
     .clear
 
@@ -90,7 +97,7 @@ div#hidden(style="display: none")
     .clear(style='padding-top: 20px')
 
     label(for='jobStartnumJob') Fecha de inicio
-    input#jobStartnumJob(type='text',name='jobnumJob[start]',value='startValue')
+    input#jobStartnumJob(type='text',name='jobnumJob[start]',value='startValue',class='validate[required]')
 
     .clear
 
@@ -106,12 +113,12 @@ div#hidden(style="display: none")
       a.removeSchool.button Eliminar escuela
 
     label(for='stitlenumSchool') Título
-    input#stitlenumSchool(type='text',name='schoolnumSchool[title]',value='titleValue')
+    input#stitlenumSchool(type='text',name='schoolnumSchool[title]',value='titleValue',class='validate[required]')
 
     .clear
 
     label(for='schoolnumSchool') Escuela
-    input#schoolnumSchool(type='text',name='schoolnumSchool[school]',value='schoolValue')
+    input#schoolnumSchool(type='text',name='schoolnumSchool[school]',value='schoolValue',class='validate[required]')
 
     .clear
 
@@ -121,7 +128,7 @@ div#hidden(style="display: none")
     .clear(style='padding-top: 20px')
 
     label(for='schoolStartnumSchool') Fecha de inicio
-    input#schoolStartnumSchool(type='text',name='schoolnumSchool[start]',value='startValue')
+    input#schoolStartnumSchool(type='text',name='schoolnumSchool[start]',value='startValue',class='validate[required]')
 
     .clear
 
@@ -136,27 +143,24 @@ div#hidden(style="display: none")
     div(style="float: right")
       a.removePublication.button Eliminar publicación
 
-    label(for='stitlenumSchool') Título
-    input#stitlenumSchool(type='text',name='schoolnumSchool[title]',value='titleValue')
+    label(for='ptitlenumPublication') Título
+    input#ptitlenumPublication(type='text',name='publicationnumPublication[title]',value='titleValue',class='validate[required]')
 
     .clear
 
-    label(for='schoolnumSchool') Escuela
-    input#schoolnumSchool(type='text',name='schoolnumSchool[school]',value='schoolValue')
+    label(for='purlnumPublication') Link
+    input#purlnumPublication(type='text',name='publicationnumPublication[url]',value='urlValue',class='validate[required,custom[url]]')
 
     .clear
 
-    label(for='ssummarynumSchool') Descripción
-    textarea#ssummarynumSchool(name='schoolnumSchool[summary]') summaryValue
+  div.affiliation
+    hr(style='margin-bottom: 20px')
 
-    .clear(style='padding-top: 20px')
+    div(style="float: right")
+      a.removeAffiliation.button Eliminar afiliación
 
-    label(for='schoolStartnumSchool') Fecha de inicio
-    input#schoolStartnumSchool(type='text',name='schoolnumSchool[start]',value='startValue')
-
-    .clear
-
-    label(for='schoolEndnumSchool') Fecha de término
-    input#schoolEndnumSchool(type='text',name='schoolnumSchool[end]',value='endValue')
+    label(for='atitlenumPublication') Título
+    input#atitlenumAffiliation(type='text',name='affiliationnumAffiliation[title]',value='titleValue',class='validate[required]')
 
     .clear
+

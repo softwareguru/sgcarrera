@@ -987,3 +987,7 @@ body{
 .job {
     padding-top: 20px;
 }
+
+form .button span {
+    width: 126px;
+}
