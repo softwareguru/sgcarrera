@@ -6,22 +6,12 @@ var Schema = mongoose.Schema,
 
 mongoose.connect(conf.mongo_url);
 
-var School = new Schema({
-    name : String,
-    people : [ObjectId]
-});
-
-var Company = new Schema({
-    name : String,
-    people : [ObjectId]
-});
-
 var Education = new Schema({
     title: String,
     summary: String,
     start: Date,
     end: Date,
-    school: ObjectId
+    school: String
 });
 
 var Job = new Schema({
@@ -29,7 +19,7 @@ var Job = new Schema({
     summary: String,
     start: Date,
     end: Date,
-    company: ObjectId
+    company: String
 });
 
 var Skill = new Schema({
@@ -70,8 +60,6 @@ var User = new Schema({
 });
 
 mongoose.model('User', User);
-mongoose.model('Company', Company);
-mongoose.model('School', School);
 
 //Add exports
 exports.User = mongoose.model('User');

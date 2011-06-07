@@ -118,11 +118,67 @@ configure = function(app) {
     });
 
     app.post('/edit', function(req, res) {
+        var numJobs;
+        var numSchools;
+        var numAffiliations;
+        var numPublications;
+        var jobs = [];
+        var schools = [];
+        var publications = [];
+        var affiliations = [];
+        var i;
+
         if(req.session.auth && req.session.auth.loggedIn) {
             User.findById(req.session.auth.userId, function(err,user) {
                 if(!err) {
-                    req.flash('success', 'Tus datos se han guardado exitosamente');
-                    res.redirect(user.slug);
+                    formUser = req.body.user;
+
+                    numJobs = req.body.numJobs || 0;
+                    numSchools = req.body.numSchools|| 0;
+                    numPublications = req.body.numPublications || 0;
+                    numAffiliations = req.body.numAffiliations || 0;
+
+                    user.name = formUser.name;
+                    user.lastNames = formUser.lastNames;
+                    user.title = formUser.title;
+                    user.summary = formUser.summary;
+                    user.url = [formUser.url];
+
+                    for(i = 1; i <= numJobs; i++) {
+                        var job = req.body['job' + i];
+                        jobs.push(job);
+                    }
+
+                    for(i = 1; i <= numSchools; i++) {
+                        var school = req.body['school' + i];
+                        schools.push(school);
+                    }
+
+                    for(i = 1; i <= numPublications; i++) {
+                        var publication = req.body['publication' + i];
+                        publications.push(publication);
+                    }
+
+                    for(i = 1; i <= numAffiliations; i++) {
+                        var affiliation = req.body['affiliation' + i];
+                        affiliations.push(affiliation.title);
+                    }
+
+                    user.jobs = jobs;
+                    user.educations = schools;
+                    user.publications = publications;
+                    user.affiliations = affiliations;
+
+                    user.save(function(err) {
+                        if(!err) {
+                            req.flash('success', 'Tus datos se han guardado exitosamente');
+                            res.redirect(user.slug);
+                        } else {
+                            req.flash('warning', err);
+                            res.redirect('edit');
+                        }
+                    });
+
                 } else {
                     res.redirect('/');
                 }
