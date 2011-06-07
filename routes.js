@@ -142,32 +142,43 @@ configure = function(app) {
                     user.lastNames = formUser.lastNames;
                     user.title = formUser.title;
                     user.summary = formUser.summary;
+                    user.place = formUser.place;
                     user.url = [formUser.url];
 
                     for(i = 1; i <= numJobs; i++) {
                         var job = req.body['job' + i];
-                        jobs.push(job);
+                        if(job) {
+                            jobs.push(job);
+                        }
                     }
 
                     for(i = 1; i <= numSchools; i++) {
                         var school = req.body['school' + i];
-                        schools.push(school);
+                        if(school) {
+                            schools.push(school);
+                        }
                     }
 
                     for(i = 1; i <= numPublications; i++) {
                         var publication = req.body['publication' + i];
-                        publications.push(publication);
+                        if(publication) {
+                            publications.push(publication);
+                        }
                     }
 
                     for(i = 1; i <= numAffiliations; i++) {
                         var affiliation = req.body['affiliation' + i];
-                        affiliations.push(affiliation.title);
+                        if(affiliation) {
+                            affiliations.push(affiliation.title);
+                        }
                     }
 
                     user.jobs = jobs;
                     user.educations = schools;
                     user.publications = publications;
                     user.affiliations = affiliations;
+
+                    user.filled = true;
 
                     user.save(function(err) {
                         if(!err) {

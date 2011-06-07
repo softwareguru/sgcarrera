@@ -2,7 +2,23 @@ var model = require('./model');
 var conf = require('./conf');
 var OAuth = require('oauth').OAuth;
 
+var User = model.User;
+
 configure = function(app) {
+    app.get('/interact/self', function(req, res) {
+        res.contentType('application/json');
+        if(req.loggedIn) {
+            User.findById(req.session.auth.userId, function(err,user) {
+                if(!err) {
+                    res.send(user);
+                } else {
+                    res.send({access:'Not allowed'});
+                }
+            });
+        } else {
+            res.send({access:'Not allowed'});
+        }
+    });
     app.get('/interact/importLinkedin', function(req, res) {
         res.contentType('application/json');
         var linkedinOAuth = new OAuth(

@@ -18,6 +18,16 @@ $(function() {
         }
     }
 
+    function formatSelfDate(date) {
+        if(date) {
+            date = new Date(date);
+
+            return date.getMonth() + 1 + "/" + date.getDate() + "/" + date.getFullYear();
+        } else {
+            return "";
+        }
+    }
+
     var addJob = function(title, company, summary, start, end) {
         var numJobs = Number($("#numJobs").val()) + 1;
         var htmlText = "<div class='job' id='job" + numJobs + "' style='display:none;'>" + $("#hidden .job").html() + "</div>";
@@ -43,11 +53,9 @@ $(function() {
         $(".formError").remove();
 
         $("#job" + numJobs + " .removeJob").click(function() {
-            var numJobs = Number($("#numJobs").val()) - 1;
             $(this).parent().parent().hide(effect, {}, effectTime);
             $(this).parent().parent().remove();
             $(".formError").remove();
-            $("#numJobs").val(numJobs);
         });
     };
 
@@ -76,11 +84,9 @@ $(function() {
         $(".formError").remove();
 
         $("#school" + numSchools + " .removeSchool").click(function() {
-            var numSchools = Number($("#numSchools").val()) - 1;
             $(this).parent().parent().hide(effect, {}, effectTime);
             $(this).parent().parent().remove();
             $(".formError").remove();
-            $("#numSchools").val(numSchools);
         });
     };
 
@@ -102,11 +108,9 @@ $(function() {
         $(".formError").remove();
 
         $("#publication" + numPublications + " .removePublication").click(function() {
-            var numPublications = Number($("#numPublications").val()) - 1;
             $(this).parent().parent().hide(effect, {}, effectTime);
             $(this).parent().parent().remove();
             $(".formError").remove();
-            $("#numPublications").val(numPublications);
         });
     };
 
@@ -128,11 +132,62 @@ $(function() {
         $(".formError").remove();
 
         $("#affiliation" + numAffiliations + " .removeAffiliation").click(function() {
-            var numAffiliations = Number($("#numAffiliations").val()) - 1;
             $(this).parent().parent().hide(effect, {}, effectTime);
             $(this).parent().parent().remove();
             $(".formError").remove();
-            $("#numAffiliations").val(numAffiliations);
+        });
+    };
+
+    var fill = function() {
+        $.getJSON('/interact/self', function(data) {
+            $("#title").val(data.title || '');
+            $("#summary").val(data.summary || '');
+            $("#name").val(data.name || '');
+            $("#lastName").val(data.lastNames || '');
+            $("#place").val(data.place || '');
+            $("#url").val(data.url[0] || '');
+
+            if(data.jobs) {
+                $.each(data.jobs, function(index, job) {
+                    addJob(
+                        job.title,
+                        job.company,
+                        job.summary,
+                        formatSelfDate(job.start),
+                        formatSelfDate(job.end)
+                    );
+                });
+            }
+
+            if(data.educations) {
+                $.each(data.educations, function(index, school) {
+                    addSchool(
+                        school.title,
+                        school.school,
+                        school.summary,
+                        formatSelfDate(school.start),
+                        formatSelfDate(school.end)
+                    );
+                });
+            }
+
+            if(data.publications) {
+                $.each(data.publications, function(index, publication) {
+                    addPublication(
+                        publication.title,
+                        publication.url
+                    );
+                });
+            }
+
+            if(data.affiliations) {
+                $.each(data.affiliations, function(index, affiliation) {
+                    addAffiliation(
+                        affiliation
+                    );
+                });
+            }
+
         });
     };
 
@@ -213,5 +268,7 @@ $(function() {
     });
 
     $("#form-container").validationEngine();
+
+    fill();
 
 });
