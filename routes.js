@@ -13,7 +13,9 @@ var taken= [
     'edit',
     'interact',
     'logout',
-    'auth'
+    'auth',
+    'companies',
+    'schools'
 ];
 
 var findService = function(user, serviceName) {
@@ -266,6 +268,34 @@ configure = function(app) {
         });
     });
 
+    app.get('/companies/:slug', function(req, res) {
+        Company.findOne({'md5': req.params.slug}, function(err, company) {
+            if(!err && company) {
+                User.find({'jobs.company':company.name}, function(err, users) {
+                    if(!err) {
+                        res.render('people', {users:users, company: company.name, md5:hashlib.md5});
+                    }
+                });
+            } else {
+                res.send('Quien es esa?', 404);
+            }
+        });
+    });
+
+    app.get('/schools/:slug', function(req, res) {
+        School.findOne({'md5': req.params.slug}, function(err, school) {
+            if(!err && school) {
+                User.find({'educations.school':school.name}, function(err, users) {
+                    if(!err) {
+                        res.render('people', {users:users, school: school.name, md5:hashlib.md5});
+                    }
+                });
+            } else {
+                res.send('Quien es esa?', 404);
+            }
+        });
+    });
+
     app.get('/:slug', function(req, res) {
         var regexSlug = new RegExp(req.params.slug, 'i');
 
@@ -299,7 +329,7 @@ configure = function(app) {
                         res.flash('warning', err);
                     }
                     scripts=['/js/profile.js'];
-                    res.render('profile', {person:user, gravatar:gravatar, skills:skills, scripts:scripts});
+                    res.render('profile', {person:user, gravatar:gravatar, skills:skills, scripts:scripts,md5:hashlib.md5});
                 });
             } else {
                 res.send('Quien es ese?', 404);

@@ -25,7 +25,8 @@
       - each job in person.jobs
         .item
           h3= job.title
-          h4= job.company
+          h4
+            a(href='/companies/' + md5(job.company))= job.company
           .date #{job.start.getFullYear()} -
             - if(job.end)
               | #{job.end.getFullYear()}
@@ -80,7 +81,8 @@
       - each education in person.educations
         .item
           h3= education.title
-          h4= education.school
+          h4
+            a(href='/schools/' + md5(education.school))= education.school
           .date #{education.start.getFullYear()} -
             - if(education.end)
               | #{education.end.getFullYear()}
