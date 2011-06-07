@@ -255,8 +255,9 @@ configure = function(app) {
     });
 
     app.get('/:slug', function(req, res) {
+        var regexSlug = new RegExp(req.params.slug, 'i');
 
-        User.findOne({'slug':req.params.slug}, function(err,user) {
+        User.findOne({'slug':regexSlug}, function(err,user) {
             var i;
             var scripts;
             if(!err && user) {
