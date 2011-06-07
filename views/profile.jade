@@ -52,8 +52,9 @@
         br
 
     .section
-      .clearfix
-        h2 Skills
+      - if(skills.length > 0 && !request.loggedIn)
+        .clearfix
+          h2 Skills
 
 
       - if(request.loggedIn)
@@ -74,9 +75,10 @@
               li
                 img(src=starUrl)
 
-    .section(style='padding-top: 50px')
-      .clearfix
-        h2 Educación
+    - if(person.educations.length > 0)
+      .section(style='padding-top: 50px')
+        .clearfix
+          h2 Educación
 
       - each education in person.educations
         .item
@@ -92,6 +94,20 @@
             p.margin= education.title
             p= education.summary
 
+    - if(person.publications.length > 0)
+      .section(style='padding-top: 50px')
+        .clearfix
+          h2 Publicaciones
+        - each publication in person.publications
+          h3
+            a(href=publication.url)= publication.title
+
+    - if(person.affiliations.length > 0)
+      .section(style='padding-top: 50px')
+        .clearfix
+          h2 Afiliaciones
+        - each affiliation in person.affiliations
+          h3= affiliation
   .clear
 
 - else
