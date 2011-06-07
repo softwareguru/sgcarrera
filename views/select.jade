@@ -18,7 +18,7 @@ form#form-container(method="post")
   br/
 
   label(for='slug') Slug:
-  input#slug(type='text',name='user[slug]',value=slug,class='validation[required]')
+  input#slug(type='text',name='user[slug]',value=slug,class='validate[required]')
 
   .clear
 
@@ -30,7 +30,7 @@ form#form-container(method="post")
   br/
 
   label(for='email') Email:
-  input#email(type='text',name='user[email]',value=email,class='validation[required,custom[email]]')
+  input#email(type='text',name='user[email]',value=email,class='validate[required,custom[email]]')
 
   #submit-btn
     input.submit(type="submit",value="Registrarse")
