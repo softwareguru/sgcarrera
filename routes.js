@@ -280,6 +280,9 @@ configure = function(app) {
                             }
                             skills.push(uiSkill);
                         });
+                        skills.sort(function(a,b) {
+                            return b.level - a.level;
+                        });
                     } else {
                         res.flash('warning', err);
                     }
