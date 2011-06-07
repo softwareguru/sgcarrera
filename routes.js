@@ -5,6 +5,8 @@ var hashlib = require('hashlib');
 
 var User = model.User;
 var DominantSkill = model.DominantSkill;
+var Company = model.Company;
+var School = model.School;
 
 var taken= [
     'select',
@@ -195,6 +197,11 @@ configure = function(app) {
                     for(i = 1; i <= numJobs; i++) {
                         var job = req.body['job' + i];
                         if(job) {
+                            var theCompany = new Company({
+                                name: job.company,
+                                md5: hashlib.md5(job.company)
+                            });
+                            theCompany.save();
                             jobs.push(job);
                         }
                     }
@@ -202,6 +209,11 @@ configure = function(app) {
                     for(i = 1; i <= numSchools; i++) {
                         var school = req.body['school' + i];
                         if(school) {
+                            var theSchool = new School({
+                                name: school.school,
+                                md5: hashlib.md5(school.school)
+                            });
+                            theSchool.save();
                             schools.push(school);
                         }
                     }

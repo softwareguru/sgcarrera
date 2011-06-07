@@ -6,6 +6,16 @@ var Schema = mongoose.Schema,
 
 mongoose.connect(conf.mongo_url);
 
+var School = new Schema({
+    name: { type: String, unique: true },
+    md5: String
+});
+
+var Company = new Schema({
+    name: { type: String, unique: true },
+    md5: String
+});
+
 var Education = new Schema({
     title: String,
     summary: String,
@@ -66,8 +76,12 @@ var User = new Schema({
 
 mongoose.model('User', User);
 mongoose.model('DominantSkill', DominantSkill);
+mongoose.model('Company', Company);
+mongoose.model('School', School);
 
 //Add exports
 exports.User = mongoose.model('User');
 exports.DominantSkill = mongoose.model('DominantSkill');
+exports.Company = mongoose.model('Company');
+exports.School = mongoose.model('School');
 
