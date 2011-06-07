@@ -346,15 +346,16 @@ configure = function(app) {
                                         });
                                     };
 
-                                    for(var i = 0; i < repos.length; i++) {
-                                        var options = {
-                                            host: 'github.com',
-                                            port: 80,
-                                            path: '/api/v2/json/repos/show/' + service.data.login + '/' + repos[i].name + '/languages'
-                                        };
-                                        http.get(options, processLanguages);
-                                    }
-
+                                    repos.forEach(function(repo) {
+                                        if(!repo.fork) {
+                                            var options = {
+                                                host: 'github.com',
+                                                port: 80,
+                                                path: '/api/v2/json/repos/show/' + service.data.login + '/' + repo.name + '/languages'
+                                            };
+                                            http.get(options, processLanguages);
+                                        }
+                                    });
 
                                     if(next) {
                                         fetchRepos(next);
