@@ -1,13 +1,56 @@
 var model = require('./model');
+
+var https = require('https');
 var hashlib = require('hashlib');
 
 var User = model.User;
+var DominantSkill = model.DominantSkill;
 
 var taken= [
     'select',
     'edit',
-    'interact'
+    'interact',
+    'logout',
+    'auth'
 ];
+
+var findService = function(user, serviceName) {
+    for(var i = 0; i < user.services.length; i++) {
+        if(user.services[i].type == serviceName) {
+            return user.services[i];
+        }
+    }
+};
+
+var findSkill = function(skills, skillName) {
+    for(var i = 0; i < skills.length; i++) {
+        if(skills[i].name == skillName) {
+            return skills[i];
+        }
+    }
+};
+
+var storeIfMax = function(skill) {
+    DominantSkill.findOne({name:skill.name}, function(err,foundSkill) {
+        if(!err && foundSkill) {
+            if(foundSkill.level < skill.level) {
+                foundSkill.level = skill.level;
+                foundSkill.save(function(err) {
+                    if(err) {
+                        console.log(err);
+                    }
+                });
+            }
+        } else {
+            var newSkill = new DominantSkill(skill);
+            newSkill.save(function(err) {
+                if(err) {
+                    console.log(err);
+                }
+            });
+        }
+    });
+};
 
 configure = function(app) {
     app.get('/', function(req, res) {
@@ -103,7 +146,7 @@ configure = function(app) {
                             }
                         }
                         scripts=['/js/jquery.validationEngine.js','/js/jquery.validationEngine-es.js','/js/edit.js'];
-                        styles=['http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.13/themes/base/jquery-ui.css','/css/validationEngine.jquery.css'];
+                        styles=['/css/validationEngine.jquery.css'];
                         res.render('edit', {person:user, hasLinkedin: hasLinkedin, scripts:scripts});
                     } else {
                         res.redirect('select');
@@ -202,13 +245,140 @@ configure = function(app) {
     app.get('/:slug', function(req, res) {
 
         User.findOne({'slug':req.params.slug}, function(err,user) {
+            var i;
+            var scripts;
             if(!err && user) {
                 var gravatar = hashlib.md5(user.email);
-                res.render('profile', {person:user, gravatar:gravatar});
+                DominantSkill.find({}, function(err, dominantSkills) {
+                    var skills = [];
+                    if(!err) {
+                        user.skills.forEach(function(skill) {
+                            var uiSkill = {
+                                name: skill.name,
+                                level: 5 * skill.level / findSkill(dominantSkills, skill.name).level,
+                                stars: []
+                            };
+                            for(i = 0; i < uiSkill.level; i++) {
+                                uiSkill.stars.push('active');
+                            }
+                            for(; i < 5; i++) {
+                                uiSkill.stars.push('inactive');
+                            }
+                            skills.push(uiSkill);
+                        });
+                    } else {
+                        res.flash('warning', err);
+                    }
+                    scripts=['/js/profile.js'];
+                    res.render('profile', {person:user, gravatar:gravatar, skills:skills, scripts:scripts});
+                });
             } else {
                 res.send('Quien es ese?', 404);
             }
         });
+    });
+
+    app.get('/edit/skills', function(req, res) {
+        if(req.session.auth && req.session.auth.loggedIn) {
+            User.findById(req.session.auth.userId, function(err,user) {
+                if(!err) {
+                    var globalSkills = [];
+                    var service = findService(user, 'github');
+
+                    if(service) {
+                        var fetchRepos = function fetchRepos(path) {
+                            path = path || '/api/v2/json/repos/show/' + service.data.login;
+
+
+                            var options = {
+                                host: 'github.com',
+                                port: 443,
+                                path: path
+                            };
+
+                            https.get(options, function(result) {
+                                var jsonResult = '';
+                                result.on('data', function(chunk) {
+                                    jsonResult += chunk;
+                                });
+                                result.on('end', function() {
+                                    var next = result.headers['x-next'];
+                                    var repos = JSON.parse(jsonResult).repositories;
+                                    var foundSkill;
+
+                                    var processLanguages = function(result) {
+                                        var skillText = '';
+                                        result.on('data', function(chunk) {
+                                            skillText += chunk;
+                                        });
+                                        result.on('end', function() {
+                                            var skills = JSON.parse(skillText).languages;
+                                            for(var skill in skills) {
+                                                if(skills.hasOwnProperty(skill)) {
+                                                    foundSkill = findSkill(globalSkills, skill);
+                                                    if(!foundSkill) {
+                                                        foundSkill = {
+                                                            name: skill,
+                                                            level: skills[skill]
+                                                        };
+                                                        globalSkills.push(foundSkill);
+                                                    } else {
+                                                        foundSkill.level += skills[skill];
+                                                    }
+                                                    user.skills = globalSkills;
+                                                    user.save();
+                                                    storeIfMax(foundSkill);
+                                                }
+                                            }
+                                        });
+                                    };
+
+                                    for(var i = 0; i < repos.length; i++) {
+                                        var options = {
+                                            host: 'github.com',
+                                            port: 443,
+                                            path: '/api/v2/json/repos/show/' + service.data.login + '/' + repos[i].name + '/languages'
+                                        };
+                                        https.get(options, processLanguages);
+                                    }
+
+
+                                    if(next) {
+                                        fetchRepos(next);
+                                    } else {
+                                        req.flash('success', 'Tus skills estan siendo calculados, regresa en unos segundos');
+                                        res.redirect(user.slug);
+                                    }
+
+                                });
+                            }).on('error', function(e) {
+                                req.flash('warning', e);
+                                res.redirect(user.slug);
+                            });
+                        };
+
+                        fetchRepos();
+
+                    } else {
+                        req.flash('warning', 'No se encontro cuenta de github asociada');
+                        res.redirect(user.slug);
+                    }
+                } else {
+                    req.flash('warning', err);
+                    res.redirect('/');
+                }
+            });
+        } else {
+            res.redirect('/');
+        }
+
+        
+
+    });
+
+    app.get('/logout', function(req, res) {
+        req.session.destroy();
+        res.redirect('/');
     });
 };
 

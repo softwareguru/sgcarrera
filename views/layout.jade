@@ -9,6 +9,7 @@ html(lang="en")
     /if lt IE 7
       link(rel="stylesheet", type="text/css", media="screen", href="/css/ie-fix.css")/
     link(href="/img/favicon.ico", rel="shortcut icon")/
+    link(rel='stylesheet',type='text/css',media='screen',href='http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.13/themes/base/jquery-ui.css')/
 
     - if(typeof(styles) != 'undefined')
       - each style in styles
@@ -29,7 +30,12 @@ html(lang="en")
 
         ul#main-nav
           li.current
-            a(href="/") Index
+            a(href="/") Principal
+          - if(request.loggedIn)
+            li
+              a(href="/edit") Editar
+            li
+              a(href="/logout") Salir
       .content-innertube
         - var infoMessages = request.flash('info')
         - var warningMessages = request.flash('warning')

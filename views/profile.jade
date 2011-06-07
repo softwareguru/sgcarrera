@@ -40,44 +40,24 @@
     .section
       .clearfix
         h2 Skills
-    //
-        .item
-          h3 Ruby
+
+
+      - if(request.loggedIn)
+        - if(!request.session.github)
+          | Si quieres refrescar tus skills, tienes que acceder con
+          a.button(href="/auth/github") github
+        - else
+          | Para refrescar tus propios skills da click
+          a.button(href='/edit/skills') aquí
+
+      .item
+        - each skill in skills
+          h3= skill.name
           ul.stars.clearfix
-            li
-              img(src="/img/star-active.png")
-            li
-              img(src="/img/star-active.png")
-            li
-              img(src="/img/star-active.png")
-            li
-              img(src="/img/star-active.png")
-            li
-              img(src="/img/star-active.png")
-          h3 Java
-          ul.stars.clearfix
-            li
-              img(src="/img/star-active.png")
-            li
-              img(src="/img/star-active.png")
-            li
-              img(src="/img/star-active.png")
-            li
-              img(src="/img/star-active.png")
-            li
-              img(src="/img/star-inactive.png")
-          h3 node.js
-          ul.stars.clearfix
-            li
-              img(src="/img/star-active.png")
-            li
-              img(src="/img/star-active.png")
-            li
-              img(src="/img/star-active.png")
-            li
-              img(src="/img/star-inactive.png")
-            li
-              img(src="/img/star-inactive.png")
+            - each star in skill.stars
+              -var starUrl = '/img/star-' + star + '.png'
+              li
+                img(src=starUrl)
 
     .section(style='padding-top: 50px')
       .clearfix

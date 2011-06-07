@@ -27,6 +27,11 @@ var Skill = new Schema({
     level: Number
 });
 
+var DominantSkill = new Schema({
+    name: String,
+    level: Number
+});
+
 var ServiceLink = new Schema({
     type : String,
     id : String,
@@ -60,7 +65,9 @@ var User = new Schema({
 });
 
 mongoose.model('User', User);
+mongoose.model('DominantSkill', DominantSkill);
 
 //Add exports
 exports.User = mongoose.model('User');
+exports.DominantSkill = mongoose.model('DominantSkill');
 
