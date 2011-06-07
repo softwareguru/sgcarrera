@@ -2,92 +2,101 @@
   img(src="/img/aboutme.png", alt="Resume", title="Resume")
 #stripe
 
-#content-left
-  .section
-    .clearfix
-      h2 Detalles personales
+- if(person.filled)
+  #content-left
+    .section
+      .clearfix
+        h2 Detalles personales
 
-    .item
-      div(style="text-align: center")
-        -var gravatarUrl = "http://www.gravatar.com/avatar/" + gravatar + "?s=300"
-        img(src=gravatarUrl, alt=person.slug, title="Tu gravatar")
+      .item(style="text-align: center")
+        div
+          -var gravatarUrl = "http://www.gravatar.com/avatar/" + gravatar + "?s=300"
+          img(src=gravatarUrl, alt=person.slug, title="Tu gravatar")
 
-      ul#personal-details
-        li
-          span Nombre:
-          span Eduardo Diaz Real
+        ul#personal-details
+          li
+            span #{person.name} #{person.lastNames}
       
 
-  .section(style='padding-top: 50px')
-    .clearfix
-      h2 Experiencia laboral
+    .section(style='padding-top: 50px')
+      .clearfix
+        h2 Experiencia laboral
 
-    .item
-      h3 Freelance
-      h4 Mi empresa
-      .date 2008-presente
-      .description
-        p.margin Headline
-        p
-          | El puesto 
-          | Era muy feliz
-
-  .section(style='padding-top: 50px')
-    .clearfix
-      h2 Educación
-
-    .item
-      h3 Ingeniería en sistemas
-      h4 ESCOM
-      .date 2000-2100
-      .description
-        p
-          | La escuela
-          | Era muy feliz
-    
-
-#content-right
-  .section
-    .clearfix
-      h2 Skills
-    .item
-      h3 Ruby
-      ul.stars.clearfix
-        li
-          img(src="/img/star-active.png")
-        li
-          img(src="/img/star-active.png")
-        li
-          img(src="/img/star-active.png")
-        li
-          img(src="/img/star-active.png")
-        li
-          img(src="/img/star-active.png")
-      h3 Java
-      ul.stars.clearfix
-        li
-          img(src="/img/star-active.png")
-        li
-          img(src="/img/star-active.png")
-        li
-          img(src="/img/star-active.png")
-        li
-          img(src="/img/star-active.png")
-        li
-          img(src="/img/star-inactive.png")
-      h3 node.js
-      ul.stars.clearfix
-        li
-          img(src="/img/star-active.png")
-        li
-          img(src="/img/star-active.png")
-        li
-          img(src="/img/star-active.png")
-        li
-          img(src="/img/star-inactive.png")
-        li
-          img(src="/img/star-inactive.png")
-  
+      - each job in person.jobs
+        .item
+          h3= job.title
+          h4= job.company
+          .date #{job.start.getFullYear()} -
+            - if(job.end)
+              | #{job.end.getFullYear()}
+            - else
+              | presente
+          .description
+            p.margin= job.title
+            p= job.summary
 
 
-.clear
+  #content-right
+    .section
+      .clearfix
+        h2 Skills
+    //
+        .item
+          h3 Ruby
+          ul.stars.clearfix
+            li
+              img(src="/img/star-active.png")
+            li
+              img(src="/img/star-active.png")
+            li
+              img(src="/img/star-active.png")
+            li
+              img(src="/img/star-active.png")
+            li
+              img(src="/img/star-active.png")
+          h3 Java
+          ul.stars.clearfix
+            li
+              img(src="/img/star-active.png")
+            li
+              img(src="/img/star-active.png")
+            li
+              img(src="/img/star-active.png")
+            li
+              img(src="/img/star-active.png")
+            li
+              img(src="/img/star-inactive.png")
+          h3 node.js
+          ul.stars.clearfix
+            li
+              img(src="/img/star-active.png")
+            li
+              img(src="/img/star-active.png")
+            li
+              img(src="/img/star-active.png")
+            li
+              img(src="/img/star-inactive.png")
+            li
+              img(src="/img/star-inactive.png")
+
+    .section(style='padding-top: 50px')
+      .clearfix
+        h2 Educación
+
+      - each education in person.educations
+        .item
+          h3= education.title
+          h4= education.school
+          .date #{education.start.getFullYear()} -
+            - if(education.end)
+              | #{education.end.getFullYear()}
+            - else
+              | presente
+          .description
+            p.margin= education.title
+            p= education.summary
+
+  .clear
+
+- else
+  h1 #{person.slug} llegará muy pronto a Carreras SG
