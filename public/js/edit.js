@@ -3,6 +3,21 @@ $(function() {
     var effect = 'blind';
     var effectTime = 500;
 
+    function formatDate(date) {
+        if(date !== undefined) {
+            var result = "";
+            if(date.month !== undefined) {
+                result = date.month + "/1/";
+            } else {
+                result = "1/1/";
+            }
+            result += date.year;
+            return result;
+        } else {
+            return "";
+        }
+    }
+
     var addJob = function(title, company, summary, start, end) {
         var numJobs = Number($("#numJobs").val()) + 1;
         var htmlText = "<div class='job' id='job" + numJobs + "' style='display:none;'>" + $("#hidden .job").html() + "</div>";
@@ -122,6 +137,46 @@ $(function() {
     };
 
     var fillLinkedin = function() {
+        $('.removeJob').click();
+        $('.removeSchool').click();
+        $('.removePublication').click();
+        $('.removeAffiliation').click();
+
+        $.getJSON('/interact/importLinkedin', function(data) {
+            $("#title").val(data.headline || '');
+            $("#summary").val(data.summary || '');
+            $("#name").val(data.firstName || '');
+            $("#lastName").val(data.lastName || '');
+            $("#place").val((data.location && data.location.name) || '');
+            $("#url").val((data.memberUrlResources && data.memberUrlResources.values[0] && data.memberUrlResources.values[0].url) || '');
+
+
+            if(data.positions && data.positions.values) {
+                $.each(data.positions.values, function(index, position) {
+                    addJob(
+                        position.title,
+                        position.company.name,
+                        position.summary,
+                        formatDate(position.startDate),
+                        formatDate(position.endDate)
+                    );
+                });
+            }
+
+            if(data.educations && data.educations.values) {
+                $.each(data.educations.values, function(index, school) {
+                    addSchool(
+                        school.fieldOfStudy,
+                        school.schoolName,
+                        school.summary,
+                        formatDate(school.startDate),
+                        formatDate(school.endDate)
+                    );
+                });
+            }
+
+        });
+
     };
 
     $("#linkedDialog").dialog({

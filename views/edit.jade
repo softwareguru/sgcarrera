@@ -2,11 +2,11 @@
   img(src="/img/aboutme.png", alt="Resume", title="Resume")
 #stripe
 
-h2 Hola #{person.slug}, edita tus datos
-
 .clear
 
-h3 Importar de linkedin
+h2 Importar de linkedin
+
+.clear
 
 - if(request.session.linkedin)
   p
@@ -25,7 +25,42 @@ form#form-container(method="post")
   input#numPublications(type='hidden',name='numPublications',value='0')
   input#numAffiliations(type='hidden',name='numAffiliations',value='0')
 
-  h3 Experiencia laboral
+  h2(style='margin-bottom: 20px;') Datos personales
+  .clear
+
+  label(for='name') Nombre
+  input#name(type='text',name='user[name]',class='validate[required]')
+
+  .clear
+
+  label(for='lastName') Apellidos
+  input#lastName(type='text',name='user[lastNames]',class='validate[required]')
+
+  .clear
+
+  label(for='title') Headline
+  input#title(type='text',name='user[title]',class='validate[required]')
+
+  .clear
+
+  label(for='place') Lugar
+  input#place(type='text',name='user[place]')
+
+  .clear
+
+  label(for='summary') Summary
+  textarea#summary(name='user[summary]') 
+
+  .clear(style='padding-top: 20px')
+
+  label(for='url') Url
+  input#url(type='text',name='user[url]',class='validate[required]')
+
+  .clear
+  
+
+  h2 Experiencia laboral
+  .clear
 
   div(style="float: right")
     a#addJob.button Agregar trabajo
@@ -37,7 +72,8 @@ form#form-container(method="post")
 
   .clear
 
-  h3 Educación
+  h2 Educación
+  .clear
 
   #schoolPlaceholder
 
@@ -46,7 +82,8 @@ form#form-container(method="post")
 
   .clear
 
-  h3 Publicaciones
+  h2 Publicaciones
+  .clear
 
   #publicationPlaceholder
 
@@ -55,7 +92,8 @@ form#form-container(method="post")
 
   .clear
 
-  h3 Afiliaciones
+  h2 Afiliaciones
+  .clear
 
   #affiliationPlaceholder
 

@@ -874,7 +874,7 @@ p.loading {
 	width:288px;
 	border: 1px solid #989895;
 	background: none;
-	font-family:'Just Another Hand', Arial, Helvetica, sans-serif;
+	font-family:'Raleway', Arial, Helvetica, sans-serif;
 	font-size:28px;
 	position: relative;
 	bottom: 12px;
@@ -884,7 +884,7 @@ p.loading {
 #form-container textarea {
 	width:390px;
 	background: none;
-	font-family:'Just Another Hand', Arial, Helvetica, sans-serif;
+	font-family:'Raleway', Arial, Helvetica, sans-serif;
 	font-size:28px;
 	border: 1px solid #989895;
 	float:left;

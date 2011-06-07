@@ -5,7 +5,7 @@ google.load("webfont", "1.0.19");
 google.setOnLoadCallback(function() {
     WebFont.load({
         google: {
-                    families: [ 'Just Another Hand', 'Yanone Kaffeesatz:light' ]
+                    families: [ 'Raleway:100', 'Yanone Kaffeesatz:light' ]
                 }
     });
 });

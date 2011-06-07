@@ -117,6 +117,21 @@ configure = function(app) {
         }
     });
 
+    app.post('/edit', function(req, res) {
+        if(req.session.auth && req.session.auth.loggedIn) {
+            User.findById(req.session.auth.userId, function(err,user) {
+                if(!err) {
+                    req.flash('success', 'Tus datos se han guardado exitosamente');
+                    res.redirect(user.slug);
+                } else {
+                    res.redirect('/');
+                }
+            });
+        } else {
+            res.redirect('/');
+        }
+    });
+
     app.get('/:slug', function(req, res) {
 
         User.findOne({'slug':req.params.slug}, function(err,user) {
