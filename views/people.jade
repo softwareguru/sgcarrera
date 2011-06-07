@@ -1,0 +1,11 @@
+h1 Personas que saben usar #{skill}
+
+.clear
+
+- each user in users
+  h3
+    img(src='http://www.gravatar.com/avatar/' + md5(user.email) + '?s=20')
+    a(href='/' + user.slug) #{user.name} #{user.lastNames}
+    | , que es un #{user.title} feliz
+  hr
+

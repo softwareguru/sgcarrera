@@ -246,6 +246,14 @@ configure = function(app) {
         }
     });
 
+    app.get('/skills/:slug', function(req, res) {
+        User.find({'skills.name':req.params.slug}, function(err, users) {
+            if(!err) {
+                res.render('people', {users:users, skill: req.params.slug, md5:hashlib.md5});
+            }
+        });
+    });
+
     app.get('/:slug', function(req, res) {
 
         User.findOne({'slug':req.params.slug}, function(err,user) {
@@ -258,6 +266,7 @@ configure = function(app) {
                     if(!err) {
                         user.skills.forEach(function(skill) {
                             var uiSkill = {
+                                id: escape(skill.name),
                                 name: skill.name,
                                 level: 5 * skill.level / findSkill(dominantSkills, skill.name).level,
                                 stars: []

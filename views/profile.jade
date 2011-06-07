@@ -39,6 +39,19 @@
   #content-right
     .section
       .clearfix
+        h2 About me
+        .clear
+
+        h3= person.title
+
+        br
+
+        p= person.summary
+
+        br
+
+    .section
+      .clearfix
         h2 Skills
 
 
@@ -52,7 +65,8 @@
 
       .item
         - each skill in skills
-          h3= skill.name
+          h3
+            a(href='/skills/' + skill.id)= skill.name
           ul.stars.clearfix
             - each star in skill.stars
               -var starUrl = '/img/star-' + star + '.png'
