@@ -15,9 +15,7 @@ var app = express.createServer(
     express.cookieParser(),
     express.session({
         secret: conf.secret,
-        store: new MongoStore({
-            db: conf.session_db
-        })
+        store: new MongoStore(conf.session)
     }),
     everyauth.middleware()
 );
