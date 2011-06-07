@@ -5,13 +5,20 @@ var routes = require('./routes');
 var services = require('./services');
 var everyauth = require('everyauth');
 
+var MongoStore = require('connect-mongo');
+
 var port = conf.port;
 
 //Here we create the server
 var app = express.createServer(
     express.logger(),
     express.cookieParser(),
-    express.session({ secret: conf.secret }),
+    express.session({
+        secret: conf.secret,
+        store: new MongoStore({
+            db: conf.session_db
+        })
+    }),
     everyauth.middleware()
 );
 
