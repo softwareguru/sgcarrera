@@ -79,6 +79,8 @@ configure = function(app) {
         if(req.session.auth && req.session.auth.loggedIn) {
             User.findById(req.session.auth.userId, function(err,user) {
                 if(!err) {
+                    var scripts;
+                    var styles;
                     if(!user.registered) {
                         var slug  = '';
                         var email = '';
@@ -89,7 +91,9 @@ configure = function(app) {
                                 email = service.data.email;
                             }
                         }
-                        res.render('select', {slug: slug, email: email});
+                        scripts=['/js/jquery.validationEngine.js','/js/jquery.validationEngine-es.js','/js/select.js'];
+                        styles=['/css/validationEngine.jquery.css'];
+                        res.render('select', {slug: slug, email: email, scripts:scripts, styles:styles});
                     } else {
                         res.redirect(user.slug);
                     }
