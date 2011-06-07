@@ -1,6 +1,6 @@
 var model = require('./model');
 
-var https = require('https');
+var http = require('http');
 var hashlib = require('hashlib');
 
 var User = model.User;
@@ -292,11 +292,11 @@ configure = function(app) {
 
                             var options = {
                                 host: 'github.com',
-                                port: 443,
+                                port: 80,
                                 path: path
                             };
 
-                            https.get(options, function(result) {
+                            http.get(options, function(result) {
                                 var jsonResult = '';
                                 result.on('data', function(chunk) {
                                     jsonResult += chunk;
@@ -336,10 +336,10 @@ configure = function(app) {
                                     for(var i = 0; i < repos.length; i++) {
                                         var options = {
                                             host: 'github.com',
-                                            port: 443,
+                                            port: 80,
                                             path: '/api/v2/json/repos/show/' + service.data.login + '/' + repos[i].name + '/languages'
                                         };
-                                        https.get(options, processLanguages);
+                                        http.get(options, processLanguages);
                                     }
 
 
