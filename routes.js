@@ -2,6 +2,7 @@ var model = require('./model');
 
 var http = require('http');
 var hashlib = require('hashlib');
+var url = require('url');
 
 var User = model.User;
 var DominantSkill = model.DominantSkill;
@@ -32,6 +33,53 @@ var findSkill = function(skills, skillName) {
             return skills[i];
         }
     }
+};
+
+var evalPublication = function(publication, callback) {
+    var parsedUrl = url.parse(publication.url);
+
+    var options = {
+        host: parsedUrl.hostname,
+        port: (parsedUrl.protocol === 'http:')?80:443,
+        path: parsedUrl.pathname + (parsedUrl.search || '') + (parsedUrl.hash || '')
+    };
+
+    http.get(options, function(res) {
+        var post_data = '';
+        res.on('data', function(chunk) {
+            post_data += chunk;
+        });
+        res.on('end', function(chunk) {
+            var options = {
+                host: 'api.opencalais.com',
+                port: 80,
+                path: '/tag/rs/enrich',
+                method: 'POST',
+                headers: {
+                    'x-calais-licenseID' : 'qp7h5nccpe2fd5f2smnyte38',
+                    'outputFormat': 'Application/JSON',
+                    'Content-Type': 'text/html',
+                    'Content-Length': post_data.length
+                }
+            };
+
+            var post_req = http.request(options, function(res) {
+                var jsonResult = '';
+                res.on('data', function(chunk) {
+                    jsonResult += chunk;
+                });
+                res.on('end', function() {
+                    //console.log(jsonResult);
+                });
+            });
+
+            post_req.write(post_data);
+            post_req.end();
+
+
+        });
+    });
+
 };
 
 var storeIfMax = function(skill) {
@@ -338,11 +386,17 @@ configure = function(app) {
     });
 
     app.get('/edit/skills', function(req, res) {
-        if(req.session.auth && req.session.auth.loggedIn) {
-            User.findById(req.session.auth.userId, function(err,user) {
+        if(true) {
+        //if(req.session.auth && req.session.auth.loggedIn) {
+            User.findOne({slug:'iamedu'}, function(err,user) {
+            //User.findById(req.session.auth.userId, function(err,user) {
                 if(!err) {
                     var globalSkills = [];
                     var service = findService(user, 'github');
+
+                    user.publications.forEach(function(publication) {
+                        evalPublication(publication);
+                    });
 
                     if(service) {
                         var fetchRepos = function fetchRepos(path) {
