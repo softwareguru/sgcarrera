@@ -386,10 +386,9 @@ configure = function(app) {
     });
 
     app.get('/edit/skills', function(req, res) {
-        if(true) {
-        //if(req.session.auth && req.session.auth.loggedIn) {
+        if(req.session.auth && req.session.auth.loggedIn) {
             User.findOne({slug:'iamedu'}, function(err,user) {
-            //User.findById(req.session.auth.userId, function(err,user) {
+            User.findById(req.session.auth.userId, function(err,user) {
                 if(!err) {
                     var globalSkills = [];
                     var service = findService(user, 'github');
