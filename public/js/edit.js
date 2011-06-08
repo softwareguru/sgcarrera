@@ -58,10 +58,10 @@ $(function() {
         });
 
         $("#jobStart" + numJobs).datepicker({
-            formatDate: "yy-mm-dd"
+            dateFormat: "yy-mm-dd"
         });
         $("#jobEnd" + numJobs).datepicker({
-            formatDate: "yy-mm-dd"
+            dateFormat: "yy-mm-dd"
         });
     };
 
@@ -95,10 +95,10 @@ $(function() {
             $(".formError").remove();
         });
         $("#schoolStart" + numSchools).datepicker({
-            formatDate: "yy-mm-dd"
+            dateFormat: "yy-mm-dd"
         });
         $("#schoolEnd" + numSchools).datepicker({
-            formatDate: "yy-mm-dd"
+            dateFormat: "yy-mm-dd"
         });
     };
 
