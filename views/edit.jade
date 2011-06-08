@@ -135,12 +135,12 @@ div#hidden(style="display: none")
     .clear(style='padding-top: 20px')
 
     label(for='jobStartnumJob') Fecha de inicio
-    input#jobStartnumJob(type='text',name='jobnumJob[start]',value='startValue',class='validate[required]')
+    input#jobStartnumJob(type='text',name='jobnumJob[start]',value='startValue',class='validate[required,custom[date]]')
 
     .clear
 
     label(for='jobEndnumJob') Fecha de término
-    input#jobEndnumJob(type='text',name='jobnumJob[end]',value='endValue')
+    input#jobEndnumJob(type='text',name='jobnumJob[end]',value='endValue',class='validate[custom[date]]')
 
     .clear
 
@@ -166,12 +166,12 @@ div#hidden(style="display: none")
     .clear(style='padding-top: 20px')
 
     label(for='schoolStartnumSchool') Fecha de inicio
-    input#schoolStartnumSchool(type='text',name='schoolnumSchool[start]',value='startValue',class='validate[required]')
+    input#schoolStartnumSchool(type='text',name='schoolnumSchool[start]',value='startValue',class='validate[required,custom[date]]')
 
     .clear
 
     label(for='schoolEndnumSchool') Fecha de término
-    input#schoolEndnumSchool(type='text',name='schoolnumSchool[end]',value='endValue')
+    input#schoolEndnumSchool(type='text',name='schoolnumSchool[end]',value='endValue',class='validate[custom[date]]')
 
     .clear
 
