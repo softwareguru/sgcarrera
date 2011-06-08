@@ -57,6 +57,9 @@ $(function() {
             $(this).parent().parent().remove();
             $(".formError").remove();
         });
+
+        $("#jobStart" + numJobs).datepicker();
+        $("#jobEnd" + numJobs).datepicker();
     };
 
     var addSchool = function(title, school, summary, start, end) {
@@ -88,6 +91,8 @@ $(function() {
             $(this).parent().parent().remove();
             $(".formError").remove();
         });
+        $("#schoolStart" + numSchools).datepicker();
+        $("#schoolEnd" + numSchools).datepicker();
     };
 
     var addPublication = function(title, url) {
