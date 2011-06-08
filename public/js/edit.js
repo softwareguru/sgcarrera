@@ -21,7 +21,8 @@ $(function() {
         if(date) {
             date = new Date(date);
 
-            return date.getFullYear() + "-" + date.getMonth() + "-" + date.getDate();
+            //We add 1 to the month, because it starts on 0
+            return date.getFullYear() + "-" + (date.getMonth() + 1) + "-" + date.getDate();
         } else {
             return "";
         }
