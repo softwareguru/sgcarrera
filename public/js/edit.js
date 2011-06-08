@@ -5,13 +5,12 @@ $(function() {
 
     function formatDate(date) {
         if(date !== undefined) {
-            var result = "";
+            var result = date.year + "-";
             if(date.month !== undefined) {
-                result = date.month + "/1/";
+                result = date.month + "-01";
             } else {
-                result = "1/1/";
+                result = "01-01";
             }
-            result += date.year;
             return result;
         } else {
             return "";
@@ -22,7 +21,7 @@ $(function() {
         if(date) {
             date = new Date(date);
 
-            return date.getMonth() + 1 + "/" + date.getDate() + "/" + date.getFullYear();
+            return date.getFullYear() + "-" + date.getMonth() + "-" + date.getDate();
         } else {
             return "";
         }
@@ -58,8 +57,12 @@ $(function() {
             $(".formError").remove();
         });
 
-        $("#jobStart" + numJobs).datepicker();
-        $("#jobEnd" + numJobs).datepicker();
+        $("#jobStart" + numJobs).datepicker({
+            formatDate: "yy-mm-dd"
+        });
+        $("#jobEnd" + numJobs).datepicker({
+            formatDate: "yy-mm-dd"
+        });
     };
 
     var addSchool = function(title, school, summary, start, end) {
@@ -91,8 +94,12 @@ $(function() {
             $(this).parent().parent().remove();
             $(".formError").remove();
         });
-        $("#schoolStart" + numSchools).datepicker();
-        $("#schoolEnd" + numSchools).datepicker();
+        $("#schoolStart" + numSchools).datepicker({
+            formatDate: "yy-mm-dd"
+        });
+        $("#schoolEnd" + numSchools).datepicker({
+            formatDate: "yy-mm-dd"
+        });
     };
 
     var addPublication = function(title, url) {
