@@ -387,7 +387,6 @@ configure = function(app) {
 
     app.get('/edit/skills', function(req, res) {
         if(req.session.auth && req.session.auth.loggedIn) {
-            User.findOne({slug:'iamedu'}, function(err,user) {
             User.findById(req.session.auth.userId, function(err,user) {
                 if(!err) {
                     var globalSkills = [];
