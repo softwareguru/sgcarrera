@@ -4,6 +4,8 @@ var http = require('http');
 var hashlib = require('hashlib');
 var url = require('url');
 
+var conf = require('./conf');
+
 var OAuth2 = require('oauth').OAuth2;
 
 var User = model.User;
