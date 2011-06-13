@@ -4,10 +4,6 @@ var http = require('http');
 var hashlib = require('hashlib');
 var url = require('url');
 
-var conf = require('./conf');
-
-var OAuth2 = require('oauth').OAuth2;
-
 var User = model.User;
 var DominantSkill = model.DominantSkill;
 var Company = model.Company;
@@ -22,7 +18,6 @@ var taken= [
     'companies',
     'schools'
 ];
-
 
 var findService = function(user, serviceName) {
     for(var i = 0; i < user.services.length; i++) {
@@ -405,7 +400,7 @@ configure = function(app) {
     });
 
     app.get('/edit/skills', function(req, res) {
-        if(req.session.auth && req.session.auth.loggedIn && req.session.github) {
+        if(req.session.auth && req.session.auth.loggedIn) {
             User.findById(req.session.auth.userId, function(err,user) {
                 if(!err) {
                     var globalSkills = [];
@@ -418,22 +413,30 @@ configure = function(app) {
                     if(service) {
                         var fetchRepos = function fetchRepos(path) {
                             path = path || '/api/v2/json/repos/show/' + service.data.login;
-                            path = 'https://github.com' + path;
-                            var accessToken = req.session.github.accessToken;
-                            new OAuth2(
-                                    conf.github.id,
-                                    conf.github.secret,
-                                    'https://github.com',
-                                    'https://github.com/login/oauth/authorize',
-                                    'https://github.com/login/oauth/access_token'
-                                    ).get(path, accessToken, function(err, jsonResult, response) {
-                                if(!err) {
-                                    var next = response.headers['x-next'];
+
+
+                            var options = {
+                                host: 'github.com',
+                                port: 80,
+                                path: path
+                            };
+
+                            http.get(options, function(result) {
+                                var jsonResult = '';
+                                result.on('data', function(chunk) {
+                                    jsonResult += chunk;
+                                });
+                                result.on('end', function() {
+                                    var next = result.headers['x-next'];
                                     var repos = JSON.parse(jsonResult).repositories;
                                     var foundSkill;
 
-                                    var processLanguages = function(err, skillText, response) {
-                                        if(!err) {
+                                    var processLanguages = function(result) {
+                                        var skillText = '';
+                                        result.on('data', function(chunk) {
+                                            skillText += chunk;
+                                        });
+                                        result.on('end', function() {
                                             var skills = JSON.parse(skillText).languages;
                                             for(var skill in skills) {
                                                 if(skills.hasOwnProperty(skill)) {
@@ -452,21 +455,17 @@ configure = function(app) {
                                                     storeIfMax(foundSkill);
                                                 }
                                             }
-                                        } else {
-                                            require('util').debug("On process languages " + err);
-                                        }
+                                        });
                                     };
 
                                     repos.forEach(function(repo) {
                                         if(!repo.fork) {
-                                            var path = 'https://github.com/api/v2/json/repos/show/' + service.data.login + '/' + repo.name + '/languages';
-                                            new OAuth2(
-                                                    conf.github.id,
-                                                    conf.github.secret,
-                                                    'https://github.com',
-                                                    'https://github.com/login/oauth/authorize',
-                                                    'https://github.com/login/oauth/access_token'
-                                                    ).get(path, accessToken, processLanguages);
+                                            var options = {
+                                                host: 'github.com',
+                                                port: 80,
+                                                path: '/api/v2/json/repos/show/' + service.data.login + '/' + repo.name + '/languages'
+                                            };
+                                            http.get(options, processLanguages);
                                         }
                                     });
 
@@ -476,13 +475,16 @@ configure = function(app) {
                                         req.flash('success', 'Tus skills estan siendo calculados, regresa en unos segundos');
                                         res.redirect(user.slug);
                                     }
-                                } else {
-                                    req.flash('warning', err);
-                                    res.redirect(user.slug);
-                                }
+
+                                });
+                            }).on('error', function(e) {
+                                req.flash('warning', e);
+                                res.redirect(user.slug);
                             });
                         };
+
                         fetchRepos();
+
                     } else {
                         req.flash('warning', 'No se encontro cuenta de github asociada');
                         res.redirect(user.slug);
