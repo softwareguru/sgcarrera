@@ -72,6 +72,7 @@ everyauth.github
     .myHostname(conf.url)
     .appId(conf.github.id)
     .appSecret(conf.github.secret)
+    .scope('repo')
     .findOrCreateUser( function (session, accessToken, accessTokenSecret, ghUser) {
         var promise = new Promise();
         session.github = {  accessToken: accessToken, accessTokenSecret: accessTokenSecret };
