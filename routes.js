@@ -23,13 +23,6 @@ var taken= [
     'schools'
 ];
 
-var githubOAuth = new OAuth2(
-        conf.github.id,
-        conf.github.secret,
-        'https://github.com',
-        'https://github.com/login/oauth/authorize',
-        'https://github.com/login/oauth/access_token'
-        );
 
 var findService = function(user, serviceName) {
     for(var i = 0; i < user.services.length; i++) {
@@ -427,7 +420,13 @@ configure = function(app) {
                             path = path || '/api/v2/json/repos/show/' + service.data.login;
                             path = 'https://github.com' + path;
                             var accessToken = req.session.github.accessToken;
-                            githubOAuth.get(path, accessToken, function(err, jsonResult, response) {
+                            new OAuth2(
+                                    conf.github.id,
+                                    conf.github.secret,
+                                    'https://github.com',
+                                    'https://github.com/login/oauth/authorize',
+                                    'https://github.com/login/oauth/access_token'
+                                    ).get(path, accessToken, function(err, jsonResult, response) {
                                 if(!err) {
                                     var next = response.headers['x-next'];
                                     var repos = JSON.parse(jsonResult).repositories;
@@ -454,14 +453,20 @@ configure = function(app) {
                                                 }
                                             }
                                         } else {
-                                            req.flash('warning', err);
+                                            require('util').debug("On process languages " + err);
                                         }
                                     };
 
                                     repos.forEach(function(repo) {
                                         if(!repo.fork) {
                                             var path = 'https://github.com/api/v2/json/repos/show/' + service.data.login + '/' + repo.name + '/languages';
-                                            githubOAuth.get(path, accessToken, processLanguages);
+                                            new OAuth2(
+                                                    conf.github.id,
+                                                    conf.github.secret,
+                                                    'https://github.com',
+                                                    'https://github.com/login/oauth/authorize',
+                                                    'https://github.com/login/oauth/access_token'
+                                                    ).get(path, accessToken, processLanguages);
                                         }
                                     });
 
