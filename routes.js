@@ -427,45 +427,49 @@ configure = function(app) {
                             path = path || '/api/v2/json/repos/show/' + service.data.login;
                             var accessToken = req.session.github.accessToken;
                             githubOAuth.get(path, accessToken, function(err, jsonResult, response) {
-                                var next = result.headers['x-next'];
-                                var repos = JSON.parse(jsonResult).repositories;
-                                var foundSkill;
+                                if(!err) {
+                                    var next = response.headers['x-next'];
+                                    var repos = JSON.parse(jsonResult).repositories;
+                                    var foundSkill;
 
-                                var processLanguages = function(err, skillText, response) {
-                                    var skills = JSON.parse(skillText).languages;
-                                    for(var skill in skills) {
-                                        if(skills.hasOwnProperty(skill)) {
-                                            foundSkill = findSkill(globalSkills, skill);
-                                            if(!foundSkill) {
-                                                foundSkill = {
-                                                    name: skill,
-                                                    level: skills[skill]
-                                                };
-                                                globalSkills.push(foundSkill);
-                                            } else {
-                                                foundSkill.level += skills[skill];
+                                    var processLanguages = function(err, skillText, response) {
+                                        var skills = JSON.parse(skillText).languages;
+                                        for(var skill in skills) {
+                                            if(skills.hasOwnProperty(skill)) {
+                                                foundSkill = findSkill(globalSkills, skill);
+                                                if(!foundSkill) {
+                                                    foundSkill = {
+                                                        name: skill,
+                                                        level: skills[skill]
+                                                    };
+                                                    globalSkills.push(foundSkill);
+                                                } else {
+                                                    foundSkill.level += skills[skill];
+                                                }
+                                                user.skills = globalSkills;
+                                                user.save();
+                                                storeIfMax(foundSkill);
                                             }
-                                            user.skills = globalSkills;
-                                            user.save();
-                                            storeIfMax(foundSkill);
                                         }
-                                    }
-                                };
+                                    };
 
-                                repos.forEach(function(repo) {
-                                    if(!repo.fork) {
-                                        var path = '/api/v2/json/repos/show/' + service.data.login + '/' + repo.name + '/languages';
-                                        githubOAuth.get(path, accessToken, processLanguages);
-                                    }
-                                });
+                                    repos.forEach(function(repo) {
+                                        if(!repo.fork) {
+                                            var path = '/api/v2/json/repos/show/' + service.data.login + '/' + repo.name + '/languages';
+                                            githubOAuth.get(path, accessToken, processLanguages);
+                                        }
+                                    });
 
-                                if(next) {
-                                    fetchRepos(next);
+                                    if(next) {
+                                        fetchRepos(next);
+                                    } else {
+                                        req.flash('success', 'Tus skills estan siendo calculados, regresa en unos segundos');
+                                        res.redirect(user.slug);
+                                    }
                                 } else {
-                                    req.flash('success', 'Tus skills estan siendo calculados, regresa en unos segundos');
+                                    req.flash('warning', err);
                                     res.redirect(user.slug);
                                 }
-
                             });
                         };
                         fetchRepos();
