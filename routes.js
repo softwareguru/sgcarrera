@@ -353,7 +353,7 @@ configure = function(app) {
             User.findById(req.session.auth.userId, function(err,user) {
                 if(!err && user) {
                     services.forEach(function(service) {
-                        if(!findService(service)) {
+                        if(!findService(user, service)) {
                             needsServices.push(service);
                         }
                     });
