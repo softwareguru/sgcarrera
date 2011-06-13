@@ -171,3 +171,53 @@ everyauth.facebook
     .redirectPath('/');
 
 
+everyauth.twitter
+    .myHostname(conf.url)
+    .consumerKey(conf.twitter.key)
+    .consumerSecret(conf.twitter.secret)
+    .findOrCreateUser( function (session, accessToken, accessTokenSecret, twitUser) {
+        var promise = new Promise();
+        session.twitter = {  accessToken: accessToken, accessTokenSecret: accessTokenSecret };
+        if(session.auth && session.auth.loggedIn) {
+            User.findById(session.auth.userId, function(err,user) {
+                if(!err) {
+                    if(!searchForService(user, 'twitter')) {
+                        user.services.push({
+                            type: 'twitter',
+                            id: String(twitUser.id),
+                            data: twitUser
+                        });
+                        user.save();
+                    }
+                    return promise.fulfill(user);
+                }
+            });
+        } else {
+            User.findOne({
+                'services.type':'twitter',
+                'services.id': String(twitUser.id)
+            }, function(err, user) {
+                if(!err && user) {
+                    return promise.fulfill(user);
+                } else {
+                    var newUser = new User({
+                        slug:'',
+                        email:'',
+                        registered: false,
+                        services: [
+                            {
+                                type: 'twitter',
+                                id: String(twitUser.id),
+                                data: twitUser
+                            }
+                        ],
+                        created: new Date()
+                    });
+                    newUser.save();
+                    return promise.fulfill(newUser);
+                }
+            });
+        }
+        return promise;
+    })
+    .redirectPath('/');
