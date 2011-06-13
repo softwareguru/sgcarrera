@@ -425,6 +425,7 @@ configure = function(app) {
                     if(service) {
                         var fetchRepos = function fetchRepos(path) {
                             path = path || '/api/v2/json/repos/show/' + service.data.login;
+                            path = 'https://github.com' + path;
                             var accessToken = req.session.github.accessToken;
                             githubOAuth.get(path, accessToken, function(err, jsonResult, response) {
                                 if(!err) {
@@ -455,7 +456,7 @@ configure = function(app) {
 
                                     repos.forEach(function(repo) {
                                         if(!repo.fork) {
-                                            var path = '/api/v2/json/repos/show/' + service.data.login + '/' + repo.name + '/languages';
+                                            var path = 'https://github.com/api/v2/json/repos/show/' + service.data.login + '/' + repo.name + '/languages';
                                             githubOAuth.get(path, accessToken, processLanguages);
                                         }
                                     });
