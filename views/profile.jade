@@ -3,7 +3,7 @@
 #stripe
 
 - if(person.filled)
-  - if(request.loggedIn)
+  - if(request.loggedIn && needsServices.length > 0)
     h1
       strong Agregar perfil de servicios
     p
