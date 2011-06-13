@@ -79,7 +79,7 @@ configure = function(app) {
             User.findById(req.session.auth.userId, function(err,user) {
                 if(!err && user) {
                     var service = findService(user, 'github');
-                    githubOAuth.get('https://github.com/api/v2/json/repos/show/' + service.data.login, accessToken, accessTokenSecret,
+                    githubOAuth.get('https://github.com/api/v2/json/repos/show/' + service.data.login, accessToken,
                     function(err, data, response) {
                         if(!err) {
                             res.send(data);
