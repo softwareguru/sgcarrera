@@ -119,3 +119,55 @@ everyauth.github
     })
     .redirectPath('/');
 
+everyauth.facebook
+    .myHostname(conf.url)
+    .appId(conf.facebook.id)
+    .appSecret(conf.facebook.secret)
+    .findOrCreateUser( function (session, accessToken, accessTokenSecret, fbUser) {
+        var promise = new Promise();
+        session.facebook = {  accessToken: accessToken, accessTokenSecret: accessTokenSecret };
+        if(session.auth && session.auth.loggedIn) {
+            User.findById(session.auth.userId, function(err,user) {
+                if(!err) {
+                    if(!searchForService(user, 'facebook')) {
+                        user.services.push({
+                            type: 'facebook',
+                            id: String(fbUser.id),
+                            data: fbUser
+                        });
+                        user.save();
+                    }
+                    return promise.fulfill(user);
+                }
+            });
+        } else {
+            User.findOne({
+                'services.type':'facebook',
+                'services.id': String(fbUser.id)
+            }, function(err, user) {
+                if(!err && user) {
+                    return promise.fulfill(user);
+                } else {
+                    var newUser = new User({
+                        slug:'',
+                        email:'',
+                        registered: false,
+                        services: [
+                            {
+                                type: 'github',
+                                id: String(fbUser.id),
+                                data: fbUser
+                            }
+                        ],
+                        created: new Date()
+                    });
+                    newUser.save();
+                    return promise.fulfill(newUser);
+                }
+            });
+        }
+        return promise;
+    })
+    .redirectPath('/');
+
+
