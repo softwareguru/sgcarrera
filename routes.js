@@ -346,6 +346,20 @@ configure = function(app) {
 
     app.get('/:slug', function(req, res) {
         var regexSlug = new RegExp(req.params.slug, 'i');
+        var services = ['linkedin', 'github', 'facebook', 'twitter'];
+        var needsServices = [];
+
+        if(req.session.auth && req.session.auth.loggedIn) {
+            User.findById(req.session.auth.userId, function(err,user) {
+                if(!err && user) {
+                    services.forEach(function(service) {
+                        if(!findService(service)) {
+                            needsServices.push(service);
+                        }
+                    });
+                }
+            });
+        }
 
         User.findOne({'slug':regexSlug}, function(err,user) {
             var i;
@@ -377,7 +391,7 @@ configure = function(app) {
                         res.flash('warning', err);
                     }
                     scripts=['/js/profile.js'];
-                    res.render('profile', {person:user, gravatar:gravatar, skills:skills, scripts:scripts,md5:hashlib.md5});
+                    res.render('profile', {person:user, gravatar:gravatar, skills:skills, scripts:scripts,md5:hashlib.md5,needsServices:needsServices});
                 });
             } else {
                 res.send('Quien es ese?', 404);

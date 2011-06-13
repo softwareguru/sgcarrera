@@ -3,6 +3,16 @@
 #stripe
 
 - if(person.filled)
+  - if(request.loggedIn)
+    h1
+      strong Agregar perfil de servicios
+    p
+    - each neededService in needsServices
+      a(href="/auth/" + neededService)
+        img(src="/img/" + neededService + "-logo.png",style="width:64px")
+
+    .clearfix
+
   #content-left
     .section
       .clearfix
