@@ -75,7 +75,7 @@ everyauth.github
     .scope('repo')
     .findOrCreateUser( function (session, accessToken, accessTokenSecret, ghUser) {
         var promise = new Promise();
-        session.github = {  accessToken: accessToken, accessTokenSecret: accessTokenSecret };
+        session.taithub = {  accessToken: accessToken, accessTokenSecret: accessTokenSecret };
         if(session.auth && session.auth.loggedIn) {
             User.findById(session.auth.userId, function(err,user) {
                 if(!err) {

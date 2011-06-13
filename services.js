@@ -1,7 +1,6 @@
 var model = require('./model');
 var conf = require('./conf');
 var OAuth = require('oauth').OAuth;
-var OAuth2 = require('oauth').OAuth2;
 
 var User = model.User;
 
@@ -29,13 +28,6 @@ var linkedinOAuth = new OAuth(
             'x-li-format': 'json'
         });
 
-var githubOAuth = new OAuth2(
-        conf.github.id,
-        conf.github.secret,
-        'https://github.com',
-        'https://github.com/login/oauth/authorize',
-        'https://github.com/login/oauth/access_token'
-        );
 
 
 configure = function(app) {
@@ -62,31 +54,6 @@ configure = function(app) {
             function(err, data, response) {
                 if(!err) {
                     res.send(data);
-                } else {
-                    res.send(err);
-                }
-            });
-        } else {
-            res.send({access:'Not allowed'});
-        }
-    });
-    app.get('/interact/githubRepos', function(req, res) {
-        res.contentType('application/json');
-        if(req.session.github) {
-            var accessToken = req.session.github.accessToken,
-                accessTokenSecret = req.session.github.accessTokenSecret;
-            var service;
-            User.findById(req.session.auth.userId, function(err,user) {
-                if(!err && user) {
-                    var service = findService(user, 'github');
-                    githubOAuth.get('https://github.com/api/v2/json/repos/show/' + service.data.login, accessToken,
-                    function(err, data, response) {
-                        if(!err) {
-                            res.send(data);
-                        } else {
-                            res.send(err);
-                        }
-                    });
                 } else {
                     res.send(err);
                 }
