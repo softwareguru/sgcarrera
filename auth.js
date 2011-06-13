@@ -76,6 +76,8 @@ everyauth.github
     .findOrCreateUser( function (session, accessToken, accessTokenSecret, ghUser) {
         var promise = new Promise();
         session.github = {  accessToken: accessToken, accessTokenSecret: accessTokenSecret };
+        ghUser.accessToken = accessToken;
+        ghUser.accessTokenSecret = accessTokenSecret;
         if(session.auth && session.auth.loggedIn) {
             User.findById(session.auth.userId, function(err,user) {
                 if(!err) {
@@ -127,6 +129,8 @@ everyauth.facebook
     .findOrCreateUser( function (session, accessToken, accessTokenSecret, fbUser) {
         var promise = new Promise();
         session.facebook = {  accessToken: accessToken, accessTokenSecret: accessTokenSecret };
+        fbUser.accessToken = accessToken;
+        fbUser.accessTokenSecret = accessTokenSecret;
         if(session.auth && session.auth.loggedIn) {
             User.findById(session.auth.userId, function(err,user) {
                 if(!err) {
