@@ -7,9 +7,9 @@ $(function() {
         if(date !== undefined) {
             var result = date.year + "-";
             if(date.month !== undefined) {
-                result = date.month + "-01";
+                result += date.month + "-01";
             } else {
-                result = "01-01";
+                result += "01-01";
             }
             return result;
         } else {
