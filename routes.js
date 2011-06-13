@@ -434,23 +434,27 @@ configure = function(app) {
                                     var foundSkill;
 
                                     var processLanguages = function(err, skillText, response) {
-                                        var skills = JSON.parse(skillText).languages;
-                                        for(var skill in skills) {
-                                            if(skills.hasOwnProperty(skill)) {
-                                                foundSkill = findSkill(globalSkills, skill);
-                                                if(!foundSkill) {
-                                                    foundSkill = {
-                                                        name: skill,
-                                                        level: skills[skill]
-                                                    };
-                                                    globalSkills.push(foundSkill);
-                                                } else {
-                                                    foundSkill.level += skills[skill];
+                                        if(!err) {
+                                            var skills = JSON.parse(skillText).languages;
+                                            for(var skill in skills) {
+                                                if(skills.hasOwnProperty(skill)) {
+                                                    foundSkill = findSkill(globalSkills, skill);
+                                                    if(!foundSkill) {
+                                                        foundSkill = {
+                                                            name: skill,
+                                                            level: skills[skill]
+                                                        };
+                                                        globalSkills.push(foundSkill);
+                                                    } else {
+                                                        foundSkill.level += skills[skill];
+                                                    }
+                                                    user.skills = globalSkills;
+                                                    user.save();
+                                                    storeIfMax(foundSkill);
                                                 }
-                                                user.skills = globalSkills;
-                                                user.save();
-                                                storeIfMax(foundSkill);
                                             }
+                                        } else {
+                                            req.flash('warning', err);
                                         }
                                     };
 
