@@ -76,7 +76,7 @@ configure = function(app) {
             var accessToken = req.session.github.accessToken,
                 accessTokenSecret = req.session.github.accessTokenSecret;
             var service;
-            User.findById(session.auth.userId, function(err,user) {
+            User.findById(req.session.auth.userId, function(err,user) {
                 if(!err && user) {
                     var service = findService(user, 'github');
                     githubOAuth.get('https://github.com/api/v2/json/repos/show/' + service.data.login, accessToken, accessTokenSecret,
