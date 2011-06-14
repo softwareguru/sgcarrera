@@ -26,7 +26,7 @@ everyauth.linkedin
 
         if(session.auth && session.auth.loggedIn) {
             User.findById(session.auth.userId, function(err,user) {
-                if(!err) {
+                if(!err && user) {
                     if(!searchForService(user, 'linkedin')) {
                         user.services.push({
                             type: 'linkedin',
@@ -80,7 +80,7 @@ everyauth.github
         ghUser.accessTokenSecret = accessTokenSecret;
         if(session.auth && session.auth.loggedIn) {
             User.findById(session.auth.userId, function(err,user) {
-                if(!err) {
+                if(!err && user) {
                     if(!searchForService(user, 'github')) {
                         user.services.push({
                             type: 'github',
@@ -133,7 +133,7 @@ everyauth.facebook
         fbUser.accessTokenSecret = accessTokenSecret;
         if(session.auth && session.auth.loggedIn) {
             User.findById(session.auth.userId, function(err,user) {
-                if(!err) {
+                if(!err && user) {
                     if(!searchForService(user, 'facebook')) {
                         user.services.push({
                             type: 'facebook',
@@ -185,7 +185,7 @@ everyauth.twitter
         session.twitter = {  accessToken: accessToken, accessTokenSecret: accessTokenSecret };
         if(session.auth && session.auth.loggedIn) {
             User.findById(session.auth.userId, function(err,user) {
-                if(!err) {
+                if(!err && user) {
                     if(!searchForService(user, 'twitter')) {
                         user.services.push({
                             type: 'twitter',
