@@ -108,7 +108,7 @@ configure = function(app) {
     app.get('/', function(req, res) {
         if(req.loggedIn) {
             User.findById(req.session.auth.userId, function(err,user) {
-                if(!err) {
+                if(!err && user) {
                     if(!user.registered) {
                         res.redirect('select');
                     } else {
@@ -130,7 +130,7 @@ configure = function(app) {
     app.get('/select', function(req, res) {
         if(req.session.auth && req.session.auth.loggedIn) {
             User.findById(req.session.auth.userId, function(err,user) {
-                if(!err) {
+                if(!err && user) {
                     var scripts;
                     var styles;
                     if(!user.registered) {
