@@ -8,9 +8,11 @@ var Promise = everyauth.Promise;
 var User = model.User;
 
 var searchForService = function(user, serviceName) {
-    for(var i = 0; i < user.services.length; i++) {
-        if(user.services[i].type === serviceName) {
-            return user.services[i];
+    if(user.service) {
+        for(var i = 0; i < user.services.length; i++) {
+            if(user.services[i].type === serviceName) {
+                return user.services[i];
+            }
         }
     }
 };
@@ -26,7 +28,7 @@ everyauth.linkedin
 
         if(session.auth && session.auth.loggedIn) {
             User.findById(session.auth.userId, function(err,user) {
-                if(!err && user) {
+                if(!err) {
                     if(!searchForService(user, 'linkedin')) {
                         user.services.push({
                             type: 'linkedin',
@@ -80,7 +82,7 @@ everyauth.github
         ghUser.accessTokenSecret = accessTokenSecret;
         if(session.auth && session.auth.loggedIn) {
             User.findById(session.auth.userId, function(err,user) {
-                if(!err && user) {
+                if(!err) {
                     if(!searchForService(user, 'github')) {
                         user.services.push({
                             type: 'github',
@@ -133,7 +135,7 @@ everyauth.facebook
         fbUser.accessTokenSecret = accessTokenSecret;
         if(session.auth && session.auth.loggedIn) {
             User.findById(session.auth.userId, function(err,user) {
-                if(!err && user) {
+                if(!err) {
                     if(!searchForService(user, 'facebook')) {
                         user.services.push({
                             type: 'facebook',
@@ -182,7 +184,22 @@ everyauth.twitter
     .consumerSecret(conf.twitter.secret)
     .findOrCreateUser( function (session, accessToken, accessTokenSecret, twitUser) {
         var promise = new Promise();
-        var twitterNewFunc = function() {
+        session.twitter = {  accessToken: accessToken, accessTokenSecret: accessTokenSecret };
+        if(session.auth && session.auth.loggedIn) {
+            User.findById(session.auth.userId, function(err,user) {
+                if(!err) {
+                    if(!searchForService(user, 'twitter')) {
+                        user.services.push({
+                            type: 'twitter',
+                            id: String(twitUser.id),
+                            data: twitUser
+                        });
+                        user.save();
+                    }
+                    return promise.fulfill(user);
+                }
+            });
+        } else {
             User.findOne({
                 'services.type':'twitter',
                 'services.id': String(twitUser.id)
@@ -207,27 +224,8 @@ everyauth.twitter
                     return promise.fulfill(newUser);
                 }
             });
-        };
-        session.twitter = {  accessToken: accessToken, accessTokenSecret: accessTokenSecret };
-        if(session.auth && session.auth.loggedIn) {
-            User.findById(session.auth.userId, function(err,user) {
-                if(!err && user) {
-                    if(!searchForService(user, 'twitter')) {
-                        user.services.push({
-                            type: 'twitter',
-                            id: String(twitUser.id),
-                            data: twitUser
-                        });
-                        user.save();
-                    }
-                    return promise.fulfill(user);
-                } else {
-                    twitterNewFunc();
-                }
-            });
-        } else {
-            twitterNewFunc();
         }
         return promise;
     })
     .redirectPath('/');
+
