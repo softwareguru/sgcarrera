@@ -77,24 +77,8 @@ everyauth.github
     .scope('repo')
     .findOrCreateUser( function (session, accessToken, accessTokenSecret, ghUser) {
         var promise = new Promise();
-        session.github = {  accessToken: accessToken, accessTokenSecret: accessTokenSecret };
-        ghUser.accessToken = accessToken;
-        ghUser.accessTokenSecret = accessTokenSecret;
-        if(session.auth && session.auth.loggedIn) {
-            User.findById(session.auth.userId, function(err,user) {
-                if(!err) {
-                    if(!searchForService(user, 'github')) {
-                        user.services.push({
-                            type: 'github',
-                            id: String(ghUser.id),
-                            data: ghUser
-                        });
-                        user.save();
-                    }
-                    return promise.fulfill(user);
-                }
-            });
-        } else {
+
+        var githubNewFunc = function() {
             User.findOne({
                 'services.type':'github',
                 'services.id': String(ghUser.id)
@@ -119,6 +103,29 @@ everyauth.github
                     return promise.fulfill(newUser);
                 }
             });
+        };
+
+        session.github = {  accessToken: accessToken, accessTokenSecret: accessTokenSecret };
+        ghUser.accessToken = accessToken;
+        ghUser.accessTokenSecret = accessTokenSecret;
+        if(session.auth && session.auth.loggedIn) {
+            User.findById(session.auth.userId, function(err,user) {
+                if(!err && user) {
+                    if(!searchForService(user, 'github')) {
+                        user.services.push({
+                            type: 'github',
+                            id: String(ghUser.id),
+                            data: ghUser
+                        });
+                        user.save();
+                    }
+                    return promise.fulfill(user);
+                } else {
+                    githubNewFunc();
+                }
+            });
+        } else {
+            githubNewFunc();
         }
         return promise;
     })
