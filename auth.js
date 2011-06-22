@@ -49,8 +49,8 @@ everyauth.linkedin
                     return promise.fulfill(user);
                 } else {
                     var newUser = new User({
-                        slug:'',
-                        email:'',
+                        slug:String(linkedinUser.id),
+                        email:String(linkedinUser.id),
                         registered: false,
                         services: [
                             {
@@ -87,8 +87,8 @@ everyauth.github
                     return promise.fulfill(user);
                 } else {
                     var newUser = new User({
-                        slug:'',
-                        email:'',
+                        slug:String(ghUser.id),
+                        email:String(ghUser.id),
                         registered: false,
                         services: [
                             {
@@ -163,8 +163,8 @@ everyauth.facebook
                     return promise.fulfill(user);
                 } else {
                     var newUser = new User({
-                        slug:'',
-                        email:'',
+                        slug:String(fbUser.id),
+                        email:String(fbUser.id),
                         registered: false,
                         services: [
                             {
@@ -215,8 +215,8 @@ everyauth.twitter
                     return promise.fulfill(user);
                 } else {
                     var newUser = new User({
-                        slug:'',
-                        email:'',
+                        slug: String(twitUser.id),
+                        email:String(twitUser.id),
                         registered: false,
                         services: [
                             {
