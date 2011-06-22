@@ -17,6 +17,8 @@ var searchForService = function(user, serviceName) {
     }
 };
 
+everyauth.everymodule.logoutRedirectPath(conf.url + '/');
+
 everyauth.linkedin
     .myHostname(conf.url)
     .consumerKey(conf.linkedin.key)
@@ -68,7 +70,7 @@ everyauth.linkedin
         }
         return promise;
     })
-    .redirectPath('/');
+    .redirectPath(conf.url + "/");
 
 everyauth.github
     .myHostname(conf.url)
@@ -129,7 +131,7 @@ everyauth.github
         }
         return promise;
     })
-    .redirectPath('/');
+    .redirectPath(conf.url + "/");
 
 everyauth.facebook
     .myHostname(conf.url)
@@ -182,7 +184,7 @@ everyauth.facebook
         }
         return promise;
     })
-    .redirectPath('/');
+    .redirectPath(conf.url + "/");
 
 
 everyauth.twitter
@@ -234,5 +236,5 @@ everyauth.twitter
         }
         return promise;
     })
-    .redirectPath('/');
+    .redirectPath(conf.url + "/");
 
