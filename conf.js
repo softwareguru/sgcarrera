@@ -1,13 +1,14 @@
 exports.url  = 'http://talento.sg.com.mx';
 exports.port = process.env.PORT || 8080;
-exports.mongo_url = 'mongodb://sgcarrera:m3t4lG34r@mongo.sgcarrera.dotcloud.com:7041/sgcarrera';
+exports.mongo_url = 'mongodb://heroku_app827822:l77qqrd1jl1m7rtqq0lki7t3de@dbh35.mongolab.com:27357/heroku_app827822';
+
 exports.calais = 'qp7h5nccpe2fd5f2smnyte38'; 
 exports.session = {
-    db : 'sgcarrera_session',
-    host: 'mongo.sgcarrera.dotcloud.com',
-    port: '7041',
-    username: 'sgcarrera_session',
-    password: 'm3t4lG34r'
+    db : 'heroku_app827822',
+    host: 'dbh35.mongolab.com',
+    port: '27357',
+    username: 'heroku_app827822',
+    password: 'l77qqrd1jl1m7rtqq0lki7t3de'
 };
 
 exports.secret = 's0ftw4r3guru';
