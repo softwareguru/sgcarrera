@@ -13,33 +13,28 @@ exports.session = {
 
 exports.secret = 's0ftw4r3guru';
 
-//Linkedin conf
 exports.linkedin = {
     key: 'J956L9qfFnjMColuRUhr4cZCIV6r3dXQWEOaT6OecAq_6vIikfovFTTBD9m0MK9w',
     secret: '6K2hXxnOgM99L3F5ZWR6mED_io49hmCew78K_WhwwJSGxYxnLLhLnDq1NE368M6F'
 };
 
-//Linkedin conf
 exports.github = {
-    id: 'fff5351c4334041394db',
-    secret: '46e0f2a94fca6c0c3510895176dfc233c4215559'
+    id: '2337bf1c7b8af15663ae',
+    secret: 'b836cec740545f1cec1722141f2dd6667cf15b71'
 };
 
-//Twitter conf
 exports.twitter = {
-    key: 'ZwDORqSIQUCSNZUj1frMQ',
-    secret: 'kKhtWngFCBwh1VVZ0hJdMsGXbJlnNk0dngeHRVPTxc'
+    key: '6UEJr5vCuUnZKBOynrHZw',
+    secret: 'ODbAax6cUNb7kY7FxooHSvaijA8ApuwAKdATcvsfzGA'
 };
 
-//Facebook conf
 exports.facebook = {
-    id: '179087812147123',
-    secret: '47d55a9654df637a0ab7af6d9daac5b6'
+    id: '160866660607023',
+    secret: '409f7965ddccbe5d850fb2be6ec5334b'
 };
 
-//Google conf
 exports.google = {
-    id: '1084757502134.apps.googleusercontent.com',
-    secret: '_gutCQl4I-ItjJ4SwUWEJaxB'
+    id: '532500560796.apps.googleusercontent.com',
+    secret: 'nLY-s4QVDmgSSqgLXOPJxHra'
 };
 
