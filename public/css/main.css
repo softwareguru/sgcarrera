@@ -991,3 +991,12 @@ body{
 form .button span {
     width: 126px;
 }
+
+input.ui-widget-content {
+	border: 0px;
+	
+}
+
+.ui-widget-content label:hover + input {
+	border-bottom: 0px;
+}
