@@ -17,8 +17,10 @@ html(lang="en")
         link(rel="stylesheet",type="text/css",media="screen",href=style)/
 
     script(type="text/javascript",src="https://www.google.com/jsapi?key=ABQIAAAA3Eakgp3sm3cNojBMoT6bGRSAHfZ3LDll5Gx94ZHFBbc4ydTNQRRNaWxJGsOdY3GEDvZ6dvynCETGaw")
-    script(type="text/javascript",src="/js/tagit/tag-it.js")
+
+    
     script(type="text/javascript",src="/js/loader.js")
+    script(type="text/javascript",src="/js/tagit/tag-it.js")
     - if(typeof(scripts) != 'undefined')
       - each script in scripts
         script(type="text/javascript",src=script)
