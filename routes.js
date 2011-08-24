@@ -227,10 +227,30 @@ configure = function(app) {
         var affiliations = [];
         var i;
 
+        var findSkill = function(skills, skill) {
+            for(i = 0; i < skills.length; i++) {
+                current = skills[i];
+                if(current.name.toLowerCase() == skill.toLowerCase()) {
+                    return current;
+                }
+            }
+            return null;
+        };
+
         if(req.session.auth && req.session.auth.loggedIn) {
             User.findById(req.session.auth.userId, function(err,user) {
                 if(!err) {
                     formUser = req.body.user;
+
+                    if(user.skills) {
+                        user.skills.forEach(function(skill) {
+                            if(skill.auto) {
+                                user.skills.remove(skill);
+                            }
+                        });
+                    }
+
+                    user.save();
 
                     numJobs = req.body.numJobs || 0;
                     numSchools = req.body.numSchools|| 0;
@@ -244,7 +264,24 @@ configure = function(app) {
                     user.place = formUser.place;
                     user.url = [formUser.url];
 
-                    console.log(req.body.selfSkills);
+
+
+                    if(req.body.selfSkills) {
+                        req.body.selfSkills.tags.forEach(function(tag) {
+                            
+
+                            if(!findSkill(user.skills, tag)) {
+                                var saidSkill = {
+                                    name: tag,
+                                    auto: true,
+                                    level: 0
+                                };
+
+                                user.skills.push(saidSkill);
+                                storeIfMax({name: tag, level: 0});
+                            }
+                        });
+                    }
 
                     for(i = 1; i <= numJobs; i++) {
                         var job = req.body['job' + i];
@@ -374,6 +411,7 @@ configure = function(app) {
                         user.skills.forEach(function(skill) {
                             var uiSkill = {
                                 id: escape(skill.name),
+                                auto: skill.auto,
                                 name: skill.name,
                                 level: 5 * skill.level / findSkill(dominantSkills, skill.name).level,
                                 stars: []

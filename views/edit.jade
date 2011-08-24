@@ -62,6 +62,9 @@ form#form-container(method="post")
   .clear
 
   ul#skills
+    - each skill in person.skills
+      - if (skill.auto)
+        li= skill.name
 
   h2 Experiencia laboral
   .clear

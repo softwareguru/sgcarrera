@@ -79,11 +79,15 @@
         - each skill in skills
           h3
             a(href='/skills/' + skill.id)= skill.name
-          ul.stars.clearfix
-            - each star in skill.stars
-              -var starUrl = '/img/star-' + star + '.png'
-              li
-                img(src=starUrl)
+          - if (skill.auto)
+            p
+              strong Certified by me
+          -else
+            ul.stars.clearfix
+              - each star in skill.stars
+                -var starUrl = '/img/star-' + star + '.png'
+                li
+                  img(src=starUrl)
 
     - if(person.educations.length > 0)
       .section(style='padding-top: 50px')
