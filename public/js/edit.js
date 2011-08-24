@@ -216,7 +216,7 @@ $(function() {
             $("#name").val(data.firstName || '');
             $("#lastName").val(data.lastName || '');
             $("#place").val((data.location && data.location.name) || '');
-            $("#url").val((data.memberUrlResources && data.memberUrlResources.values[0] && data.memberUrlResources.values[0].url) || '');
+            $("#url").val((data.memberUrlResources && data.memberUrlResources.values && data.memberUrlResources.values[0] && data.memberUrlResources.values[0].url) || '');
 
 
             if(data.positions && data.positions.values) {
