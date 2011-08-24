@@ -244,6 +244,8 @@ configure = function(app) {
                     user.place = formUser.place;
                     user.url = [formUser.url];
 
+                    console.log(req.body.selfSkills);
+
                     for(i = 1; i <= numJobs; i++) {
                         var job = req.body['job' + i];
                         if(job) {
