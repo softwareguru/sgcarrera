@@ -45,7 +45,7 @@ ul.tagit input[type="text"] {
     -webkit-box-sizing: border-box;
     box-sizing:         border-box;
 
-    border: none;
+    border: none !important;
 	margin: 0;
 	padding: 0;
 	width: inherit;
