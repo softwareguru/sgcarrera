@@ -282,6 +282,10 @@ $(function() {
 
     $("#form-container").validationEngine();
 
+    $("#skills").tagit({
+       itemName: 'selfSkills' 
+    });
+
     fill();
 
 });
