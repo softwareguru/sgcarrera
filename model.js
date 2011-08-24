@@ -34,6 +34,7 @@ var Job = new Schema({
 
 var Skill = new Schema({
     name: String,
+    auto: { type: Boolean, default: false },
     level: Number
 });
 
